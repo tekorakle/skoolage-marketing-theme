@@ -1,0 +1,274 @@
+---
+import { icons } from '@/lib/icons';
+
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="modal-backdrop"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={`${id}-title`}
+  hidden
+>
+  <div class="modal-box" id={`${id}-box`}>
+
+    <button class="modal-close" id={`${id}-close`} aria-label="Close">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-4 h-4" stroke-width="2" set:html={icons['x-mark']} />
+    </button>
+
+    <div class="modal-hero" id={`${id}-hero`}>
+      <div class="modal-hero-overlay"></div>
+      <div class="modal-hero-content">
+        <div id={`${id}-cat`} class="modal-cat-badge font-mono"></div>
+        <h2 id={`${id}-title`} class="modal-heading font-display uppercase tracking-wide"></h2>
+        <p id={`${id}-subtitle`} class="modal-subtitle font-mono"></p>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <p id={`${id}-desc`} class="modal-description"></p>
+      <div id={`${id}-tags`} class="modal-tags"></div>
+      <div class="modal-cta-wrap">
+        <slot />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 1rem 2rem;
+    background: rgb(var(--bg-base-ch) / 0.88);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.26s ease;
+  }
+  .modal-backdrop[hidden] { display: none !important; }
+  .modal-backdrop.modal-open {
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .modal-backdrop.modal-closing { opacity: 0; pointer-events: none; }
+
+  .modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    background: var(--bg-deep);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.26s ease;
+    opacity: 0;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgb(var(--primary-ch) / 0.08);
+  }
+  .modal-backdrop.modal-open .modal-box   { transform: translateY(0) scale(1); opacity: 1; }
+  .modal-backdrop.modal-closing .modal-box { transform: translateY(14px) scale(0.98); opacity: 0; }
+
+  .modal-close {
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-dim);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.25s ease;
+  }
+  .modal-close:hover {
+    background: rgb(var(--primary-ch) / 0.15);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: rotate(90deg);
+  }
+
+  .modal-hero {
+    position: relative;
+    height: 210px;
+    background-size: cover;
+    background-position: top center;
+    background-color: var(--bg-base);
+    flex-shrink: 0;
+  }
+  .modal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgb(var(--bg-base-ch) / 0.88) 80%, var(--bg-deep) 100%);
+  }
+  .modal-hero-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.25rem 1.5rem 1rem;
+  }
+
+  .modal-cat-badge {
+    display: inline-block;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: rgb(var(--primary-ch) / 0.1);
+    border: 1px solid rgb(var(--primary-ch) / 0.25);
+    padding: 0.18rem 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .modal-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin: 0 0 0.25rem;
+  }
+  .modal-subtitle {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  .modal-body { padding: 1.25rem 1.5rem 1.5rem; }
+  .modal-description { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.1rem; }
+  .modal-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+  .modal-cta-wrap {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.25rem;
+    text-align: center;
+  }
+
+  /* Slot content and dynamically created elements can't receive scoped attributes,
+     so these selectors are intentionally global. */
+  :global(.modal-tag) {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+    color: var(--color-text-dim);
+    background: var(--bg-base);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.55rem;
+    font-family: ui-monospace, monospace;
+  }
+  :global(.modal-cta) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.7rem 1.75rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--bg-base);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    transition: filter 0.25s ease, gap 0.3s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 0 0 rgb(var(--primary-ch) / 0);
+  }
+  :global(.modal-cta:hover) {
+    filter: brightness(1.1);
+    gap: 1rem;
+    box-shadow: 0 0 18px rgb(var(--primary-ch) / 0.3);
+  }
+  :global(.modal-no-link) {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+
+  /* Light mode */
+  :global(html.light-mode) .modal-box {
+    background: var(--bg-elevated);
+    border-color: var(--color-border);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.15);
+  }
+  :global(html.light-mode) .modal-close       { background: rgba(0,0,0,0.08); }
+  :global(html.light-mode) .modal-close:hover { background: rgb(var(--primary-ch) / 0.12); }
+  :global(html.light-mode) .modal-cta-wrap    { border-top-color: var(--color-border); }
+  :global(html.light-mode .modal-cta)         { color: #fff; }
+</style>
+
+<script>
+  // Close any open modal via event delegation on document. Bound once and
+  // survives view transitions since the document object persists between navigations.
+  if (!(window as any).__modalListenersBound) {
+    (window as any).__modalListenersBound = true;
+
+    // Track the element that triggered the most-recently opened modal so focus
+    // can be returned to it when the modal closes.
+    let modalOpener: HTMLElement | null = null;
+
+    function closeModal(backdrop: Element) {
+      backdrop.classList.remove('modal-open');
+      backdrop.classList.add('modal-closing');
+      setTimeout(() => {
+        backdrop.setAttribute('hidden', '');
+        backdrop.classList.remove('modal-closing');
+        document.body.style.overflow = '';
+        // Return focus to the element that opened this modal (WCAG 2.4.3)
+        modalOpener?.focus();
+        modalOpener = null;
+      }, 260);
+    }
+
+    // Focusable selectors for the focus-trap implementation
+    const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    function trapFocus(e: KeyboardEvent) {
+      const open = document.querySelector<HTMLElement>('.modal-backdrop.modal-open');
+      if (!open) return;
+      const focusable = Array.from(open.querySelectorAll<HTMLElement>(FOCUSABLE));
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+        }
+      }
+    }
+
+    document.addEventListener('keydown', trapFocus);
+
+    document.addEventListener('click', (e) => {
+      const t = e.target as Element;
+      const closeBtn = t.closest('.modal-close');
+      if (closeBtn) {
+        const backdrop = closeBtn.closest('.modal-backdrop');
+        if (backdrop) closeModal(backdrop);
+        return;
+      }
+      if (t.classList.contains('modal-backdrop') && t.classList.contains('modal-open')) {
+        closeModal(t);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const open = document.querySelector('.modal-backdrop.modal-open');
+      if (open) closeModal(open);
+    });
+
+    // Expose opener-tracking so callers can set it before opening a modal
+    (window as any).__setModalOpener = (el: HTMLElement) => { modalOpener = el; };
+  }
+</script>

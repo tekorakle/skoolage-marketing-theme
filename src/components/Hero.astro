@@ -1,0 +1,99 @@
+---
+import { withBase } from '@/lib/assetPath';
+import heroData from '@/data/home/hero.json';
+import { icons } from '@/lib/icons';
+---
+
+<section
+  id="home"
+  class="relative pt-16 lg:pt-0 overflow-hidden"
+  style="background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-deep) 60%);"
+  aria-labelledby="hero-heading"
+>
+  <!-- Subtle top accent line -->
+  <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(90deg, transparent, var(--color-primary), transparent);"></div>
+
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-12 pt-10 sm:pt-16 xl:pt-28 pb-2 xl:pb-28">
+
+    <!-- Eyebrow -->
+    <div class="flex items-center gap-3 mb-6 animate-fade-in">
+      <div class="h-px w-8" style="background: var(--color-primary);"></div>
+      <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">
+        {heroData.eyebrow}
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h1
+      id="hero-heading"
+      class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white uppercase leading-[1.0] tracking-wide mb-4 animate-slide-up"
+    >
+      {heroData.heading}
+    </h1>
+    <p
+      class="font-display font-bold text-xl sm:text-2xl lg:text-3xl uppercase tracking-widest mb-8 animate-slide-up"
+      style="color: var(--color-primary); animation-delay: 0.05s; opacity: 0; animation-fill-mode: forwards;"
+    >
+      {heroData.subHeading}
+    </p>
+
+    <!-- Subheading -->
+    <p
+      class="text-site-text-muted text-lg sm:text-xl leading-relaxed max-w-2xl mb-10 animate-slide-up"
+      style="animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards;"
+    >
+      {heroData.blurb}
+    </p>
+
+    <!-- Gray band separator -->
+    <div class="site-band mb-10 max-w-xs" style="animation-delay: 0.15s;"></div>
+
+    <!-- CTAs -->
+    <div
+      class="flex flex-wrap gap-4 mb-2 xl:mb-16 animate-slide-up"
+      style="animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards;"
+    >
+      {heroData.ctas.map((cta) => cta.style === 'primary' ? (
+        <a
+          href={withBase(cta.href)}
+          class="inline-flex items-center gap-2 px-7 py-3.5 text-white font-display font-semibold tracking-[2px] uppercase text-sm shadow-glow-md hover:shadow-glow-lg transition-all duration-300 hover:brightness-110"
+          style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);"
+        >
+          {cta.label}
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" set:html={icons['arrow-right']} />
+        </a>
+      ) : (
+        <a
+          href={withBase(cta.href)}
+          class="inline-flex items-center gap-2 px-7 py-3.5 border text-site-text font-display font-semibold tracking-[2px] uppercase text-sm hover:text-white hover:border-site-green transition-all duration-300"
+          style="border-color: var(--color-border); background: var(--bg-surface);"
+        >
+          {cta.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Stats row
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-0 animate-slide-up border border-site-border"
+      style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;"
+    >
+      {[
+        { value: "99.9%", label: "Uptime SLA" },
+        { value: "< 1hr", label: "Response Time" },
+        { value: "100%", label: "Human Support" },
+        { value: "24/7", label: "Monitoring" },
+      ].map((stat, i) => (
+        <div class={`px-6 py-4 ${i < 3 ? "border-r border-site-border" : ""} bg-navy-800`}>
+          <div class="text-2xl font-display font-bold uppercase tracking-wide" style="color: var(--color-primary);">{stat.value}</div>
+          <div class="text-xs font-mono text-site-muted mt-0.5 uppercase tracking-wider">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+    End Stats row -->
+  </div>
+</section>
+
+<!-- Gray band after hero
+<div class="site-band"></div>
+ -->

@@ -1,0 +1,57 @@
+{
+  "welcomeText": "Apex Capital Group",
+  "ctaText": "Investor Inquiry",
+  "navItems": [
+    { "label": "Home", "href": "/", "iconKey": "home" },
+    {
+      "label": "Services",
+      "href": "/services",
+      "iconKey": "server",
+      "children": [
+        { "label": "Acquisition & Intake", "href": "/services/acquisition-intake", "iconKey": "terminal" },
+        { "label": "Operational Efficiency", "href": "/services/operational-efficiency", "iconKey": "network" },
+        { "label": "Portfolio Disposition", "href": "/services/portfolio-disposition", "iconKey": "star" },
+        { "label": "Leadership Transition", "href": "/services/leadership-transition", "iconKey": "support" }
+      ]
+    },
+    { "label": "About", "href": "/about", "iconKey": "user" },
+    {
+      "label": "Blog",
+      "href": "/blog",
+      "iconKey": "book",
+      "children": [
+        { "label": "Posts", "href": "/blog", "iconKey": "book" },
+        { "label": "Categories", "href": "/blog/categories", "iconKey": "grid" },
+        { "label": "Timeline", "href": "/blog/timeline", "iconKey": "clock" }
+      ]
+    },
+    { "label": "Portfolio", "href": "/projects", "iconKey": "monitor" },
+    { "label": "Contact", "href": "/contact", "iconKey": "mail" }
+  ],
+  "footerTagline": "Investor Relations — Voice or Message",
+  "footerLinks": {
+    "Services": [
+      { "label": "Acquisition & Intake", "href": "/services/acquisition-intake" },
+      { "label": "Operational Efficiency", "href": "/services/operational-efficiency" },
+      { "label": "Portfolio Disposition", "href": "/services/portfolio-disposition" },
+      { "label": "Leadership Transition", "href": "/services/leadership-transition" }
+    ],
+    "Company": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Portfolio", "href": "/projects" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "Legal": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" }
+    ]
+  },
+  "sidebarSocialLabel": "Social",
+  "sidebarOtherSitesLabel": "Other Sites",
+  "otherSites": [
+    { "label": "Secure Client Access", "href": "https://client.apexcap.example", "iconKey": "user-outline" },
+    { "label": "Investor Relations", "href": "mailto:ir@apexcap.example", "iconKey": "home-outline" }
+  ]
+}
+

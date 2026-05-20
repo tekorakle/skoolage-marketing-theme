@@ -1,0 +1,405 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import Modal from "@/components/Modal.astro";
+import { fetchBlogPosts } from "@/lib/fetchBlog";
+import { getCollection } from "astro:content";
+import personalData from "@/data/global/personal.json";
+import siteData from "@/data/global/site.json";
+import { withBase } from "@/lib/assetPath";
+import { icons } from "@/lib/icons";
+
+// Local posts from content collection (rendered markdown, served from this site)
+const now = new Date();
+const allLocalPosts = await getCollection("posts");
+const localPosts = (
+  import.meta.env.DEV
+    ? allLocalPosts
+    : allLocalPosts.filter((p) => !p.data.draft && p.data.pubDate <= now)
+).sort((a, b) => {
+  if (a.data.pin !== b.data.pin) return a.data.pin ? -1 : 1;
+  return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+});
+
+// Fetched at build time from {siteData.name} Blog/feed.xml + sitemap
+// When the blog migrates to this domain: swap `href={post.link}` → `href={"/blog/" + post.slug}`
+const posts = await fetchBlogPosts();
+const POSTS_PER_PAGE = 10;
+---
+
+<Layout
+  title={`Blog — ${siteData.name}`}
+  description={`Insights, perspectives, and updates from ${siteData.name}.`}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-site-text transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">Blog</li>
+        </ol>
+      </nav>
+
+      <div class="mb-10">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-site-text mb-4">Blog</h1>
+        <p class="text-site-text-muted text-xl">
+          Perspectives on private equity, operations, and business building from the Apex Capital team.
+        </p>
+      </div>
+
+      <!-- Sub-nav for blog sections -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        <a href={withBase('/blog')} class="px-3 py-1.5 text-xs font-mono rounded-lg border border-site-green/60 bg-site-surface/60 text-site-text transition-colors">All Posts</a>
+        <a href={withBase('/blog/categories')} class="px-3 py-1.5 text-xs font-mono rounded-lg border border-site-border/60 bg-site-surface/30 text-site-muted hover:text-site-text hover:border-site-border transition-colors">Categories</a>
+        <a href={withBase('/blog/timeline')} class="px-3 py-1.5 text-xs font-mono rounded-lg border border-site-border/60 bg-site-surface/30 text-site-muted hover:text-site-text hover:border-site-border transition-colors">Timeline</a>
+      </div>
+
+      {/* ── Local markdown posts (content collection, rendered on this site) ── */}
+      {localPosts.length > 0 && (
+        <div class="mb-10">
+          <h2 class="font-display font-bold text-xl text-site-text uppercase tracking-wider mb-4 flex items-center gap-3">
+            <span class="h-px w-6 bg-electric-cyan/60 inline-block"></span>
+            Published Here
+          </h2>
+          <div class="space-y-5">
+            {localPosts.map((post) => {
+              const slug = post.id.replace(/\.md$/, "");
+              const date = post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+              return (
+                <a
+                  href={withBase(`/blog/${slug}`)}
+                  class="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl border border-site-border/60 bg-site-surface/30 backdrop-blur-sm hover:bg-site-surface/50 hover:border-electric-cyan/20 transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  {post.data.image && (
+                    <div class="sm:w-40 sm:shrink-0 overflow-hidden rounded-lg">
+                      <img
+                        src={withBase(post.data.image.path)}
+                        alt={post.data.image.alt}
+                        class="w-full h-28 sm:h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                      {post.data.pin && (
+                        <span class="inline-flex items-center gap-1 text-[11px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-site-surface border border-electric-cyan/40 text-electric-cyan">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={icons['map-pin']} />
+                          Pinned
+                        </span>
+                      )}
+                      <span class="text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-site-surface border border-site-border/60 text-electric-cyan">
+                        {post.data.category}
+                      </span>
+                      <span class="text-xs text-site-muted font-mono">{date}</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-site-text group-hover:text-electric-cyan transition-colors leading-snug mb-2">
+                      {post.data.title}
+                    </h3>
+                    <p class="text-site-muted text-sm leading-relaxed mb-3">{post.data.description}</p>
+                    {post.data.tags.length > 0 && (
+                      <div class="flex flex-wrap gap-1.5 mt-2">
+                        {post.data.tags.map((tag) => (
+                          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-site-surface border border-site-border/40 text-site-muted hover:text-site-text hover:border-site-border transition-colors">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div class="flex items-center sm:items-start pt-1 shrink-0">
+                    <span class="inline-flex items-center gap-1 text-xs font-medium text-electric-cyan opacity-60 group-hover:opacity-100 transition-opacity">
+                      Read →
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {posts.length === 0 && localPosts.length === 0 && (
+        <p class="text-site-muted font-mono text-sm">
+          Posts unavailable right now — check back soon or visit{" "}
+          <a href={personalData.blog_url} class="text-electric-cyan hover:underline" target="_blank" rel="noopener noreferrer">
+            {siteData.name} Blog
+          </a>{" "}
+          directly.
+        </p>
+      )}
+
+      {posts.length > 0 && (
+        <h2 class="font-display font-bold text-xl text-site-text uppercase tracking-wider mb-4 flex items-center gap-3">
+          <span class="h-px w-6 bg-site-muted/40 inline-block"></span>
+          From the Blog
+        </h2>
+      )}
+
+      {posts.length === 0 && localPosts.length > 0 && (
+        <p class="text-site-muted font-mono text-sm mb-6">
+          External posts unavailable right now — visit{" "}
+          <a href={personalData.blog_url} class="text-electric-cyan hover:underline" target="_blank" rel="noopener noreferrer">
+            {siteData.name} Blog
+          </a>{" "}
+          directly.
+        </p>
+      )}
+
+      {posts.length > 0 && (
+        <p class="text-site-muted font-mono text-xs mb-6" id="page-summary">
+          Showing posts <span id="range-start">1</span>–<span id="range-end">{Math.min(POSTS_PER_PAGE, posts.length)}</span> of <span>{posts.length}</span>
+        </p>
+      )}
+
+      <div class="space-y-5" id="posts-container">
+        {posts.map((post, index) => (
+          <div
+            role="button"
+            tabindex="0"
+            data-post-index={index}
+            class={`post-card group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl border bg-site-surface/30 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 cursor-pointer ${post.border} hover:bg-site-surface/50${index >= POSTS_PER_PAGE ? " hidden" : ""}`}
+          >
+            {post.image && (
+              <div class="sm:w-40 sm:shrink-0 overflow-hidden rounded-lg">
+                <img
+                  src={post.image}
+                  alt=""
+                  class="w-full h-28 sm:h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            <div class="flex-1 min-w-0">
+              {/* Category + date + read time row */}
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class={`text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-site-surface border border-site-border/60 ${post.accent}`}>
+                  {post.category}
+                </span>
+                <span class="text-xs text-site-muted font-mono">{post.date}</span>
+                <span class="text-xs text-site-muted">·</span>
+                <span class="text-xs text-site-muted">{post.readTime}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-site-text mb-2 group-hover:text-electric-cyan transition-colors leading-snug">
+                {post.title}
+              </h3>
+              <p class="text-site-muted text-sm leading-relaxed mb-3">{post.excerpt}</p>
+
+              {/* Tags row */}
+              {post.tags && post.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1.5 mt-2">
+                  {post.tags.map((tag: string) => (
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-site-surface border border-site-border/40 text-site-muted hover:text-site-text hover:border-site-border transition-colors">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div class="flex items-center sm:items-start pt-1 shrink-0">
+              <span class={`inline-flex items-center gap-1 text-xs font-medium ${post.accent} opacity-60 group-hover:opacity-100 transition-opacity`}>
+                Open →
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pagination controls */}
+      {posts.length > POSTS_PER_PAGE && (
+        <div class="flex items-center justify-between mt-10 pt-6 border-t border-site-border/40" id="pagination">
+          <button
+            id="prev-btn"
+            disabled
+            class="flex items-center gap-2 px-4 py-2 rounded-lg border border-site-border/60 bg-site-surface/30 text-site-muted font-mono text-xs transition-all hover:bg-site-surface/60 hover:text-site-text disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-site-surface/30 disabled:hover:text-site-muted"
+          >
+            ← Previous
+          </button>
+
+          <div class="flex items-center gap-1.5" id="page-dots">
+            {Array.from({ length: Math.ceil(posts.length / POSTS_PER_PAGE) }).map((_, i) => (
+              <button
+                data-page={i}
+                class={`page-dot w-2 h-2 rounded-full transition-all ${i === 0 ? "bg-electric-cyan w-4" : "bg-site-border/60 hover:bg-site-border"}`}
+              />
+            ))}
+          </div>
+
+          <button
+            id="next-btn"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg border border-site-border/60 bg-site-surface/30 text-site-muted font-mono text-xs transition-all hover:bg-site-surface/60 hover:text-site-text disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-site-surface/30 disabled:hover:text-site-muted"
+          >
+            Next →
+          </button>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <Modal id="blog-modal">
+    <a id="blog-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-cta">
+      <span class="font-display uppercase tracking-[2px] font-semibold">Read Post</span>
+      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" set:html={icons['external-link']} />
+    </a>
+  </Modal>
+
+  <Footer />
+</Layout>
+
+<script is:inline type="application/json" id="blog-posts-data" set:html={JSON.stringify({
+  postsPerPage: POSTS_PER_PAGE,
+  totalPosts: posts.length,
+  posts: posts.map(p => ({
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    date: p.date,
+    readTime: p.readTime,
+    link: p.link,
+    image: p.image ?? null,
+    tags: p.tags ?? [],
+  })),
+}).replace(/<\/script>/gi, '<\\/script>')} />
+
+<script>
+  interface BlogPostData {
+    title: string;
+    excerpt: string;
+    category: string;
+    date: string;
+    readTime: string;
+    link: string;
+    image: string | null;
+    tags: string[];
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    if (!document.getElementById('posts-container')) return;
+
+    const el = document.getElementById('blog-posts-data') as HTMLElement | null;
+    const raw: { postsPerPage?: number; totalPosts?: number; posts?: BlogPostData[] } =
+      el ? JSON.parse(el.textContent ?? '{}') : {};
+    const postsPerPage = raw.postsPerPage ?? 10;
+    const totalPosts = raw.totalPosts ?? 0;
+    const blogPosts: BlogPostData[] = raw.posts ?? [];
+    const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+    const cards = document.querySelectorAll<HTMLElement>('.post-card');
+    const prevBtn = document.getElementById('prev-btn') as HTMLButtonElement | null;
+    const nextBtn = document.getElementById('next-btn') as HTMLButtonElement | null;
+    const rangeStart = document.getElementById('range-start');
+    const rangeEnd = document.getElementById('range-end');
+    const pageDots = document.querySelectorAll<HTMLElement>('.page-dot');
+
+    let currentPage = 0;
+
+    function showPage(page: number) {
+      const start = page * postsPerPage;
+      const end = start + postsPerPage;
+
+      cards.forEach((card, i) => {
+        card.classList.toggle('hidden', i < start || i >= end);
+      });
+
+      if (rangeStart) rangeStart.textContent = String(start + 1);
+      if (rangeEnd) rangeEnd.textContent = String(Math.min(end, totalPosts));
+
+      if (prevBtn) prevBtn.disabled = page === 0;
+      if (nextBtn) nextBtn.disabled = page === totalPages - 1;
+
+      pageDots.forEach((dot, i) => {
+        dot.classList.toggle('bg-electric-cyan', i === page);
+        dot.classList.toggle('w-4', i === page);
+        dot.classList.toggle('bg-site-border/60', i !== page);
+        dot.classList.toggle('w-2', i !== page);
+      });
+
+      const url = new URL(location.href);
+      if (page === 0) url.searchParams.delete('page');
+      else url.searchParams.set('page', String(page));
+      history.replaceState(null, '', url);
+
+      document.getElementById('posts-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      currentPage = page;
+    }
+
+    prevBtn?.addEventListener('click', () => { if (currentPage > 0) showPage(currentPage - 1); });
+    nextBtn?.addEventListener('click', () => { if (currentPage < totalPages - 1) showPage(currentPage + 1); });
+
+    pageDots.forEach(dot => {
+      dot.addEventListener('click', () => showPage(Number(dot.dataset.page)));
+    });
+
+    // ── Blog post modal ─────────────────────────────────────────
+    function openBlogModal(idx: number) {
+      const p = blogPosts[idx];
+      if (!p) return;
+
+      const hero = document.getElementById('blog-modal-hero');
+      const safeImg = p.image && /^(https?:\/\/|\/)[^\s'"()]+$/.test(p.image) ? p.image : null;
+      if (hero) {
+        if (safeImg) {
+          hero.style.backgroundImage = `url("${safeImg}")`;
+          hero.style.display = '';
+        } else {
+          hero.style.backgroundImage = '';
+          hero.style.display = 'none';
+        }
+      }
+
+      const cat      = document.getElementById('blog-modal-cat');
+      const title    = document.getElementById('blog-modal-title');
+      const subtitle = document.getElementById('blog-modal-subtitle');
+      const desc     = document.getElementById('blog-modal-desc');
+      const tagsEl   = document.getElementById('blog-modal-tags');
+      const link     = document.getElementById('blog-modal-link') as HTMLAnchorElement | null;
+      const modal    = document.getElementById('blog-modal');
+      const closeBtn = document.getElementById('blog-modal-close');
+      const box      = document.getElementById('blog-modal-box');
+
+      if (cat)      cat.textContent      = p.category;
+      if (title)    title.textContent    = p.title;
+      if (subtitle) subtitle.textContent = p.date + (p.readTime ? ' · ' + p.readTime : '');
+      if (desc)     desc.textContent     = p.excerpt || '';
+
+      if (tagsEl) {
+        const frag = document.createDocumentFragment();
+        (p.tags || []).forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'modal-tag font-mono';
+          span.textContent = '#' + t;
+          frag.appendChild(span);
+        });
+        tagsEl.replaceChildren(frag);
+      }
+
+      if (link) link.href = p.link;
+
+      if (modal) {
+        modal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+        void box?.offsetWidth;
+        modal.classList.add('modal-open');
+      }
+      closeBtn?.focus();
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => openBlogModal(parseInt(card.dataset.postIndex ?? '0', 10)));
+      card.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openBlogModal(parseInt(card.dataset.postIndex ?? '0', 10));
+        }
+      });
+    });
+
+    // Restore page from URL on load
+    const params = new URLSearchParams(location.search);
+    const initialPage = Math.max(0, Math.min(totalPages - 1, Number(params.get('page') ?? 0)));
+    if (initialPage > 0) showPage(initialPage);
+  });
+</script>

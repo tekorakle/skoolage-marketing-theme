@@ -1,0 +1,507 @@
+---
+import Sidebar from "@/components/Sidebar.astro";
+import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
+import "@/styles/global.css";
+import siteData from "@/data/global/site.json";
+import { withBase } from "@/lib/assetPath";
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  schema?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description = siteData.description,
+  ogImage,
+  schema,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? siteData.url);
+// If SITE_URL is misconfigured as http://, upgrade to https:// to prevent
+// mixed content errors when the page is served over TLS.
+if (canonicalURL.protocol === 'http:') canonicalURL.protocol = 'https:';
+const fullTitle = title === siteData.name ? title : `${title} | ${siteData.name}`;
+
+const siteOrigin = Astro.site?.origin ?? siteData.url;
+const resolvedOgImage = ogImage ?? `${siteOrigin}/images/favicons/android-chrome-512x512.png`;
+const ogImageAlt = `${siteData.name} — Private Holding Company`;
+
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteData.url}/#business`,
+      name: siteData.name,
+      legalName: siteData.legalName,
+      description: description,
+      url: siteData.url,
+      telephone: siteData.phone,
+      email: siteData.email,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: siteData.addressLocality,
+        addressRegion: siteData.addressRegion,
+        addressCountry: "US",
+      },
+      areaServed: {
+        "@type": "State",
+        name: "Colorado",
+      },
+      founder: { "@id": `${siteData.url}/#founder` },
+      sameAs: siteData.sameAs,
+      serviceType: siteData.serviceTypes,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteOrigin}/images/favicons/android-chrome-512x512.png`,
+        width: 512,
+        height: 512,
+      },
+      image: `${siteOrigin}/images/favicons/android-chrome-512x512.png`,
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteData.url}/#founder`,
+      name: siteData.founderName,
+      email: siteData.email,
+      url: siteData.url,
+      jobTitle: "Founder",
+      worksFor: { "@id": `${siteData.url}/#business` },
+      sameAs: siteData.sameAs,
+    },
+  ],
+};
+
+const schemaData = schema || defaultSchema;
+
+function safeJsonLd(obj: Record<string, unknown>): string {
+  return JSON.stringify(obj).replace(/<\/script>/gi, "<\\/script>");
+}
+---
+
+<!doctype html>
+<!--!
+
+  This is the Apex Capital Group holding company site.
+  We are a real and real serious financial firm. :-D
+
+-->
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={siteData.founderName} />
+    <meta name="application-name" content={siteData.name} />
+    <meta name="theme-color" content="#0a1628" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="geo.region" content={`US-${siteData.addressRegion}`} />
+    <meta name="geo.placename" content={`${siteData.addressLocality}, ${siteData.addressRegion}`} />
+    <meta name="contact" content={siteData.email} />
+    <link rel="canonical" href={canonicalURL} />
+    <!-- Astro Fonts API: self-hosted Inter + Oswald, downloaded at build time.
+         No explicit preload — <ClientRouter /> re-emits preload tags on every
+         client-side page swap; fonts are already cached by then, so the browser
+         can't match the duplicate preload to a font-face fetch and fires
+         "preloaded font not used" warnings. Fonts still load normally. -->
+    <Font cssVariable="--font-inter" />
+    <Font cssVariable="--font-oswald" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:site_name" content={siteData.name} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+    {siteData.twitter && <meta name="twitter:site" content={siteData.twitter} />}
+    {siteData.twitter && <meta name="twitter:creator" content={siteData.twitter} />}
+
+    <title>{fullTitle}</title>
+
+    <!-- Favicon: GIF first so animated-capable browsers prefer it -->
+    <link rel="icon" type="image/gif"     href={withBase('/images/favicons/favicon-animated.gif')} />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="icon"                      href={withBase('/images/favicons/favicon.ico')} sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96"  href={withBase('/images/favicons/favicon-96x96.png')} />
+    <link rel="icon" type="image/png" sizes="32x32"  href={withBase('/images/favicons/favicon-32x32.png')} />
+    <link rel="icon" type="image/png" sizes="16x16"  href={withBase('/images/favicons/favicon-16x16.png')} />
+    <link rel="apple-touch-icon" sizes="180x180" href={withBase('/images/favicons/apple-icon-180x180.png')} />
+    <link rel="apple-touch-icon" sizes="152x152" href={withBase('/images/favicons/apple-icon-152x152.png')} />
+    <link rel="apple-touch-icon" sizes="144x144" href={withBase('/images/favicons/apple-icon-144x144.png')} />
+    <link rel="apple-touch-icon" sizes="120x120" href={withBase('/images/favicons/apple-icon-120x120.png')} />
+    <link rel="apple-touch-icon" sizes="114x114" href={withBase('/images/favicons/apple-icon-114x114.png')} />
+    <link rel="apple-touch-icon" sizes="76x76"   href={withBase('/images/favicons/apple-icon-76x76.png')} />
+    <link rel="apple-touch-icon" sizes="72x72"   href={withBase('/images/favicons/apple-icon-72x72.png')} />
+    <link rel="apple-touch-icon" sizes="60x60"   href={withBase('/images/favicons/apple-icon-60x60.png')} />
+    <link rel="apple-touch-icon" sizes="57x57"   href={withBase('/images/favicons/apple-icon-57x57.png')} />
+    <link rel="manifest" href={withBase('/manifest.json')} />
+    <meta name="msapplication-config" content={withBase('/browserconfig.xml')} />
+
+    <!-- Schema.org JSON-LD -->
+    <script is:inline type="application/ld+json" set:html={safeJsonLd(schemaData)} />
+
+    <!-- Apply sidebar + theme state before first paint to prevent flash -->
+    <script is:inline>
+      (function () {
+        if (localStorage.getItem("sidebar-collapsed") === "1") {
+          document.documentElement.classList.add("sidebar-collapsed");
+        }
+        var saved = localStorage.getItem("site-theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light-mode");
+        }
+      })();
+    </script>
+
+    <script is:inline>
+      if (!window.__apexBannerShown) {
+        window.__apexBannerShown = true;
+        var art = [
+      '    #    ',
+      '  #####  ',
+      ' #  #  # ',
+      ' #  #    ',
+      '  #####  ',
+      '    #  # ',
+      ' #  #  # ',
+      '  #####  ',
+      '    #    ',
+        ].join('\n');
+        console.log('%c' + art, 'color:#C5A840;font-family:monospace;font-size:11px;line-height:1.4;');
+        console.log('%c Greetings.', 'color:#ffffff;font-weight:bold;font-size:14px;');
+        console.log('%cApex Capital Group — Private Holding Company\nInvestor relations: ir@apexcap.example', 'color:#94a3b8;font-size:12px;');
+      }
+    </script>
+
+    <ClientRouter />
+  </head>
+
+  <body class="bg-navy-900 text-site-text font-sans antialiased">
+    <!-- Skip navigation — WCAG 2.4.1 -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      style="background: var(--color-primary);"
+    >Skip to main content</a>
+
+    <!-- Layout: Sidebar + Main -->
+    <div class="flex min-h-screen">
+      <Sidebar transition:persist />
+
+      <!-- Main content area - offset by sidebar width -->
+      <main
+        id="main-content"
+        tabindex="-1"
+        class="flex-1 ml-0 lg:ml-60 xl:ml-64"
+        style="transition: margin-left 250ms cubic-bezier(0.4,0,0.2,1);"
+      >
+        <slot />
+      </main>
+    </div>
+
+    <!-- Mobile sidebar overlay -->
+    <div
+      id="sidebar-overlay"
+      class="fixed inset-0 z-30 bg-navy-950/80 hidden lg:hidden"
+      aria-hidden="true"
+    ></div>
+
+    <script>
+      const html = document.documentElement;
+
+      // ── Re-apply persisted <html> classes after every View Transition swap ──
+      // Astro's page-swap resets <html> attributes to the incoming page's values,
+      // wiping any dynamically-added classes (light-mode, sidebar-collapsed).
+      // astro:after-swap fires after the DOM is replaced but before the page is
+      // shown, giving us a chance to restore them from localStorage.
+      document.addEventListener("astro:after-swap", () => {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light") {
+          html.classList.add("light-mode");
+        } else {
+          html.classList.remove("light-mode");
+        }
+        if (localStorage.getItem("sidebar-collapsed") === "1") {
+          html.classList.add("sidebar-collapsed");
+        } else {
+          html.classList.remove("sidebar-collapsed");
+        }
+      });
+
+      // ── Flyout shared timer ──────────────────────────────────────────────────
+      // Declared at module scope so the flyout panel's mouseenter handler (bound
+      // once) and the summary's mouseleave handler (re-bound each navigation via
+      // bindNavParentListeners) both reference the same timer. Previously these
+      // were re-declared inside bindNavParentListeners, shadowing the outer timer
+      // and making mouseenter on the flyout unable to cancel the summary's hide.
+      let flyoutTimer: ReturnType<typeof setTimeout> | null = null;
+      function clearFlyoutTimer() {
+        if (flyoutTimer) { clearTimeout(flyoutTimer); flyoutTimer = null; }
+      }
+      function hideFlyout(delay = 120) {
+        clearFlyoutTimer();
+        flyoutTimer = setTimeout(() => {
+          const el = document.getElementById("sidebar-flyout");
+          if (el) { el.style.display = "none"; el.setAttribute("aria-hidden", "true"); }
+        }, delay);
+      }
+
+      // ── Bind interactive listeners once on document ─────────────────────────
+      // All click handlers delegate on `document` rather than on specific
+      // element references. This survives transition:persist edge cases where
+      // the sidebar element may be recreated (e.g. when navigating back to the
+      // homepage whose active-nav markup differs from the persisted node).
+      if (!(window as any).__sidebarListenersBound) {
+        (window as any).__sidebarListenersBound = true;
+
+        // ── Mobile open/close ─────────────────────────────────────────────────
+        // Always look up sidebar/overlay by ID so we get the live element even
+        // if transition:persist swapped it out between navigations.
+        function openSidebar() {
+          document.getElementById("sidebar")?.classList.remove("-translate-x-full");
+          document.getElementById("sidebar-overlay")?.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+          const toggle = document.getElementById("sidebar-toggle");
+          if (toggle) { toggle.setAttribute("aria-expanded", "true"); toggle.setAttribute("aria-label", "Close navigation"); }
+        }
+        function closeSidebar() {
+          document.getElementById("sidebar")?.classList.add("-translate-x-full");
+          document.getElementById("sidebar-overlay")?.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+          const toggle = document.getElementById("sidebar-toggle");
+          if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.setAttribute("aria-label", "Open navigation"); }
+        }
+
+        document.addEventListener("astro:before-preparation", () => {
+          if (window.innerWidth < 1024) closeSidebar();
+        });
+
+        // ── Desktop collapse ──────────────────────────────────────────────────
+        function setCollapsed(collapsed: boolean) {
+          html.classList.toggle("sidebar-collapsed", collapsed);
+          localStorage.setItem("sidebar-collapsed", collapsed ? "1" : "0");
+          const collapseBtn = document.getElementById("sidebar-collapse-btn");
+          if (collapseBtn) collapseBtn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+          if (collapsed) {
+            document.querySelectorAll("#sidebar details[data-nav-parent]").forEach((d) => {
+              (d as HTMLDetailsElement).open = false;
+            });
+          }
+        }
+
+        // Sync with the value already applied by the inline <head> script
+        const savedCollapsed = localStorage.getItem("sidebar-collapsed") === "1";
+        if (html.classList.contains("sidebar-collapsed") !== savedCollapsed) {
+          setCollapsed(savedCollapsed);
+        }
+
+        // ── Unified document-level click delegation ───────────────────────────
+        // Handles: hamburger toggle, overlay dismiss, collapse button, theme toggle.
+        // Using document ensures clicks are caught regardless of which DOM node
+        // is currently in the tree.
+        document.addEventListener("click", (e) => {
+          const target = e.target as Element;
+
+          if (target?.closest("#sidebar-toggle")) {
+            const sidebar = document.getElementById("sidebar");
+            sidebar?.classList.contains("-translate-x-full") ? openSidebar() : closeSidebar();
+            return;
+          }
+
+          if (target?.closest("#sidebar-overlay")) {
+            closeSidebar();
+            return;
+          }
+
+          if (target?.closest("#sidebar-collapse-btn")) {
+            setCollapsed(!html.classList.contains("sidebar-collapsed"));
+            return;
+          }
+
+          if (target?.closest("#theme-toggle")) {
+            const isLight = html.classList.contains("light-mode");
+            html.classList.add("theme-transitioning");
+            html.classList.toggle("light-mode", !isLight);
+            localStorage.setItem("site-theme", isLight ? "dark" : "light");
+            setTimeout(() => html.classList.remove("theme-transitioning"), 300);
+            const themeBtn = document.getElementById("theme-toggle");
+            if (themeBtn) themeBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+            return;
+          }
+        });
+
+        // ── Flyout submenu (collapsed icon-only mode) ─────────────────────────
+        // Timer functions live at module scope — see comment above the if-block.
+        const flyout      = document.getElementById("sidebar-flyout");
+        flyout?.addEventListener("mouseenter", clearFlyoutTimer);
+        flyout?.addEventListener("mouseleave", () => hideFlyout());
+
+        // Flyout hover + collapsed-mode nav-parent click are bound on
+        // astro:page-load (below) so they always target the live elements.
+      }
+
+      // ── Per-navigation bindings ─────────────────────────────────────────────
+      // Collapsed-mode nav-parent click and flyout hover must be re-bound each
+      // navigation because these listeners sit on sidebar child elements that
+      // may be recreated by transition:persist on certain navigations.
+      function bindNavParentListeners() {
+        const flyout      = document.getElementById("sidebar-flyout");
+        const flyoutInner = document.getElementById("sidebar-flyout-inner");
+
+        // Base path for correct navigation in subpath deployments.
+        // data-href on <details> elements stores the raw path (e.g. "/services"),
+        // so we must prepend the base (e.g. "/subdirectory") before navigating.
+        const siteBase = (document.getElementById("sidebar-logo-gif") as HTMLElement | null)?.dataset.base ?? "/";
+        const basePath = siteBase.replace(/\/?$/, "");
+
+        function showFlyout(detailsEl: Element) {
+          if (!flyout || !flyoutInner || !html.classList.contains("sidebar-collapsed")) return;
+          const summary = detailsEl.querySelector("summary");
+          if (!summary) return;
+          const childLinks = [...detailsEl.querySelectorAll("a[data-nav-link]")];
+          if (childLinks.length === 0) return;
+
+          flyoutInner.innerHTML = "";
+          const title = document.createElement("p");
+          title.textContent = summary.getAttribute("title") ?? "";
+          flyoutInner.appendChild(title);
+          childLinks.forEach((link) => {
+            const clone = link.cloneNode(true) as HTMLElement;
+            clone.removeAttribute("style");
+            flyoutInner.appendChild(clone);
+          });
+
+          const rect = summary.getBoundingClientRect();
+          flyout.style.top = `${rect.top}px`;
+          flyout.style.display = "block";
+          flyout.setAttribute("aria-hidden", "false");
+        }
+
+        document.querySelectorAll("[data-nav-parent]").forEach((details) => {
+          // Clone node to drop any stale listeners from a previous navigation
+          const summary = details.querySelector("summary");
+          const rawHref = details.getAttribute("data-href");
+          // Prepend base so collapsed-mode navigation lands on the correct URL
+          const href = rawHref ? basePath + rawHref : null;
+
+          if (summary) {
+            const freshSummary = summary.cloneNode(true) as HTMLElement;
+            summary.replaceWith(freshSummary);
+
+            freshSummary.addEventListener("click", (e) => {
+              if (html.classList.contains("sidebar-collapsed") && href) {
+                e.preventDefault();
+                window.location.href = href;
+              }
+            });
+            freshSummary.addEventListener("mouseenter", () => {
+              if (!html.classList.contains("sidebar-collapsed")) return;
+              clearFlyoutTimer();
+              showFlyout(details);
+            });
+            freshSummary.addEventListener("mouseleave", () => hideFlyout());
+          }
+        });
+      }
+
+      // ── Active nav highlighting ─────────────────────────────────────────────
+      function updateNavActive() {
+        const path = window.location.pathname;
+        const isCollapsed = html.classList.contains("sidebar-collapsed");
+
+        // Derive the home href from the sidebar's data-base attribute (set at build time).
+        // When BASE_PATH is set (e.g. /subdirectory/), withBase('/') produces '/subdirectory/' not '/'.
+        // Without this, path.startsWith('/subdirectory/') matches every page and Home is always active.
+        const siteBase = (document.getElementById("sidebar-logo-gif") as HTMLElement | null)?.dataset.base ?? "/";
+        const homeHref = siteBase.replace(/\/?$/, ""); // '' for root, '/subdirectory' for subpath
+
+        function matches(href: string | null): boolean {
+          if (!href) return false;
+          const norm = href.replace(/\/$/, "");
+          // Normalise raw paths (data-href, no base prefix) to full paths.
+          // Anchor hrefs are already base-prefixed via withBase(); data-href on
+          // <details> elements uses the raw path (e.g. "/services"), so prepend
+          // the base when the href doesn't already start with it.
+          const full = (homeHref && !norm.startsWith(homeHref)) ? homeHref + norm : norm;
+          if (full === homeHref) {
+            return path.replace(/\/$/, "") === homeHref;
+          }
+          return path === full || path.startsWith(full + "/");
+        }
+
+        document.querySelectorAll(".sidebar-nav-item").forEach((item) => {
+          const details = item.querySelector("details[data-nav-parent]");
+
+          if (details) {
+            const active = matches(details.getAttribute("data-href"));
+            const summary = details.querySelector("summary");
+
+            if (summary) {
+              summary.classList.toggle("border-site-green", active);
+              summary.classList.toggle("text-white", active);
+              summary.classList.toggle("bg-site-surface", active);
+              summary.classList.toggle("border-transparent", !active);
+              summary.classList.toggle("text-site-muted", !active);
+              const icon = summary.querySelector("span.flex-shrink-0");
+              if (icon instanceof HTMLElement) icon.style.color = active ? "var(--color-primary)" : "";
+            }
+
+            // Only open <details> when sidebar is expanded
+            (details as HTMLDetailsElement).open = active && !isCollapsed;
+
+            details.querySelectorAll("a[data-nav-link]").forEach((child) => {
+              const childActive = matches(child.getAttribute("href"));
+              child.classList.toggle("text-white", childActive);
+              child.classList.toggle("bg-site-surface", childActive);
+              child.classList.toggle("text-site-muted", !childActive);
+              if (child instanceof HTMLElement)
+                child.style.color = childActive ? "var(--color-primary)" : "";
+            });
+          } else {
+            const a = item.querySelector("a[data-nav-link]");
+            if (!a) return;
+            const active = matches(a.getAttribute("href"));
+            a.classList.toggle("border-site-green", active);
+            a.classList.toggle("text-white", active);
+            a.classList.toggle("bg-site-surface", active);
+            a.classList.toggle("border-transparent", !active);
+            a.classList.toggle("text-site-muted", !active);
+            const icon = a.querySelector("span.flex-shrink-0");
+            if (icon instanceof HTMLElement) icon.style.color = active ? "var(--color-primary)" : "";
+          }
+        });
+      }
+
+      document.addEventListener("astro:page-load", () => {
+        bindNavParentListeners();
+        updateNavActive();
+
+        // Sync aria-labels to actual state on every navigation
+        const isCollapsed = html.classList.contains("sidebar-collapsed");
+        const collapseBtn = document.getElementById("sidebar-collapse-btn");
+        if (collapseBtn) collapseBtn.setAttribute("aria-label", isCollapsed ? "Expand sidebar" : "Collapse sidebar");
+
+        const isLight = html.classList.contains("light-mode");
+        const themeBtn = document.getElementById("theme-toggle");
+        if (themeBtn) themeBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+      });
+    </script>
+  </body>
+</html>

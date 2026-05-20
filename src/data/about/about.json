@@ -1,0 +1,86 @@
+{
+  "pageTitle": "About Apex Capital Group",
+  "pageDescription": "Apex Capital Group is a private holding company that acquires, operates, and strategically exits businesses across multiple sectors. We deploy capital with discipline and manage operations with intention.",
+
+  "contactBar": {
+    "items": [
+      { "label": "IR Email",    "value": "ir@apexcap.example",   "href": "mailto:ir@apexcap.example" },
+      { "label": "Phone",       "value": "(000) 000-0000",         "href": "tel:+10000000000" },
+      { "label": "Location",    "value": "New York, New York",     "href": null }
+    ]
+  },
+
+  "paragraphs": [
+    "Apex Capital Group was formed to do one thing well: identify businesses with strong fundamentals and underutilized potential, acquire them, and make them perform. We are not a turnaround shop. We are not a strip-and-flip operation. We are operators who happen to own companies.",
+    "Our portfolio spans manufacturing, services, technology, media, and real estate. What these companies have in common is not their sector — it is the situation we found them in: ready for the next chapter, waiting for the right partner to write it.",
+    "We take board seats, we hire and replace leadership when necessary, we optimize costs without destroying culture, and we plan for exits from the day we close. This is not complicated. It is simply disciplined capital allocation paired with operational seriousness. Most people find that combination more rare than it should be."
+  ],
+
+  "pillarsHeading": "What Apex Capital Does",
+  "pillars": [
+    {
+      "title": "Acquisition & Intake",
+      "desc": "Sourcing, diligence, deal structuring, and portfolio integration across sectors and transaction sizes.",
+      "icon": "building-office"
+    },
+    {
+      "title": "Operational Efficiency",
+      "desc": "Post-close operational assessment, cost structure optimization, and KPI-driven performance management.",
+      "icon": "chart-bar-square"
+    },
+    {
+      "title": "Portfolio Disposition",
+      "desc": "Exit strategy development, M&A advisory, buyer identification, and transaction management.",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Leadership Transition",
+      "desc": "Executive assessment, onboarding, board governance, and stakeholder communication management.",
+      "icon": "user-plus"
+    }
+  ],
+
+  "stats": [
+    { "value": "20+", "label": "Years Experience" },
+    { "value": "12+", "label": "Portfolio Companies" },
+    { "value": "5",   "label": "Active Sectors" },
+    { "value": "LLC", "label": "Apex Capital Group, LLC" }
+  ],
+
+  "clientTypes": {
+    "eyebrow": "Who We Work With",
+    "heading": "Built for businesses at an inflection point.",
+    "body": "Our portfolio companies come to us through various paths — founder succession, corporate divestitures, distressed situations, and competitive acquisitions. What they share is a need for the right owner at the right time.",
+    "items": [
+      { "label": "Family-Owned Businesses" },
+      { "label": "Corporate Divestitures" },
+      { "label": "Management Buyouts" },
+      { "label": "Distressed & Turnaround" },
+      { "label": "Founder Succession" },
+      { "label": "Secondary Buyouts" }
+    ]
+  },
+
+  "capabilitiesShowcase": {
+    "eyebrow": "Full Capabilities",
+    "heading": "What We Do.",
+    "subheading": "A cross-section of the disciplines we apply across every company in our portfolio. Click any card to read more."
+  },
+
+  "techStackHeading": "Sectors we know well",
+  "techStackGroups": [
+    { "cat": "Manufacturing",   "items": ["Industrial Supply", "Food Processing", "Contract Manufacturing", "Light Assembly", "Co-Manufacturing", "Specialty Chemicals", "Metal Fabrication", "Plastics & Composites"] },
+    { "cat": "Services",        "items": ["Healthcare Staffing", "IT Services", "Field Services", "Business Process Outsourcing", "Environmental Services", "Facilities Management", "Professional Services"] },
+    { "cat": "Technology",      "items": ["SaaS", "Managed Services", "Enterprise Software", "IoT & Connected Devices", "Data & Analytics", "Digital Transformation", "Platform Businesses"] },
+    { "cat": "Distribution",    "items": ["Industrial Distribution", "Food & Beverage", "Last-Mile Logistics", "Third-Party Logistics", "Cold Chain", "E-commerce Fulfillment"] },
+    { "cat": "Real Estate",     "items": ["Light Industrial", "Flex Commercial", "Net Lease", "Sale-Leaseback", "Owner-User", "Development Land"] },
+    { "cat": "Media",           "items": ["Regional Publishing", "Digital Media", "Events & Conferences", "Trade Publications", "Newsletters", "Broadcast"] }
+  ],
+
+  "cta": {
+    "heading": "Ready to discuss your company or investment thesis?",
+    "body": "We review all serious inquiries and respond to those that fit our mandate. If it fits, we move quickly.",
+    "label": "Contact Investor Relations →",
+    "href": "/contact"
+  }
+}

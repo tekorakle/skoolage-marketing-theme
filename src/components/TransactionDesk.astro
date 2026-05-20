@@ -1,0 +1,741 @@
+---
+import personalData from '@/data/global/personal.json';
+import siteData from '@/data/global/site.json';
+import deskData from '@/data/home/transaction-desk.json';
+import { withBase } from '../lib/assetPath';
+import '../styles/apex-chat.css';
+import { icons } from '../lib/icons';
+
+const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chatScripts.length)];
+---
+
+<div class="site-band"></div>
+
+<section id="transaction-desk" aria-labelledby="transaction-desk-heading" class="py-16 lg:py-24 relative" style="background: var(--bg-deep);">
+
+  <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgb(var(--primary-ch) / 0.025) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--primary-ch) / 0.025) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-12">
+
+    <div class="flex items-center gap-3 mb-3">
+      <div class="h-px w-8" style="background: var(--color-primary);"></div>
+      <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">{deskData.sectionLabel}</span>
+    </div>
+    <h2 id="transaction-desk-heading" class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-wide mb-10">
+      {deskData.headingPrefix} <span style="color: var(--color-primary);">{deskData.headingAccent}</span>
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+      <!-- Left: copy -->
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2">
+          <span class="relative flex h-2 w-2" aria-hidden="true">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--color-primary);"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2" style="background: var(--color-primary);"></span>
+          </span>
+          <span class="text-[10px] font-mono font-bold uppercase tracking-[3px] text-site-muted">Apex</span>
+        </div>
+
+        <p class="font-display font-bold text-2xl lg:text-3xl text-site-text leading-snug">
+          {deskData.tagline}
+        </p>
+
+        <p class="text-sm text-site-text-muted leading-relaxed">
+          {deskData.description}
+        </p>
+
+        <ul class="space-y-3">
+          {deskData.services.map(item => (
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgb(var(--primary-ch) / 0.1);">
+                <svg aria-hidden="true" class="w-3 h-3" style="color: var(--color-primary);" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" set:html={icons['check']} />
+              </div>
+              <span class="text-sm text-site-muted leading-relaxed">
+                <strong class="text-site-text font-medium">{item.title}</strong> — {item.desc}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="flex items-center gap-6 py-4 border-t border-b border-site-border/30">
+          {deskData.stats.map((stat, i) => (
+            <>
+              {i > 0 && <div class="w-px h-10 bg-site-border/40"></div>}
+              <div class="flex flex-col gap-0.5">
+                <span class="text-2xl font-bold font-mono" style="color: var(--color-primary);">{stat.value}</span>
+                <span class="text-[10px] font-mono uppercase tracking-[2px] text-site-muted">{stat.label}</span>
+              </div>
+            </>
+          ))}
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href={personalData.apex_url} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-white font-display font-semibold text-sm tracking-[2px] uppercase shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:brightness-110"
+            style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+            {deskData.visitButtonLabel}
+            <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" set:html={icons['arrow-right']} />
+          </a>
+          <a href={`mailto:${personalData.apex_email}`} class="text-sm font-mono text-site-muted hover:text-site-green transition-colors">
+            {personalData.apex_email}
+          </a>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           RIGHT: Chat window — single pane,
+           fixed height, internal scroll.
+           ═══════════════════════════════════════ -->
+      <div class="flex justify-center lg:justify-end">
+
+        <div class="c-window">
+
+          <!-- Head box: avatar + name + action icons + ellipsis dropdown -->
+          <div class="c-head">
+            <div class="c-head-who">
+              <div class="c-ava" aria-hidden="true">A</div>
+              <div>
+                <div class="c-head-name">{deskData.chatHeader}</div>
+                <div class="c-head-sub">
+                  <span class="c-pulse" aria-hidden="true"></span>
+                  {deskData.chatOnlineStatus}
+                </div>
+              </div>
+            </div>
+
+            <div class="c-head-icons">
+              <a href={`tel:${siteData.phone}`} class="c-icon-btn" aria-label="Call us">
+                <svg aria-hidden="true" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" set:html={icons['phone']} />
+              </a>
+              <a href={`mailto:${personalData.apex_email}`} class="c-icon-btn" aria-label="Email us">
+                <svg aria-hidden="true" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" set:html={icons['envelope']} />
+              </a>
+              <!-- Ellipsis / settings (original .setting-drop toggle) -->
+              <div class="c-ellipsis-wrap">
+                <button class="c-icon-btn" id="chatSettBtn" aria-label="More options" aria-expanded="false" aria-controls="chatSettDrop">
+                  <svg aria-hidden="true" width="15" height="15" fill="currentColor" viewBox="0 0 24 24" set:html={icons['ellipsis-v']} />
+                </button>
+                <div class="c-settings-drop" id="chatSettDrop">
+                  <a href={personalData.apex_url} target="_blank" rel="noopener noreferrer">Visit Apex</a>
+                  <a href={`mailto:${personalData.apex_email}`}>Email Support</a>
+                  <a href={withBase('/privacy')}>Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Message history — FIXED HEIGHT, SCROLLS INSIDE ── -->
+          <div class="c-history" id="chatHistory" aria-live="polite"></div>
+
+          <!-- Send area: textarea + paperclip + send -->
+          <div class="c-send">
+            <div class="c-attach-wrap">
+              <button class="c-foot-btn" id="chatAttachBtn" aria-label="Attach" aria-expanded="false" aria-controls="chatAttachDrop">
+                <svg aria-hidden="true" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" set:html={icons['paperclip']} />
+              </button>
+              <!-- Attachment dropdown -->
+              <div class="c-attach-drop" id="chatAttachDrop">
+                <button class="c-attach-opt"><svg aria-hidden="true" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><span>File</span></button>
+                <button class="c-attach-opt"><svg aria-hidden="true" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><span>Image</span></button>
+                <button class="c-attach-opt"><svg aria-hidden="true" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></button>
+                <button class="c-attach-opt"><svg aria-hidden="true" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg><span>Location</span></button>
+                <button class="c-attach-opt"><svg aria-hidden="true" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Contact</span></button>
+              </div>
+            </div>
+
+            <textarea
+              id="chatInput"
+              class="c-textarea"
+              placeholder="Loading conversation..."
+              rows="1"
+              disabled
+              aria-label="Type your message"
+            ></textarea>
+
+            <button class="c-send-btn" id="chatSendBtn" disabled aria-label="Send">
+              <svg aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" set:html={icons['send-plane']} />
+            </button>
+          </div>
+
+          <div class="c-status" id="chatStatus">{deskData.chatStatusBar}</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+  /* ══════════════════════════════════════════════
+     CHAT WINDOW
+     Fixed total height. The history area scrolls
+     internally — nothing expands the outer box.
+  ══════════════════════════════════════════════ */
+  .c-window {
+    width: 100%;
+    max-width: 420px;
+    /* Fixed height — the box never grows */
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--bg-elevated);
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.4);
+  }
+
+  /* ── Pulse dot ── */
+  .c-pulse {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    animation: c-pulse 2.2s ease infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes c-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  /* ── Avatar ── */
+  .c-ava {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    background: rgb(var(--primary-ch) / 0.12);
+    color: var(--color-primary);
+    border: 1px solid rgb(var(--primary-ch) / 0.28);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* ── Head box ── */
+  .c-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.875rem;
+    background: var(--bg-raised);
+    border-bottom: 1px solid var(--color-border);
+    /* Never shrink — fixed part of the layout */
+    flex-shrink: 0;
+  }
+
+  .c-head-who {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .c-head-name {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--color-text);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .c-head-sub {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.6rem;
+    color: var(--color-text-subtle);
+    margin-top: 1px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .c-head-icons {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .c-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 0.375rem;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+    text-decoration: none;
+  }
+
+  .c-icon-btn:hover {
+    background: rgb(var(--primary-ch) / 0.1);
+    color: var(--color-primary);
+  }
+
+  .c-ellipsis-wrap { position: relative; }
+
+  /* Settings dropdown */
+  .c-settings-drop {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 4px);
+    background: var(--bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    min-width: 168px;
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.25);
+    z-index: 60;
+    overflow: hidden;
+  }
+
+  .c-settings-drop.open { display: block; }
+
+  .c-settings-drop a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.73rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: background 0.1s, color 0.1s;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .c-settings-drop a:hover {
+    background: rgb(var(--primary-ch) / 0.07);
+    color: var(--color-text);
+  }
+
+  /*
+     MESSAGE HISTORY
+     This is the ONLY element that grows/scrolls.
+     flex: 1 fills remaining height.
+     min-height: 0 is REQUIRED — without it, a flex
+     child won't shrink below its content size and
+     the box will blow out.
+     overflow-y: auto provides the scroll.
+ */
+  .c-history {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0.875rem 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
+  .c-history::-webkit-scrollbar       { width: 3px; }
+  .c-history::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 9999px; }
+
+  /* Message entry animation */
+  @keyframes c-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Send area — never shrinks ── */
+  .c-send {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+    padding: 0.65rem 0.875rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--color-border);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* Attachment wrap + dropdown */
+  .c-attach-wrap { position: relative; flex-shrink: 0; }
+
+  .c-attach-drop {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-elevated);
+    border: 1px solid var(--color-border);
+    border-left: 2px solid var(--color-primary);
+    border-radius: 0.5rem;
+    padding: 0.35rem;
+    gap: 0.2rem;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.25);
+    z-index: 50;
+    white-space: nowrap;
+  }
+
+  .c-attach-drop.open { display: flex; }
+
+  .c-attach-opt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 0.38rem 0.45rem;
+    border-radius: 0.375rem;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.57rem;
+    cursor: pointer;
+    transition: background 0.1s, color 0.1s;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .c-attach-opt:hover {
+    background: rgb(var(--primary-ch) / 0.1);
+    color: var(--color-primary);
+  }
+
+  /* Paperclip button */
+  .c-foot-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+    flex-shrink: 0;
+  }
+
+  .c-foot-btn:hover { background: rgb(var(--primary-ch) / 0.1); color: var(--color-primary); }
+
+  /* Textarea */
+  .c-textarea {
+    flex: 1;
+    background: var(--bg-form);
+    border: 1px solid var(--color-border-form);
+    border-radius: 0.625rem;
+    padding: 0.46rem 0.72rem;
+    font-size: 0.73rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    color: var(--color-text);
+    resize: none;
+    outline: none;
+    transition: border-color 0.14s;
+    line-height: 1.45;
+    max-height: 80px;
+  }
+
+  .c-textarea::placeholder { color: var(--color-text-dim); }
+  .c-textarea:focus         { border-color: rgb(var(--primary-ch) / 0.45); }
+  .c-textarea:disabled      { opacity: 0.4; cursor: not-allowed; }
+
+  /* Paper-plane send button */
+  .c-send-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    color: #fff;
+    transition: background 0.14s, transform 0.1s;
+  }
+
+  .c-send-btn:hover:not(:disabled)  { background: var(--color-primary-light); }
+  .c-send-btn:active:not(:disabled) { transform: scale(0.9); }
+  .c-send-btn:disabled { opacity: 0.28; cursor: not-allowed; }
+
+  /* Status bar — never shrinks */
+  .c-status {
+    text-align: center;
+    font-size: 0.57rem;
+    color: var(--color-text-dim);
+    letter-spacing: 0.04em;
+    padding: 0.28rem 0.875rem 0.42rem;
+    background: var(--bg-surface);
+    font-family: ui-monospace, monospace;
+    flex-shrink: 0;
+    transition: color 0.3s;
+  }
+</style>
+
+
+<script is:inline define:vars={{ web3formsKey: siteData.web3formsKey, chatScript }}>
+  (function () {
+    var hist     = document.getElementById('chatHistory');
+    var inp      = document.getElementById('chatInput');
+    var sendBtn  = document.getElementById('chatSendBtn');
+    var statusEl = document.getElementById('chatStatus');
+    var settBtn  = document.getElementById('chatSettBtn');
+    var settDrop = document.getElementById('chatSettDrop');
+    var attBtn   = document.getElementById('chatAttachBtn');
+    var attDrop  = document.getElementById('chatAttachDrop');
+
+    if (!hist || !inp || !sendBtn) return;
+
+    /* ── Dropdown toggles ── */
+    if (settBtn && settDrop) {
+      settBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = settDrop.classList.toggle('open');
+        settBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (attDrop) { attDrop.classList.remove('open'); if (attBtn) attBtn.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+
+    if (attBtn && attDrop) {
+      attBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = attDrop.classList.toggle('open');
+        attBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (settDrop) { settDrop.classList.remove('open'); if (settBtn) settBtn.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+
+    document.addEventListener('click', function () {
+      if (settDrop) { settDrop.classList.remove('open'); if (settBtn) settBtn.setAttribute('aria-expanded', 'false'); }
+      if (attDrop)  { attDrop.classList.remove('open');  if (attBtn)  attBtn.setAttribute('aria-expanded', 'false'); }
+    });
+
+    /* ── Helpers ── */
+    function scrollBottom() {
+      // Scroll the history div to its bottom — messages scroll UP as new ones arrive
+      hist.scrollTop = hist.scrollHeight;
+    }
+
+    function timeNow() {
+      return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function addDate(text) {
+      var d = document.createElement('div');
+      d.className = 'c-date';
+      d.textContent = text;
+      hist.appendChild(d);
+      scrollBottom();
+    }
+
+    var typingEl = null;
+
+    function showTyping() {
+      if (typingEl) return;
+      typingEl = document.createElement('div');
+      typingEl.className = 'c-typing';
+      var av = document.createElement('div');
+      av.className = 'c-in-av';
+      av.setAttribute('aria-hidden', 'true');
+      av.textContent = 'A';
+      var dots = document.createElement('div');
+      dots.className = 'c-typing-dots';
+      dots.innerHTML = '<span></span><span></span><span></span>';
+      typingEl.appendChild(av);
+      typingEl.appendChild(dots);
+      hist.appendChild(typingEl);
+      scrollBottom();
+    }
+
+    function hideTyping() {
+      if (typingEl) { typingEl.remove(); typingEl = null; }
+    }
+
+    function addIn(text, time) {
+      hideTyping();
+      var wrap = document.createElement('div');
+      wrap.className = 'c-incoming';
+      var av = document.createElement('div');
+      av.className = 'c-in-av';
+      av.setAttribute('aria-hidden', 'true');
+      av.textContent = 'A';
+      var body = document.createElement('div');
+      body.className = 'c-in-body';
+      var bub = document.createElement('div');
+      bub.className = 'c-bubble-in';
+      bub.textContent = text;
+      var ts = document.createElement('span');
+      ts.className = 'c-time';
+      ts.textContent = time || timeNow();
+      body.appendChild(bub);
+      body.appendChild(ts);
+      wrap.appendChild(av);
+      wrap.appendChild(body);
+      hist.appendChild(wrap);
+      scrollBottom();
+    }
+
+    function addOut(text, time, isVisitor) {
+      hideTyping();
+      var wrap = document.createElement('div');
+      wrap.className = 'c-outgoing';
+      var body = document.createElement('div');
+      body.className = 'c-out-body';
+
+      /* Show "User" label for real visitor messages */
+      if (isVisitor) {
+        var label = document.createElement('div');
+        label.className = 'c-out-label';
+        label.textContent = 'User';
+        body.appendChild(label);
+      }
+
+      var bub = document.createElement('div');
+      bub.className = isVisitor ? 'c-bubble-out c-bubble-visitor' : 'c-bubble-out';
+      bub.textContent = text;
+      var ts = document.createElement('span');
+      ts.className = 'c-time';
+      ts.textContent = time || timeNow();
+      body.appendChild(bub);
+      body.appendChild(ts);
+      wrap.appendChild(body);
+      hist.appendChild(wrap);
+      scrollBottom();
+    }
+
+    /* ── Scripted demo conversation (loaded from transaction-desk.json) ── */
+    var script = chatScript;
+
+    /* ── Only start the demo once the chat window is actually visible ── */
+    function runScript() {
+      script.forEach(function (item) {
+        setTimeout(function () {
+          if      (item.t === 'date') { addDate(item.v); }
+          else if (item.t === 'type') { showTyping(); }
+          else if (item.t === 'in')   { addIn(item.v, item.ts); }
+          else if (item.t === 'out')  { addOut(item.v, item.ts, false); }
+          else if (item.t === 'open') {
+            addIn("Have a question? Message us right here \u2193", timeNow());
+            inp.disabled     = false;
+            sendBtn.disabled = false;
+            inp.placeholder  = 'Message Apex...';
+          /* NO --  inp.focus(); -- dont steal focus from the user unless landing page*/
+          }
+        }, item.at);
+      });
+    }
+
+    var chatWindow = document.querySelector('.c-window');
+    if (chatWindow && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          obs.disconnect(); /* fire once — never replay */
+          runScript();
+        }
+      }, { threshold: 0.3 });
+      observer.observe(chatWindow);
+    } else {
+      /* Fallback: no IntersectionObserver support — just run immediately */
+      runScript();
+    }
+
+    /* ── Multi-step form: message → name → email → submit ── */
+    var step = 'message', storedMsg = '', storedName = '';
+
+    function doSend() {
+      var val = inp.value.trim();
+      if (!val) return;
+      inp.value = '';
+      inp.style.height = 'auto';
+
+      if (step === 'message') {
+        storedMsg = val;
+        addOut(val, timeNow(), true);
+        step = 'name';
+        setTimeout(function () {
+          showTyping();
+          setTimeout(function () {
+            addIn("Got it! What's your name so I can address you properly?", timeNow());
+            inp.placeholder = 'Your name...';
+          }, 1100);
+        }, 350);
+
+      } else if (step === 'name') {
+        storedName = val;
+        addOut(val, timeNow(), true);
+        step = 'email';
+        setTimeout(function () {
+          showTyping();
+          setTimeout(function () {
+            addIn('Nice to meet you, ' + val + '! Best email to reach you?', timeNow());
+            inp.placeholder = 'your@email.com';
+          }, 1100);
+        }, 350);
+
+      } else if (step === 'email') {
+        var email = val;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          addIn("That doesn't look like a valid email. Try again?", timeNow());
+          return;
+        }
+        addOut(val, timeNow(), true);
+        step = 'done';
+        inp.disabled     = true;
+        sendBtn.disabled = true;
+        inp.placeholder  = 'Message delivered!';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key: web3formsKey,
+            subject:    'Apex Chat Inquiry',
+            from_name:  storedName,
+            email:      email,
+            message:    storedMsg,
+            botcheck:   '',
+          }),
+        }).then(function (res) {
+          return res.json();
+        }).then(function (data) {
+          if (!data.success) {
+            console.error('[Apex] Web3Forms error:', data.message);
+          }
+        }).catch(function (err) {
+          console.error('[Apex] Submit failed:', err);
+        });
+
+        setTimeout(function () {
+          showTyping();
+          setTimeout(function () {
+            addIn("We'll follow up at " + email + " within 2 hours. 🟢", timeNow());
+            if (statusEl) {
+              statusEl.textContent = '\u2713 Message sent to Apex';
+              statusEl.classList.add('sent');
+            }
+          }, 1600);
+        }, 500);
+      }
+    }
+
+    sendBtn.addEventListener('click', doSend);
+
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        doSend();
+      }
+    });
+
+    inp.addEventListener('input', function () {
+      inp.style.height = 'auto';
+      inp.style.height = Math.min(inp.scrollHeight, 80) + 'px';
+    });
+  })();
+</script>

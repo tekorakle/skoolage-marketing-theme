@@ -1,0 +1,657 @@
+@import "tailwindcss";
+/* Inter and Oswald are self-hosted via Astro Fonts API — no CDN imports needed */
+
+@font-face {
+  font-family: 'Claxton';
+  src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2'),
+       url(data:application/font-woff;charset=utf-8;base64,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) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TAILWIND V4 CUSTOM TOKENS
+   All CSS-variable-backed tokens use `@theme inline` so Tailwind
+   emits the rgb(var(--*)) value directly instead of wrapping it
+   in a new --tw-* variable (which would break the CSS-var reference).
+═══════════════════════════════════════════════════════════════ */
+@theme inline {
+  /* ── Colors: backgrounds ── */
+  --color-navy-950: rgb(var(--bg-base-ch));
+  --color-navy-900: rgb(var(--bg-deep-ch));
+  --color-navy-800: rgb(var(--bg-elevated-ch));
+  --color-navy-700: rgb(var(--bg-surface-ch));
+  --color-navy-600: rgb(var(--bg-raised-ch));
+  --color-navy-500: rgb(var(--bg-high-ch));
+
+  /* ── Colors: brand ── */
+  --color-electric-blue: rgb(var(--primary-ch));
+  --color-electric-cyan: rgb(var(--primary-light-ch));
+  --color-electric-glow: rgb(var(--primary-dark-ch));
+  --color-matrix:        rgb(var(--primary-ch));
+
+  /* ── Colors: site design system ── */
+  --color-site-primary:    rgb(var(--primary-ch));
+  --color-site-secondary:  rgb(var(--primary-light-ch));
+  --color-site-accent:     rgb(var(--primary-ch));
+  --color-site-surface:    rgb(var(--bg-surface-ch));
+  --color-site-border:     rgb(var(--border-ch));
+  --color-site-muted:      rgb(var(--text-subtle-ch));
+  --color-site-text:       rgb(var(--text-ch));
+  --color-site-text-muted: rgb(var(--text-muted-ch));
+  --color-site-green:      rgb(var(--primary-ch));
+  --color-site-green-dark: rgb(var(--primary-dark-ch));
+  --color-site-band:       rgb(var(--band-ch));
+
+  /* ── Typography ── */
+  --font-sans:    var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-oswald), 'Impact', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* ── Animations ── */
+  --animate-fade-in:       fadeIn 0.6s ease-out forwards;
+  --animate-slide-up:      slideUp 0.6s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 0.4s ease-out forwards;
+  --animate-float:         float 6s ease-in-out infinite;
+
+  /* ── Blur (shared by blur-xs and backdrop-blur-xs) ── */
+  --blur-xs: 2px;
+}
+
+/* Keyframes for custom animations */
+@keyframes fadeIn      { from { opacity: 0 } to { opacity: 1 } }
+@keyframes slideUp     { from { opacity: 0; transform: translateY(24px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-24px) } to { opacity: 1; transform: translateX(0) } }
+@keyframes float       { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+
+/* ═══════════════════════════════════════════════════════════════
+   CSS DESIGN TOKENS
+   All hardcoded colors live here as CSS custom properties.
+   html.light-mode overrides every variable — nothing else changes.
+   Channel variables (space-separated RGB) enable Tailwind
+   opacity modifiers (e.g. bg-navy-950/80) at runtime.
+═══════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: dark;
+  --shadow-color: 0deg 0% 63%;
+  --cta-shadow-color: 84deg 55% 52%;
+
+  /* ── Backgrounds (hex, for direct use) ── */
+  --bg-base:     #040507;
+  --bg-deep:     #0c0d12;
+  --bg-elevated: #14171c;
+  --bg-surface:  #1a1d24;
+  --bg-raised:   #1e2330;
+  --bg-high:     #252b38;
+  --bg-form:     #1e2130;
+  --bg-white:    #ffffff;
+
+  /* ── Backgrounds (RGB channels, for opacity modifiers) ── */
+  --bg-base-ch:     4 5 7;
+  --bg-deep-ch:     12 13 18;
+  --bg-elevated-ch: 20 23 28;
+  --bg-surface-ch:  26 29 36;
+  --bg-raised-ch:   30 35 48;
+  --bg-high-ch:     37 43 56;
+
+  /* ── Brand / Primary ── */
+  --color-primary:      #C5A840;
+  --color-primary-dark: #A8902D;
+  --color-primary-light:#D4BC60;
+  --primary-ch:         197 168 64;
+  --primary-dark-ch:    168 144 45;
+  --primary-light-ch:   212 188 96;
+
+  /* ── Text ── */
+  --color-text:        #f0f4f8;
+  --color-text-muted:  #9aa3ae;
+  --color-text-subtle: #6e7d8a;
+  --color-text-dim:    #718096;
+  --color-text-ui:     #8b949e;
+  --text-ch:           240 244 248;
+  --text-muted-ch:     154 163 174;
+  --text-subtle-ch:    110 125 138;
+
+  /* ── Borders & UI ── */
+  --color-border:      #2a2d36;
+  --color-border-hover: #3a3d46;
+  --color-border-alt:  #2a2d3e;
+  --color-border-form: #1e2130;
+  --border-ch:         42 45 54;
+  --color-band:        #c9c9c9;
+  --band-ch:           201 201 201;
+  --color-logo-box:    #1c2230;
+  --color-error:       #ef4444;
+
+  /* ── Logo font ── */
+  --font-logo: 'Claxton', sans-serif;
+
+  /* ── Terminal dots (brand-fixed, not theme-sensitive) ── */
+  --dot-red:         #ff5f57;
+  --dot-yellow:      #febc2e;
+  --dot-green-term:  #28c840;
+  --dot-green-term2: #28ca41;
+
+  /* ── Sidebar gradient ── */
+  --sidebar-from: #040507;
+  --sidebar-to:   #0c0d12;
+
+  /* ── Logo box starfield ── */
+  --star-1:    #e8f0ff;
+  --star-2:    #cfe0ff;
+  --star-3:    #ffffff;
+  --star-4:    #b9d0ff;
+  --star-glow-1: rgba(80,130,255,0.15);
+  --star-glow-2: rgba(100,160,255,0.10);
+  --star-bg-1: #10141d;
+  --star-bg-2: #1d2738;
+  --star-bg-3: #0a0d14;
+  --logo-border: #ffffff;
+
+  /* ── Image overlays (channel vars for rgb()/opacity) ── */
+  --overlay-dark-ch: 4 5 7;
+  --overlay-bg-ch:   0 0 0;
+
+  --site-band: #c9c9c92b;
+}
+
+/* ── Light mode overrides ───────────────────────────────────── */
+html.light-mode {
+  color-scheme: light;
+
+  --bg-base:     #f1f5f9;
+  --bg-deep:     #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-surface:  #f0f4f8;
+  --bg-raised:   #e8edf2;
+  --bg-high:     #e2e8f0;
+  --bg-form:     #f8fafc;
+  --bg-white:    #fdfdfd;
+
+  --bg-base-ch:     241 245 249;
+  --bg-deep-ch:     248 250 252;
+  --bg-elevated-ch: 255 255 255;
+  --bg-surface-ch:  240 244 248;
+  --bg-raised-ch:   232 237 242;
+  --bg-high-ch:     226 232 240;
+
+  --color-primary:       #A8902D;
+  --color-primary-dark:  #8C7620;
+  --color-primary-light: #C5A840;
+  --primary-ch:          168 144 45;
+  --primary-dark-ch:     140 118 32;
+  --primary-light-ch:    197 168 64;
+
+  --color-text:        #1a1d24;
+  --color-text-muted:  #374151;
+  --color-text-subtle: #4b5563;
+  --color-text-dim:    #6b7280;
+  --color-text-ui:     #6b7280;
+  --text-ch:           26 29 36;
+  --text-muted-ch:     55 65 81;
+  --text-subtle-ch:    75 85 99;
+
+  --color-border:      #cbd5e1;
+  --color-border-hover: #94a3b8;
+  --color-border-alt:  #94a3b8;
+  --color-border-form: #cbd5e1;
+  --border-ch:         203 213 225;
+  --color-band:        #94a3b8;
+  --band-ch:           148 163 184;
+  --color-logo-box:    #1e2535;
+  --color-error:       #dc2626;
+
+  --sidebar-from: #f8fafc;
+  --sidebar-to:   #f1f5f9;
+
+  --star-1:    #94a3b8;
+  --star-2:    #94a3b8;
+  --star-3:    #64748b;
+  --star-4:    #94a3b8;
+  --star-glow-1: rgba(100,116,139,0.12);
+  --star-glow-2: rgba(71,85,105,0.08);
+  --star-bg-1: #e8edf2;
+  --star-bg-2: #dde4ec;
+  --star-bg-3: #f0f4f8;
+  --logo-border: #94a3b8;
+
+  --overlay-dark-ch: 241 245 249;
+  --overlay-bg-ch:   241 245 249;
+
+  --site-band: rgba(201, 201, 201, 0.17);
+}
+
+/* ── Smooth transitions when switching themes ───────────────── */
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    color 200ms ease,
+    box-shadow 250ms ease,
+    fill 200ms ease,
+    stroke 200ms ease !important;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-900 text-site-text;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-base);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-site-green ring-offset-2 ring-offset-navy-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Details/summary no arrow */
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Section bands */
+  .section-band {
+    background: var(--color-band);
+    height: 16px;
+    width: 100%;
+  }
+
+  /* Oswald headings */
+  h1, h2, h3 {
+    font-family: var(--font-oswald), Impact, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Sidebar scrollbar */
+  #sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  #sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 9999px;
+  }
+
+  /* Flyout submenu for collapsed sidebar parent items */
+  #sidebar-flyout {
+    display: none;
+    position: fixed;
+    left: 4rem;
+    min-width: 190px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--color-border);
+    border-left: 2px solid var(--color-primary);
+    z-index: 200;
+    box-shadow: 6px 6px 20px rgb(0 0 0 / 0.7);
+    overflow: hidden;
+  }
+
+  #sidebar-flyout-inner > p {
+    padding: 8px 12px 6px;
+    font-size: 9px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-ui);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  #sidebar-flyout-inner a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-family: ui-monospace, monospace;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: background 120ms, color 120ms;
+  }
+
+  #sidebar-flyout-inner a:hover {
+    background: rgb(var(--primary-ch) / 0.08);
+    color: var(--color-text);
+  }
+
+  /* Section band divider */
+  .site-band {
+    background: var(--site-band);
+    height: 16px;
+    width: 100%;
+    display: block;
+  }
+
+  /* Retro nav item */
+  .retro-nav-item {
+    @apply flex flex-col items-center gap-1.5 text-site-muted transition-colors duration-150;
+  }
+  .retro-nav-item:hover {
+    @apply text-site-text;
+  }
+  .retro-nav-item svg {
+    @apply transition-colors duration-150;
+  }
+  .retro-nav-item:hover svg {
+    color: var(--color-primary);
+  }
+
+  /* Starfield logo */
+  .site-logo-box {
+    background-color: var(--color-logo-box);
+    background-image:  radial-gradient(circle at 20% 30%, var(--star-glow-1) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 70%, var(--star-glow-2) 0%, transparent 50%),
+                       linear-gradient(135deg, var(--star-bg-1) 0%, var(--star-bg-2) 50%, var(--star-bg-3) 100%);
+    background-repeat: no-repeat;
+    border: 3px solid #242627;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.5);
+    transition: all 300ms ease-out;
+  }
+
+  .site-logo-box:hover {
+    border: 3px solid #222d1c;
+  }
+
+  #sidebar-logo-gif {
+    filter: brightness(.35) grayscale(.8) saturate(2);
+    transition: all ease-out 300ms;
+  }
+
+  #sidebar-logo-gif:hover {
+    filter: brightness(.5) grayscale(.3) saturate(2);
+  }
+}
+
+@layer utilities {
+  /* Background gradient utilities (reference CSS vars so they respond to theme changes) */
+  .bg-cta-gradient {
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Breathing glow lives entirely on ::before — button's own box-shadow is never touched */
+  .bg-cta-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    z-index: -1;
+    animation: cta-breathe 9s linear infinite;
+    transition: opacity 0.4s ease;
+  }
+
+  /* Animation keeps running invisibly — no snap/glitch on mouse-out */
+  .bg-cta-gradient:hover::before {
+    opacity: 0 !important;
+  }
+  .bg-sidebar-gradient {
+    background-image: linear-gradient(180deg, var(--sidebar-from) 0%, var(--sidebar-to) 100%);
+  }
+  .bg-card-gradient {
+    background-image: linear-gradient(135deg, rgb(var(--bg-surface-ch) / 0.95) 0%, rgb(var(--bg-deep-ch) / 0.98) 100%);
+  }
+
+  /* Glow box-shadow utilities */
+  .shadow-glow-sm   { box-shadow: 0 0 10px rgb(var(--primary-ch) / 0.2); }
+  .shadow-glow-md   { box-shadow: 0 0 20px rgb(var(--primary-ch) / 0.28); }
+  .shadow-glow-lg   { box-shadow: 0 0 40px rgb(var(--primary-ch) / 0.22); }
+  .shadow-glow-cyan { box-shadow: 0 0 20px rgb(var(--primary-ch) / 0.25); }
+  .shadow-glow-green{ box-shadow: 0 0 15px rgb(var(--primary-ch) / 0.3); }
+  .shadow-card      { box-shadow: 0 4px 24px rgb(0 0 0 / 0.5), 0 1px 0 rgb(255 255 255 / 0.03) inset; }
+  .shadow-sidebar   { box-shadow: 4px 0 24px rgb(0 0 0 / 0.6); }
+
+  /* Text gradient utility — green */
+  .text-gradient {
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Glow text — green */
+  .glow-text {
+    text-shadow: 0 0 20px rgb(var(--primary-ch) / 0.4);
+  }
+
+  /* Promote animated elements to their own compositing layer */
+  .animate-slide-up,
+  .animate-fade-in,
+  .animate-slide-in-left {
+    will-change: transform, opacity;
+  }
+
+  /* Uppercase display heading */
+  .heading-display {
+    font-family: var(--font-oswald), Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+}
+
+/* ── Sidebar collapse overrides ───────────────────────────────────────────
+   These rules MUST live outside any @layer block. CSS unlayered styles beat
+   all named cascade layers (@layer utilities included), so these overrides
+   correctly win over Tailwind utilities like w-60, lg:ml-60, px-3, etc.
+   ────────────────────────────────────────────────────────────────────── */
+
+/* Sidebar base transition */
+#sidebar {
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 300ms ease;
+  overflow: hidden;
+}
+
+/* Sidebar labels — smooth clip */
+.sidebar-label {
+  max-width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 220ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms ease;
+}
+
+/* Logo/chevron visibility toggles */
+html:not(.sidebar-collapsed) .sidebar-logo-collapsed { display: none; }
+html:not(.sidebar-collapsed) .sidebar-icon-expand    { display: none; }
+.sidebar-collapsed .sidebar-icon-collapse            { display: none; }
+
+/* Theme icon swap */
+html:not(.light-mode) .theme-icon-moon { display: none; }
+html.light-mode       .theme-icon-sun  { display: none; }
+
+/* Desktop-only collapse */
+@media (min-width: 1024px) {
+  .sidebar-collapsed #sidebar      { width: 4rem; }
+  .sidebar-collapsed #main-content { margin-left: 4rem; }
+
+  .sidebar-collapsed .sidebar-logo-expanded { display: none; }
+  .sidebar-collapsed .sidebar-logo-collapsed { display: flex; }
+
+  .sidebar-collapsed #sidebar-logo-bar {
+    justify-content: center;
+    padding: 6px 0;
+  }
+
+  .sidebar-collapsed #sidebar-welcome,
+  .sidebar-collapsed .sidebar-band,
+  .sidebar-collapsed .sidebar-quick-access {
+    display: none;
+  }
+
+  .sidebar-collapsed #sidebar .sidebar-label {
+    max-width: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar-collapsed #sidebar nav a,
+  .sidebar-collapsed #sidebar nav summary {
+    justify-content: center;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+
+  .sidebar-collapsed #sidebar nav a.border-site-green,
+  .sidebar-collapsed #sidebar nav summary.border-site-green {
+    border-left-width: 2px;
+    background: rgb(var(--primary-ch) / 0.1);
+  }
+
+  .sidebar-collapsed #sidebar nav a:not(.border-site-green),
+  .sidebar-collapsed #sidebar nav summary:not(.border-site-green) {
+    border-left-width: 0;
+  }
+
+  .sidebar-collapsed #sidebar details > div {
+    display: none;
+  }
+
+  .sidebar-collapsed #sidebar nav .sidebar-label {
+    display: none;
+  }
+
+  .sidebar-collapsed .sidebar-collapse-btn {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-collapsed .sidebar-theme-btn {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+html.light-mode h1.text-white,  html.light-mode .text-white span {
+  text-shadow: 0px 1px 3px black;
+}
+
+html.light-mode h2.text-white,
+html.light-mode h3.text-white,
+html.light-mode .text-white.transition-colors {
+  color: var(--color-text);
+  text-shadow: none;
+}
+
+html.light-mode h3.text-white.uppercase.tracking-wide {
+   color: var(--color-text-ui);
+   text-decoration: underline;
+   text-shadow: none;
+}
+
+html.light-mode .sidebar-nav-item .text-white.bg-site-surface span {
+  text-shadow: none;
+}
+
+html.light-mode #sidebar nav a.text-white,
+html.light-mode #sidebar nav summary.text-white,
+html.light-mode #sidebar nav a:hover,
+html.light-mode #sidebar nav summary:hover {
+  color: var(--color-text);
+}
+
+html.light-mode #sidebar-logo-gif {
+  filter: invert(.9);
+}
+
+/* Dim the mobile hamburger button when the sidebar menu is open */
+body.overflow-hidden #sidebar-toggle {
+  opacity: .5;
+}
+body.overflow-hidden #sidebar-toggle svg {
+  opacity: .2;
+}
+
+/* Timing breakdown — 5 equal active segments × 13.4% = 67%, + 33% normal hold = 100%
+   ┌─────────────────┬───────────────────┬──────────────────┬───────────────────┬──────────────────┬──────────────────┐
+   │ Normal hold     │ Normal → A        │ Phase A hold     │ A → B             │ Phase B hold     │ B → Normal       │
+   │ 0 – 33%  (33%)  │ 33 – 46.4% (13.4%)│ 46.4 – 59.8%(13.4%)│ 59.8 – 73.2%(13.4%)│ 73.2 – 86.6%(13.4%)│ 86.6 – 100%(13.4%)│
+   └─────────────────┴───────────────────┴──────────────────┴───────────────────┴──────────────────┴──────────────────┘
+*/
+@keyframes cta-breathe {
+
+  /* ── Normal: no effect (33% hold, loop-safe) ── */
+  0%, 33% {
+    opacity: 1;
+    filter: none;
+    box-shadow: none; /* swap for your base shadow if the button has one */
+    transform: scale(1) translateY(0);
+  }
+
+  /* ── Phase A: fade-pulse (blur removed — filter: blur() causes expensive GPU compositing) ── */
+  46.4%, 59.8% {
+    opacity: 0.55;
+    transform: scale(1.06) translateY(1px);
+    box-shadow: none;
+  }
+
+  /* ── Phase B: layered shadow bloom ── */
+  73.2%, 86.6% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow:
+      -0.1px   1px    1px         hsl(var(--shadow-color) / 0.39),
+      -0.2px   3.2px  3.1px -0.4px hsl(var(--shadow-color) / 0.36),
+      -0.3px   5.7px  5.5px -0.8px hsl(var(--shadow-color) / 0.34),
+      -0.5px   9.3px  8.9px -1.2px hsl(var(--shadow-color) / 0.32),
+      -0.8px  14.8px 14.2px -1.6px hsl(var(--shadow-color) / 0.29),
+      -1.3px  23.1px 22.2px -2px   hsl(var(--shadow-color) / 0.27),
+      -2px    35px   33.7px -2.4px hsl(var(--shadow-color) / 0.24),
+      -2.9px  51.2px 49.2px -2.8px hsl(var(--shadow-color) / 0.22),
+      -4.1px  72.6px 69.8px -3.2px hsl(var(--shadow-color) / 0.20),
+      -5.6px 100px   96.2px -3.6px hsl(var(--shadow-color) / 0.17);
+  }
+
+  /* ── Return to Normal (loop-safe — matches 0%) ── */
+  100% {
+    opacity: 1;
+    filter: none;
+    box-shadow: none;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-cta-gradient::before {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,122 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import servicesData from "@/data/services/services.json";
+import { withBase } from "@/lib/assetPath";
+
+const service = servicesData.find((s) => s.slug === "acquisition-intake")!;
+---
+
+<Layout
+  title={service.pageMeta.title}
+  description={service.pageMeta.description}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li><a href={withBase('/services')} class="hover:text-white transition-colors">Services</a></li>
+          <li class="text-site-border">/</li>
+          <li class={service.theme.accent}>Acquisition & Intake</li>
+        </ol>
+      </nav>
+
+      <div class="mb-12">
+        <div class={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${service.theme.badgeBorder} ${service.theme.badgeBg} mb-5`}>
+          <span class={`text-xs font-mono font-medium ${service.theme.accent} uppercase tracking-wider`}>{service.intro.badge}</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">{service.intro.heading}</h1>
+        <p class="text-site-text-muted text-xl leading-relaxed max-w-3xl">
+          {service.intro.subHeading}
+        </p>
+      </div>
+
+      <!-- Deal pipeline visual -->
+      <div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
+          </div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
+            Deal Flow · Pipeline
+          </div>
+          <div class="flex items-center gap-1.5 font-mono text-[10px] text-site-muted/60">
+            <span>deal-room/pipeline</span>
+          </div>
+        </div>
+
+        <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
+          <svg viewBox="0 0 580 110" width="100%" style="max-width: 640px; height: 110px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Pipeline backbone -->
+            <line x1="70" y1="46" x2="510" y2="46" stroke="rgba(100,120,160,0.2)" stroke-width="1.5"/>
+            <!-- Animated sweep -->
+            <line x1="70" y1="46" x2="510" y2="46" stroke-width="2" stroke-dasharray="440" stroke-linecap="round" style="stroke: var(--color-primary); opacity: 0.45;">
+              <animate attributeName="stroke-dashoffset" values="440;0;440" dur="5s" repeatCount="indefinite" calcMode="linear"/>
+            </line>
+
+            <!-- Stage 1: Sourcing -->
+            <circle cx="70" cy="46" r="20" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+            <circle cx="70" cy="46" r="20" fill="none" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+              <animate attributeName="r" values="20;34;20" dur="3.5s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.35;0;0.35" dur="3.5s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <text x="70" y="82" text-anchor="middle" fill="rgba(145,165,195,0.75)" font-family="monospace" font-size="9" letter-spacing="0.3">SOURCING</text>
+
+            <!-- Stage 2: Diligence -->
+            <circle cx="217" cy="46" r="20" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary); opacity: 0.7;"/>
+            <circle cx="217" cy="46" r="20" fill="none" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+              <animate attributeName="r" values="20;34;20" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.35;0;0.35" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+            </circle>
+            <text x="217" y="82" text-anchor="middle" fill="rgba(145,165,195,0.75)" font-family="monospace" font-size="9" letter-spacing="0.3">DILIGENCE</text>
+
+            <!-- Stage 3: Structure -->
+            <circle cx="363" cy="46" r="20" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary); opacity: 0.7;"/>
+            <circle cx="363" cy="46" r="20" fill="none" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+              <animate attributeName="r" values="20;34;20" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.35;0;0.35" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+            </circle>
+            <text x="363" y="82" text-anchor="middle" fill="rgba(145,165,195,0.75)" font-family="monospace" font-size="9" letter-spacing="0.3">STRUCTURE</text>
+
+            <!-- Stage 4: Close -->
+            <circle cx="510" cy="46" r="20" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary); opacity: 0.7;"/>
+            <circle cx="510" cy="46" r="20" fill="none" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+              <animate attributeName="r" values="20;34;20" dur="3.5s" begin="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.35;0;0.35" dur="3.5s" begin="3s" repeatCount="indefinite"/>
+            </circle>
+            <text x="510" y="82" text-anchor="middle" fill="rgba(145,165,195,0.75)" font-family="monospace" font-size="9" letter-spacing="0.3">CLOSE</text>
+
+            <!-- Traveling dot -->
+            <circle r="8" style="fill: var(--color-primary);" opacity="0">
+              <animate attributeName="cx" values="70;217;363;510;510" keyTimes="0;0.28;0.56;0.84;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0 0 1 1"/>
+              <animate attributeName="cy" values="46;46;46;46;46" dur="5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" keyTimes="0;0.04;0.80;0.90;1" dur="5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
+        {service.capabilities.map((cap) => (
+          <div class={`p-5 rounded-xl border border-site-border/60 bg-site-surface/30 hover:${service.theme.borderAccent} transition-colors`}>
+            <h3 class="font-semibold text-white mb-2">{cap.title}</h3>
+            <p class="text-site-muted text-sm leading-relaxed">{cap.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class={`p-8 rounded-2xl border ${service.theme.borderAccent} bg-site-surface/40 text-center`}>
+        <h2 class="font-display font-bold text-2xl text-white mb-3">{service.cta.heading}</h2>
+        <p class="text-site-muted mb-6">{service.cta.body}</p>
+        <a href={withBase('/contact')} class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:scale-105">
+          {service.cta.label}
+        </a>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

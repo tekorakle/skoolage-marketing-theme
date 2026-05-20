@@ -1,0 +1,132 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import siteData from "@/data/global/site.json";
+import servicesData from "@/data/services/services.json";
+import { withBase } from "@/lib/assetPath";
+
+const service = servicesData.find((s) => s.slug === "leadership-transition")!;
+---
+
+<Layout
+  title={service.pageMeta.title}
+  description={`${service.pageMeta.description} by ${siteData.name}.`}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li><a href={withBase('/services')} class="hover:text-white transition-colors">Services</a></li>
+          <li class="text-site-border">/</li>
+          <li class={service.theme.accent}>Leadership Transition</li>
+        </ol>
+      </nav>
+
+      <div class="mb-12">
+        <div class={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${service.theme.badgeBorder} ${service.theme.badgeBg} mb-5`}>
+          <span class={`text-xs font-mono font-medium ${service.theme.accent} uppercase tracking-wider`}>{service.intro.badge}</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">{service.intro.heading}</h1>
+        <p class="text-site-text-muted text-xl leading-relaxed max-w-3xl">
+          {service.intro.subHeading}
+        </p>
+      </div>
+
+      <!-- Org structure visual -->
+      <div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
+          </div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
+            Engagement Timeline
+          </div>
+          <div class="flex items-center gap-2 font-mono text-xs text-amber-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            ACTIVE
+          </div>
+        </div>
+
+        <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
+          <svg viewBox="0 0 580 168" width="100%" style="max-width: 640px; height: 168px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <!-- Board / Apex node (visible from start) -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <rect x="230" y="8" width="120" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+              <text x="290" y="28" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">BOARD / APEX</text>
+            </g>
+
+            <!-- Connector: Board → CEO -->
+            <line x1="290" y1="40" x2="290" y2="62" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+              <animate attributeName="opacity" values="0;0;0.45;0.45;0;0" keyTimes="0;0.10;0.13;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+            </line>
+
+            <!-- CEO node -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.15;0.19;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <rect x="230" y="62" width="120" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+              <text x="290" y="82" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">CEO / GM</text>
+            </g>
+
+            <!-- Branch connectors -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;0;0.4;0.4;0;0" keyTimes="0;0.22;0.26;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <line x1="290" y1="94" x2="290" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <line x1="96" y1="106" x2="484" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <line x1="96" y1="106" x2="96" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <line x1="290" y1="106" x2="290" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <line x1="484" y1="106" x2="484" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+            </g>
+
+            <!-- Operations node -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.30;0.34;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <rect x="38" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <text x="96" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">OPERATIONS</text>
+            </g>
+
+            <!-- Finance node -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.35;0.39;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <rect x="232" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <text x="290" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">FINANCE</text>
+            </g>
+
+            <!-- Commercial node -->
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.40;0.44;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+              <rect x="426" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+              <text x="484" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">COMMERCIAL</text>
+            </g>
+
+            <!-- Status label -->
+            <text x="290" y="162" text-anchor="middle" fill="rgba(100,120,150,0.4)" font-family="monospace" font-size="8" letter-spacing="0.5">STRUCTURE CONFIRMED · DAY 30</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
+        {service.capabilities.map((item) => (
+          <div class={`p-5 rounded-xl border border-site-border/60 bg-site-surface/30 hover:${service.theme.borderAccent} transition-colors`}>
+            <h3 class="font-semibold text-white mb-2">{item.title}</h3>
+            <p class="text-site-muted text-sm leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class={`p-8 rounded-2xl border ${service.theme.borderAccent} bg-site-surface/40 text-center`}>
+        <h2 class="font-display font-bold text-2xl text-white mb-3">{service.cta.heading}</h2>
+        <p class="text-site-muted mb-6">{service.cta.body}</p>
+        <a href={withBase('/contact')} class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300">
+          {service.cta.label}
+        </a>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

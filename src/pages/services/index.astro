@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import siteData from "@/data/global/site.json";
+import servicesData from "@/data/services/services.json";
+import servicesIndex from "@/data/services/services-index.json";
+import { withBase } from "@/lib/assetPath";
+import { icons } from "@/lib/icons";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  provider: { "@type": "LocalBusiness", name: siteData.name },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: `${siteData.name} Services`,
+    itemListElement: servicesData.map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: s.title, description: s.description },
+    })),
+  },
+};
+---
+
+<Layout
+  title={servicesIndex.pageTitle}
+  description={`${siteData.name} ${servicesIndex.pageDescription}`}
+  schema={schema}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">Services</li>
+        </ol>
+      </nav>
+
+      <div class="mb-12">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">{servicesIndex.heading}</h1>
+        <p class="text-site-text-muted text-xl max-w-2xl leading-relaxed">
+          {servicesIndex.subHeading}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {servicesData.map((service) => (
+          <a
+            href={withBase(`/services/${service.slug}`)}
+            class={`group relative flex flex-col p-6 rounded-2xl border bg-card-gradient backdrop-blur-sm transition-all duration-300 ${service.theme.border} hover:-translate-y-1 hover:shadow-card`}
+          >
+            {"badge" in service && (service as any).badge && (
+              <div class="absolute -top-px left-6">
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-b-lg bg-cta-gradient text-white">
+                  {(service as any).badge}
+                </span>
+              </div>
+            )}
+            <div class="flex items-start gap-4">
+              <div class={`flex-shrink-0 p-3 rounded-xl bg-gradient-to-br ${service.theme.color} border border-white/5`}>
+                <svg xmlns="http://www.w3.org/2000/svg" class={`w-6 h-6 ${service.theme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icons[service.iconKey]} />
+              </div>
+              <div class="flex-1">
+                <p class={`text-xs font-mono font-medium mb-1 ${service.theme.accent}`}>{service.tagline}</p>
+                <h2 class="font-display font-bold text-xl text-white mb-2">{service.title}</h2>
+                <p class="text-site-text-muted text-sm leading-relaxed">{service.description}</p>
+              </div>
+            </div>
+            <div class="mt-4 flex justify-end">
+              <span class={`inline-flex items-center gap-1 text-xs font-medium ${service.theme.accent} opacity-0 group-hover:opacity-100 transition-opacity`}>
+                {servicesIndex.learnMoreLabel}
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

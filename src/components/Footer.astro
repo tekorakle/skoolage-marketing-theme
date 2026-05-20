@@ -1,0 +1,170 @@
+---
+import siteData from '@/data/global/site.json';
+import navigationData from '@/data/global/navigation.json';
+import { withBase } from '@/lib/assetPath';
+import { icons } from '@/lib/icons';
+const currentYear = new Date().getFullYear();
+const links = navigationData.footerLinks;
+---
+
+<footer class="border-t border-site-border" style="background: var(--bg-deep);" aria-label="Site footer">
+  <div class="max-w-5xl mx-auto px-6 lg:px-12 py-14">
+    <!-- Top: Brand + links -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <!-- Mini starfield logo -->
+        <a href={withBase('/')} data-astro-reload class="site-logo-box inline-flex items-center justify-center mb-5" style="width: 100px; height: 50px;">
+          <span class="font-display font-light text-white tracking-[4px] text-lg uppercase" style="text-shadow: 0 1px 3px rgba(0,0,0,0.6);" data-scramble>{siteData.name.split(' ')[0].toUpperCase()}</span>
+        </a>
+        <p class="text-site-muted text-xs leading-relaxed mb-4" data-scramble>
+          {navigationData.footerTagline}
+        </p>
+        <div class="flex items-center gap-2 text-sm text-site-muted mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary);" set:html={icons['phone']} />
+          <a href={`tel:${siteData.phone}`} class="hover:text-white transition-colors font-mono text-xs" data-scramble>{siteData.phoneDisplay}</a>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-site-muted">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary);" set:html={icons['envelope']} />
+          <a href={`mailto:${siteData.email}`} class="hover:text-white transition-colors font-mono text-xs" data-scramble>{siteData.email}</a>
+        </div>
+      </div>
+
+      <!-- Nav links -->
+      {Object.entries(links).map(([category, items]) => (
+        <div>
+          <h3 class="font-display font-bold text-white text-xs uppercase tracking-[2px] mb-4 border-b border-site-border pb-2" data-scramble>{category}</h3>
+          <ul class="space-y-2">
+            {items.map((item) => (
+              <li>
+                <a
+                  href={withBase(item.href)}
+                  class="text-site-muted text-xs hover:text-white transition-colors duration-150 flex items-center gap-1.5 group font-mono"
+                >
+                  <span class="w-0 h-px transition-all duration-200 group-hover:w-3" style="background: var(--color-primary);"></span>
+                  <span data-scramble>{item.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Gray band divider -->
+    <div class="site-band mb-6"></div>
+
+    <!-- Bottom row -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-site-muted text-xs font-mono text-center md:text-left">
+        &copy; {currentYear} {siteData.legalName} &middot; <a href={withBase('/privacy')} class="hover:text-white transition-colors">Privacy</a> &middot; <a href={withBase('/terms')} class="hover:text-white transition-colors">Terms</a>
+      </p>
+
+      <!-- UTC clock -->
+      <div class="text-xs font-mono flex-shrink-0" style="color: var(--color-primary);">
+        <span id="footer-utc-clock">00:00:00 UTC</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .scramble-dud {
+    opacity: 0.4;
+    color: var(--color-primary);
+  }
+</style>
+
+<script>
+  class TextScramble {
+    el: HTMLElement;
+    chars: string;
+    resolve!: () => void;
+    queue: Array<{ from: string; to: string; start: number; end: number; char?: string }> = [];
+    frame: number = 0;
+    frameRequest: number = 0;
+
+    constructor(el: HTMLElement) {
+      this.el = el;
+      this.chars = '!<>-_\\/[]{}—=+*^?#';
+      this.update = this.update.bind(this);
+    }
+
+    setText(newText: string): Promise<void> {
+      const length = newText.length;
+      const promise = new Promise<void>((resolve) => { this.resolve = resolve; });
+      this.queue = [];
+      for (let i = 0; i < length; i++) {
+        const to = newText[i];
+        const start = Math.floor(Math.random() * 4);
+        const end = start + Math.floor(Math.random() * 5) + 3;
+        this.queue.push({ from: '', to, start, end });
+      }
+      cancelAnimationFrame(this.frameRequest);
+      this.frame = 0;
+      this.update();
+      return promise;
+    }
+
+    update() {
+      let output = '';
+      let complete = 0;
+      for (let i = 0; i < this.queue.length; i++) {
+        const item = this.queue[i];
+        if (this.frame >= item.end) {
+          complete++;
+          output += item.to;
+        } else if (this.frame >= item.start) {
+          if (!item.char || Math.random() < 0.5) {
+            item.char = this.chars[Math.floor(Math.random() * this.chars.length)];
+          }
+          output += `<span class="scramble-dud">${item.char}</span>`;
+        } else {
+          output += item.to === ' ' ? ' ' : '&nbsp;';
+        }
+      }
+      this.el.innerHTML = output;
+      if (complete === this.queue.length) {
+        this.resolve();
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+      }
+    }
+  }
+
+  // UTC clock
+  const clockEl = document.getElementById('footer-utc-clock');
+  function tickClock() {
+    if (!clockEl) return;
+    const now = new Date();
+    const h = String(now.getUTCHours()).padStart(2, '0');
+    const m = String(now.getUTCMinutes()).padStart(2, '0');
+    const s = String(now.getUTCSeconds()).padStart(2, '0');
+    clockEl.textContent = `${h}:${m}:${s} UTC`;
+  }
+  tickClock();
+  setInterval(tickClock, 1000);
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const footer = document.querySelector('footer[aria-label="Site footer"]') as HTMLElement | null;
+  if (footer && !prefersReduced) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        if (entries[0].isIntersecting) {
+          obs.unobserve(footer);
+          const targets = Array.from(footer.querySelectorAll<HTMLElement>('[data-scramble]'));
+          targets.forEach((el, i) => {
+            const text = el.textContent ?? '';
+            setTimeout(() => {
+              new TextScramble(el).setText(text);
+            }, i * 60);
+          });
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(footer);
+  }
+</script>

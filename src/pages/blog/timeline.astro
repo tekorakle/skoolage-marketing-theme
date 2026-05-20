@@ -1,0 +1,108 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import { fetchBlogPosts } from "@/lib/fetchBlog";
+import personalData from "@/data/global/personal.json";
+import siteData from "@/data/global/site.json";
+import { withBase } from "@/lib/assetPath";
+
+const posts = await fetchBlogPosts();
+
+// Group posts by year
+const byYear = new Map<string, typeof posts>();
+for (const post of posts) {
+  const year = post.date?.slice(0, 4) || 'Unknown';
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(post);
+}
+const years = [...byYear.keys()].sort((a, b) => b.localeCompare(a));
+---
+
+<Layout
+  title={`Blog Timeline — ${siteData.name}`}
+  description={`A chronological archive of every post on the ${siteData.name} blog.`}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-site-text transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li><a href={withBase('/blog')} class="hover:text-site-text transition-colors">Blog</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">Timeline</li>
+        </ol>
+      </nav>
+
+      <div class="mb-12">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-site-text mb-4">Timeline</h1>
+        <p class="text-site-text-muted text-lg">
+          {posts.length} posts in chronological order.
+        </p>
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-site-muted font-mono text-sm">
+          Posts unavailable — check back soon or visit{" "}
+          <a href={personalData.blog_url} class="text-electric-cyan hover:underline" target="_blank" rel="noopener noreferrer">
+            {siteData.name} Blog
+          </a>.
+        </p>
+      )}
+
+      <div class="space-y-12">
+        {years.map(year => (
+          <div>
+            <!-- Year marker -->
+            <div class="flex items-center gap-4 mb-6">
+              <span class="font-display font-bold text-3xl" style="color: var(--color-primary);">{year}</span>
+              <div class="flex-1 h-px bg-site-border/40"></div>
+              <span class="text-xs font-mono text-site-muted">{byYear.get(year)!.length} posts</span>
+            </div>
+
+            <!-- Posts for this year -->
+            <div class="relative pl-6 border-l border-site-border/40 space-y-5">
+              {byYear.get(year)!.map(post => (
+                <div class="relative">
+                  <!-- Timeline dot -->
+                  <div class="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-site-border" style="background: var(--bg-deep);"></div>
+
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block"
+                  >
+                    <div class="flex flex-wrap items-center gap-2 mb-1">
+                      <span class={`text-xs font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-site-surface border border-site-border/60 ${post.accent}`}>
+                        {post.category}
+                      </span>
+                      <span class="text-xs text-site-muted font-mono">{post.date}</span>
+                      <span class="text-xs text-site-muted">·</span>
+                      <span class="text-xs text-site-muted">{post.readTime}</span>
+                    </div>
+                    <h3 class="font-display font-bold text-site-text group-hover:text-electric-cyan transition-colors leading-snug text-lg">
+                      {post.title}
+                    </h3>
+                    {post.tags.length > 0 && (
+                      <div class="flex flex-wrap gap-1 mt-2">
+                        {post.tags.slice(0, 4).map((tag: string) => (
+                          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-site-surface border border-site-border/40 text-site-muted">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+  <Footer />
+</Layout>

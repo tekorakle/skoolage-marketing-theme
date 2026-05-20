@@ -1,0 +1,28 @@
+{
+  "sectionLabel": "Client Access",
+  "heading": "Partner",
+  "headingAccent": "Portal",
+  "personalSiteCard": {
+    "label": "Secure Access",
+    "displayName": "client.apexcap.example",
+    "description": "Authorized clients and business partners access portfolio summaries, asset documentation, billing statements, and payment records through the secure client portal.",
+    "visitLabel": "Log in to Portal"
+  },
+  "quickStats": {
+    "label": "Portal Overview",
+    "items": [
+      { "key": "Asset Modules", "valueKey": "yearsExperience", "suffix": "" },
+      { "key": "Billing Cycles", "value": "Active" },
+      { "key": "Active Sectors", "value": "5" }
+    ]
+  },
+  "infoLabels": {
+    "role": "Account Type",
+    "location": "Primary Jurisdiction",
+    "experience": "Relationship Status",
+    "experienceSuffix": " years on platform",
+    "education": "Entity Classification",
+    "blog": "Resource Library",
+    "contact": "Support Portal"
+  }
+}

@@ -1,0 +1,79 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import { fetchBlogPosts } from "@/lib/fetchBlog";
+import personalData from "@/data/global/personal.json";
+import siteData from "@/data/global/site.json";
+import { withBase } from "@/lib/assetPath";
+
+const posts = await fetchBlogPosts();
+
+// Aggregate categories with post counts and styling
+const catMap = new Map<string, { count: number; accent: string; border: string }>();
+for (const post of posts) {
+  if (!catMap.has(post.category)) {
+    catMap.set(post.category, { count: 0, accent: post.accent, border: post.border });
+  }
+  catMap.get(post.category)!.count++;
+}
+const categories = [...catMap.entries()]
+  .sort((a, b) => b[1].count - a[1].count);
+---
+
+<Layout
+  title={`Blog Categories — ${siteData.name}`}
+  description={`Browse all blog categories from ${siteData.name}.`}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-4xl mx-auto">
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-site-text transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li><a href={withBase('/blog')} class="hover:text-site-text transition-colors">Blog</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">Categories</li>
+        </ol>
+      </nav>
+
+      <div class="mb-10">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-site-text mb-4">Categories</h1>
+        <p class="text-site-text-muted text-lg">
+          {categories.length} categories across {posts.length} posts.
+        </p>
+      </div>
+
+      {categories.length === 0 && (
+        <p class="text-site-muted font-mono text-sm">
+          Categories unavailable — check back soon or visit{" "}
+          <a href={personalData.blog_url} class="text-electric-cyan hover:underline" target="_blank" rel="noopener noreferrer">
+            {siteData.name} Blog
+          </a>.
+        </p>
+      )}
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {categories.map(([name, { count, accent, border }]) => (
+          <a
+            href={name === 'general' ? `${personalData.blog_url}/categories/` : `${personalData.blog_url}/categories/${name.toLowerCase().replace(/\s+/g, '-')}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`group flex items-center justify-between p-4 rounded-xl border bg-site-surface/30 hover:bg-site-surface/60 transition-all duration-200 ${border}`}
+          >
+            <div>
+              <span class={`text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-site-surface border border-site-border/60 ${accent}`}>
+                {name}
+              </span>
+            </div>
+            <span class="text-lg font-bold font-mono text-site-text opacity-60 group-hover:opacity-100 transition-opacity">
+              {count}
+            </span>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </div>
+  <Footer />
+</Layout>

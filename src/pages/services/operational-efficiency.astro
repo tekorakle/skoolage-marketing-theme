@@ -1,0 +1,134 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import siteData from "@/data/global/site.json";
+import servicesData from "@/data/services/services.json";
+import { withBase } from "@/lib/assetPath";
+
+const service = servicesData.find((s) => s.slug === "operational-efficiency")!;
+---
+
+<Layout
+  title={service.pageMeta.title}
+  description={`${service.pageMeta.description} by ${siteData.name}.`}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li><a href={withBase('/services')} class="hover:text-white transition-colors">Services</a></li>
+          <li class="text-site-border">/</li>
+          <li class={service.theme.accent}>Operational Efficiency</li>
+        </ol>
+      </nav>
+
+      <div class="mb-12">
+        <div class={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${service.theme.badgeBorder} ${service.theme.badgeBg} mb-5`}>
+          <span class={`text-xs font-mono font-medium ${service.theme.accent} uppercase tracking-wider`}>{service.intro.badge}</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">{service.intro.heading}</h1>
+        <p class="text-site-text-muted text-xl leading-relaxed max-w-3xl">
+          {service.intro.subHeading}
+        </p>
+      </div>
+
+      <!-- Portfolio KPI chart visual -->
+      <div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
+            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
+          </div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
+            Portfolio Operations Dashboard
+          </div>
+          <div class="flex items-center gap-2 font-mono text-xs text-emerald-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            LIVE
+          </div>
+        </div>
+
+        <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
+          <svg viewBox="0 0 580 148" width="100%" style="max-width: 640px; height: 148px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Axes -->
+            <line x1="52" y1="8" x2="52" y2="104" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
+            <line x1="52" y1="104" x2="528" y2="104" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
+            <!-- Grid lines -->
+            <line x1="52" y1="72" x2="528" y2="72" stroke="rgba(80,100,140,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="52" y1="40" x2="528" y2="40" stroke="rgba(80,100,140,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="52" y1="8" x2="528" y2="8" stroke="rgba(80,100,140,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- Y-axis labels -->
+            <text x="44" y="107" text-anchor="end" fill="rgba(110,130,160,0.45)" font-family="monospace" font-size="8">0</text>
+            <text x="44" y="75" text-anchor="end" fill="rgba(110,130,160,0.45)" font-family="monospace" font-size="8">30</text>
+            <text x="44" y="43" text-anchor="end" fill="rgba(110,130,160,0.45)" font-family="monospace" font-size="8">60</text>
+            <text x="44" y="11" text-anchor="end" fill="rgba(110,130,160,0.45)" font-family="monospace" font-size="8">90</text>
+
+            <!-- Bar 1: EBITDA -->
+            <rect x="78" width="50" rx="2" style="fill: var(--color-primary);" opacity="0.28">
+              <animate attributeName="height" values="0;32;32;0" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="104;72;72;104" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="103" y="120" text-anchor="middle" fill="rgba(125,145,175,0.65)" font-family="monospace" font-size="8.5">EBITDA</text>
+
+            <!-- Bar 2: COST -->
+            <rect x="172" width="50" rx="2" style="fill: var(--color-primary);" opacity="0.42">
+              <animate attributeName="height" values="0;48;48;0" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.22s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="104;56;56;104" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.22s" repeatCount="indefinite"/>
+            </rect>
+            <text x="197" y="120" text-anchor="middle" fill="rgba(125,145,175,0.65)" font-family="monospace" font-size="8.5">COST</text>
+
+            <!-- Bar 3: REVENUE -->
+            <rect x="266" width="50" rx="2" style="fill: var(--color-primary);" opacity="0.58">
+              <animate attributeName="height" values="0;62;62;0" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.44s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="104;42;42;104" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.44s" repeatCount="indefinite"/>
+            </rect>
+            <text x="291" y="120" text-anchor="middle" fill="rgba(125,145,175,0.65)" font-family="monospace" font-size="8.5">REVENUE</text>
+
+            <!-- Bar 4: MARGIN -->
+            <rect x="360" width="50" rx="2" style="fill: var(--color-primary);" opacity="0.72">
+              <animate attributeName="height" values="0;74;74;0" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.66s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="104;30;30;104" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.66s" repeatCount="indefinite"/>
+            </rect>
+            <text x="385" y="120" text-anchor="middle" fill="rgba(125,145,175,0.65)" font-family="monospace" font-size="8.5">MARGIN</text>
+
+            <!-- Bar 5: MOIC -->
+            <rect x="454" width="50" rx="2" style="fill: var(--color-primary);" opacity="0.88">
+              <animate attributeName="height" values="0;88;88;0" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.88s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="104;16;16;104" keyTimes="0;0.28;0.78;1" dur="5.5s" begin="0.88s" repeatCount="indefinite"/>
+            </rect>
+            <text x="479" y="120" text-anchor="middle" fill="rgba(125,145,175,0.65)" font-family="monospace" font-size="8.5">MOIC</text>
+
+            <!-- Trend overlay line -->
+            <polyline points="103,72 197,56 291,42 385,30 479,16" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="440" style="stroke: var(--color-primary); opacity: 0.5;">
+              <animate attributeName="stroke-dashoffset" values="440;0;0;440" keyTimes="0;0.33;0.78;1" dur="5.5s" begin="0.55s" repeatCount="indefinite"/>
+            </polyline>
+
+            <!-- Performance label -->
+            <text x="528" y="15" text-anchor="end" fill="rgba(140,160,190,0.55)" font-family="monospace" font-size="8.5">▲ PERFORMANCE</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
+        {service.capabilities.map((cap) => (
+          <div class={`p-5 rounded-xl border border-site-border/60 bg-site-surface/30 hover:${service.theme.borderAccent} transition-colors`}>
+            <h3 class="font-semibold text-white mb-2">{cap.title}</h3>
+            <p class="text-site-muted text-sm leading-relaxed">{cap.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class={`p-8 rounded-2xl border ${service.theme.borderAccent} bg-site-surface/40 text-center`}>
+        <h2 class="font-display font-bold text-2xl text-white mb-3">{service.cta.heading}</h2>
+        <p class="text-site-muted mb-6">{service.cta.body}</p>
+        <a href={withBase('/contact')} class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300">
+          {service.cta.label}
+        </a>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

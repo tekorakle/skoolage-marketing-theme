@@ -1,0 +1,22 @@
+{
+  "pageTitle": "Portfolio — Apex Capital Group",
+  "pageDescription": "Apex Capital Group portfolio companies across manufacturing, services, consumer, industrial, healthcare, and distribution sectors.",
+  "featuredEyebrow": "Portfolio Highlights",
+  "featuredHeading": "Featured",
+  "featuredAccent": "Holdings",
+  "allEyebrow": "Full Portfolio",
+  "allHeading": "Portfolio",
+  "allAccent": "Companies",
+  "viewAllLabel": "View full portfolio",
+  "viewAllUnit": "companies",
+  "featuredPortfolioLabel": "Portfolio Highlights",
+  "filters": [
+    { "label": "All",           "value": "all" },
+    { "label": "Manufacturing", "value": "manufacturing" },
+    { "label": "Services",      "value": "services" },
+    { "label": "Consumer",      "value": "consumer" },
+    { "label": "Industrial",    "value": "industrial" },
+    { "label": "Healthcare",    "value": "healthcare" },
+    { "label": "Distribution",  "value": "distribution" }
+  ]
+}

@@ -1,0 +1,262 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import siteData from "@/data/global/site.json";
+import contactCtas from "@/data/contact/contact-ctas.json";
+import contactData from "@/data/contact/contact.json";
+import { withBase } from "@/lib/assetPath";
+import { icons } from "@/lib/icons";
+
+const contactMethods = contactData.contactMethods.map((m) => ({
+  ...m,
+  value: m.iconKey === "phone" ? siteData.phoneDisplay : siteData.email,
+  href: m.iconKey === "phone" ? `tel:${siteData.phone}` : `mailto:${siteData.email}`,
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: `Contact ${siteData.name}`,
+  description: `Contact ${siteData.name} regarding investment inquiries, portfolio matters, or partnership opportunities.`,
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: siteData.name,
+    telephone: siteData.phone,
+    email: siteData.email,
+  },
+};
+---
+
+<Layout
+  title={contactData.pageTitle}
+  description={contactData.pageDescription}
+  schema={schema}
+>
+  <div class="px-6 lg:px-12 py-16">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">Contact</li>
+        </ol>
+      </nav>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Left: Info -->
+        <div>
+          <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">{contactData.heading}</h1>
+          <p class="text-site-text-muted text-xl leading-relaxed mb-8">
+            {contactData.subHeading}
+          </p>
+
+          <div class="space-y-4 mb-10">
+            {contactMethods.map((method) => (
+              <a
+                href={method.href}
+                class="flex items-center gap-4 p-4 rounded-xl border border-site-border/60 bg-site-surface/30 hover:border-electric-blue/30 transition-colors group"
+              >
+                <div class="p-2.5 rounded-lg bg-electric-blue/10 border border-electric-blue/20 text-electric-cyan flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" set:html={icons[method.iconKey]} />
+                </div>
+                <div class="flex-1">
+                  <p class="text-xs text-site-muted font-mono uppercase tracking-wider">{method.label}</p>
+                  <p class="text-white font-semibold mt-0.5 group-hover:text-electric-cyan transition-colors">{method.value}</p>
+                  <p class="text-site-muted text-xs mt-0.5">{method.note}</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-site-muted group-hover:text-electric-cyan transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={icons['arrow-right']} />
+              </a>
+            ))}
+          </div>
+
+          <!-- Free offer callout — populated at page load from contact-ctas.json -->
+          <div id="contact-cta" class="p-5 rounded-xl border border-matrix/20 bg-matrix/5" aria-live="polite"></div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="p-6 rounded-2xl border border-site-border bg-site-surface/40 backdrop-blur-sm">
+          <h2 class="font-display font-bold text-xl text-white mb-6">{contactData.form.heading}</h2>
+          <form
+            id="contact-form"
+            class="space-y-4"
+            novalidate
+            data-success={contactData.form.successMessage}
+            data-error-fallback={contactData.form.errorFallback}
+            data-network-error={contactData.form.networkError}
+            data-submit-label={contactData.form.submitLabel}
+            data-sending-label={contactData.form.sendingLabel}
+          >
+            <input type="hidden" name="access_key" value={siteData.web3formsKey} />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;" aria-hidden="true" />
+
+            <div>
+              <label for="name" class="block text-xs font-medium text-site-muted mb-1.5 uppercase tracking-wider">{contactData.form.fields.name.label}</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="name-error"
+                class="w-full px-4 py-3 rounded-xl bg-navy-700 border border-site-border text-white placeholder-site-muted text-sm focus:outline-none focus:border-electric-blue/50 focus:ring-1 focus:ring-electric-blue/30 transition-colors"
+                placeholder={contactData.form.fields.name.placeholder}
+              />
+              <p id="name-error" class="hidden mt-1 text-xs font-mono text-red-400" role="alert"></p>
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-medium text-site-muted mb-1.5 uppercase tracking-wider">{contactData.form.fields.email.label}</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-error"
+                class="w-full px-4 py-3 rounded-xl bg-navy-700 border border-site-border text-white placeholder-site-muted text-sm focus:outline-none focus:border-electric-blue/50 focus:ring-1 focus:ring-electric-blue/30 transition-colors"
+                placeholder={contactData.form.fields.email.placeholder}
+              />
+              <p id="email-error" class="hidden mt-1 text-xs font-mono text-red-400" role="alert"></p>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-medium text-site-muted mb-1.5 uppercase tracking-wider">{contactData.form.fields.message.label}</label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+                class="w-full px-4 py-3 rounded-xl bg-navy-700 border border-site-border text-white placeholder-site-muted text-sm focus:outline-none focus:border-electric-blue/50 focus:ring-1 focus:ring-electric-blue/30 transition-colors resize-none"
+                placeholder={contactData.form.fields.message.placeholder}
+              ></textarea>
+              <p id="message-error" class="hidden mt-1 text-xs font-mono text-red-400" role="alert"></p>
+            </div>
+
+            <div aria-live="polite" aria-atomic="true" id="form-status" class="sr-only"></div>
+            <button
+              type="submit"
+              class="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-cta-gradient text-white font-bold shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:scale-[1.01]"
+            >
+              {contactData.form.submitLabel}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
+
+            <p class="text-center text-site-muted text-xs">
+              {contactData.form.confirmationText}
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<script define:vars={{ contactCtas }} is:inline>
+  const cta = contactCtas[Math.floor(Math.random() * contactCtas.length)];
+  const ctaEl = document.getElementById('contact-cta');
+  if (ctaEl && cta) {
+    ctaEl.innerHTML = `
+      <div class="flex items-start gap-3">
+        <span class="text-2xl" aria-hidden="true">${cta.emoji}</span>
+        <div>
+          <h3 class="font-semibold text-white mb-1">${cta.title}</h3>
+          <p class="text-site-muted text-sm leading-relaxed">${cta.description}</p>
+        </div>
+      </div>`;
+  }
+</script>
+
+<script>
+  const form   = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('form-status') as HTMLElement | null;
+  const button = form?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+  const d      = form?.dataset;
+  const BUTTON_HTML = button?.innerHTML ?? '';
+
+  function setStatus(msg: string, isError: boolean) {
+    if (!status) return;
+    status.textContent = msg;
+    status.className = isError
+      ? 'mt-3 text-sm text-red-400 not-sr-only'
+      : 'mt-3 text-sm text-site-green not-sr-only';
+  }
+
+  function setFieldError(inputId: string, errorId: string, message: string) {
+    const input = document.getElementById(inputId) as HTMLInputElement | HTMLTextAreaElement | null;
+    const error = document.getElementById(errorId) as HTMLElement | null;
+    if (!input || !error) return;
+    input.setAttribute('aria-invalid', 'true');
+    error.textContent = message;
+    error.classList.remove('hidden');
+  }
+
+  function clearFieldError(inputId: string, errorId: string) {
+    const input = document.getElementById(inputId) as HTMLInputElement | HTMLTextAreaElement | null;
+    const error = document.getElementById(errorId) as HTMLElement | null;
+    if (!input || !error) return;
+    input.removeAttribute('aria-invalid');
+    error.textContent = '';
+    error.classList.add('hidden');
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Client-side validation
+    const nameEl    = document.getElementById('name')    as HTMLInputElement | null;
+    const emailEl   = document.getElementById('email')   as HTMLInputElement | null;
+    const messageEl = document.getElementById('message') as HTMLTextAreaElement | null;
+
+    clearFieldError('name', 'name-error');
+    clearFieldError('email', 'email-error');
+    clearFieldError('message', 'message-error');
+
+    let firstInvalid: HTMLElement | null = null;
+    if (!nameEl?.value.trim()) {
+      setFieldError('name', 'name-error', 'Please enter your name.');
+      firstInvalid ||= nameEl;
+    }
+    if (!emailEl?.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) {
+      setFieldError('email', 'email-error', 'Please enter a valid email address.');
+      firstInvalid ||= emailEl;
+    }
+    if (!messageEl?.value.trim()) {
+      setFieldError('message', 'message-error', 'Please enter your message.');
+      firstInvalid ||= messageEl;
+    }
+    if (firstInvalid) { firstInvalid.focus(); return; }
+
+    if (button) { button.disabled = true; button.textContent = d?.sendingLabel ?? ''; }
+    setStatus('', false);
+    try {
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form!),
+      });
+      const data = await res.json() as { success?: boolean; message?: string };
+      if (res.ok) {
+        setStatus(d?.success ?? '', false);
+        form!.reset();
+      } else {
+        setStatus(data.message ?? (d?.errorFallback ?? ''), true);
+      }
+    } catch {
+      setStatus(d?.networkError ?? '', true);
+    } finally {
+      if (button) { button.disabled = false; button.innerHTML = BUTTON_HTML; }
+    }
+  });
+</script>
+
+<style>
+  #contact-form .bg-cta-gradient::before {
+     background: none; animation: none; display: none;
+  }
+</style>

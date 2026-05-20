@@ -1,0 +1,28 @@
+{
+  "sectionLabel": "Quick Contact",
+  "heading": "What are we discussing?",
+  "blurb": "Tell us in a few seconds. Select the topic below, provide your contact information, and we will follow up appropriately.",
+  "stepLabels": ["Select topic", "Your info"],
+  "services": [
+    { "label": "Acquisition",   "subLabel": "Deal sourcing & intake",      "serviceValue": "Acquisition Inquiry",     "iconKey": "search"     },
+    { "label": "Investor",      "subLabel": "LP & investor relations",      "serviceValue": "Investor Relations",      "iconKey": "chart"      },
+    { "label": "Operations",    "subLabel": "Portfolio company support",    "serviceValue": "Portfolio Operations",    "iconKey": "settings"   },
+    { "label": "Leadership",    "subLabel": "Management & transition",      "serviceValue": "Leadership Transition",   "iconKey": "person"     },
+    { "label": "Exit Planning", "subLabel": "Disposition & sale",          "serviceValue": "Portfolio Disposition",   "iconKey": "lightbulb2" },
+    { "label": "Other",         "subLabel": "General inquiry",              "serviceValue": "General Inquiry",         "iconKey": "list"       }
+  ],
+  "formLabels": {
+    "name": "Your Name",
+    "email": "Email",
+    "namePlaceholder": "Name or Company",
+    "emailPlaceholder": "your_email@company.example"
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "submit": "Send It"
+  },
+  "footerNote": "Expect a confirmation and a response within one business day.",
+  "successTitle": "Received.",
+  "successMessage": "Expect a response from our team to the email you provided."
+}

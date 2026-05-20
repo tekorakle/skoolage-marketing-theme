@@ -1,0 +1,140 @@
+[
+  {
+    "title": "Millbrook Fasteners, Inc.",
+    "company": "Manufacturing · Acquired 2019",
+    "category": "manufacturing",
+    "description": "70-year-old precision fastener manufacturer with strong regional OEM relationships, healthy margins, and an ERP system that predated the iPhone. The founder's retirement was somewhat optional at time of close. It is no longer.",
+    "tags": ["Manufacturing", "OEM Supply", "Industrial", "Add-On Candidate"],
+    "icon": "server-stack",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/factory.svg"
+  },
+  {
+    "title": "Summit Printing Solutions",
+    "company": "Commercial Services · Acquired 2020",
+    "category": "services",
+    "description": "Regional commercial print network acquired at 5.2x adjusted EBITDA. Strong recurring contracts with municipal and healthcare clients. Their former branding was, in retrospect, somewhat ironic.",
+    "tags": ["Commercial Print", "B2B Services", "Regional", "Contract Revenue"],
+    "icon": "document-text",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/printer.svg"
+  },
+  {
+    "title": "Cascade Lawn & Landscape",
+    "company": "Field Services · Acquired 2020",
+    "category": "services",
+    "description": "40-location lawn care and landscape maintenance franchise system. Recurring residential and HOA contracts, strong seasonal cash conversion, and franchisees who were genuinely delighted to have institutional support. Most still are.",
+    "tags": ["Field Services", "Franchise", "Recurring Revenue", "B2C"],
+    "icon": "globe-alt",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/leaf.svg"
+  },
+  {
+    "title": "Heritage Bakery Brands",
+    "company": "Consumer / Food · Acquired 2021",
+    "category": "consumer",
+    "description": "Three regional bakery chains unified under a single holding structure. The signature croissant recipe remains unchanged and always will. The commissary labor model is another matter entirely.",
+    "tags": ["Consumer", "Food & Beverage", "Regional Brand", "Wholesale"],
+    "icon": "cpu-chip",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/food-croissant.svg"
+  },
+  {
+    "title": "ProVantage Staffing Group",
+    "company": "Professional Services · Acquired 2021",
+    "category": "services",
+    "description": "Managed workforce provider serving light industrial and logistics clients. High volume, consistent spread, and a churn model that — when viewed through the correct lens — is actually a feature of the business rather than a concern.",
+    "tags": ["Staffing", "Professional Services", "Industrial", "B2B"],
+    "icon": "user-outline",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-group.svg"
+  },
+  {
+    "title": "Lakeshore Environmental Services",
+    "company": "Industrial Services · Acquired 2022",
+    "category": "industrial",
+    "description": "Environmental waste handling and remediation services under long-term municipal contracts. Steady, recession-resistant cash flows — because regardless of the economic cycle, municipalities continue to produce waste.",
+    "tags": ["Environmental", "Municipal Contracts", "Industrial", "Recurring Revenue"],
+    "icon": "shield-check",
+    "featuredImage": "/images/projects/default-bg.jpg",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/recycle.svg"
+  },
+  {
+    "title": "Tri-State Packaging Corp.",
+    "company": "Manufacturing · Acquired 2022",
+    "category": "manufacturing",
+    "description": "Corrugated packaging manufacturer with regional distribution to consumer goods and e-commerce clients. The world will continue to need boxes. We own some of the people who make them.",
+    "tags": ["Packaging", "Manufacturing", "Distribution", "E-Commerce Supply"],
+    "icon": "archive-box",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/package-variant.svg"
+  },
+  {
+    "title": "Vanguard Home Security",
+    "company": "Consumer Services · Acquired 2022",
+    "category": "services",
+    "description": "Residential security monitoring with 98,000 contracted subscribers. Cancellation fees are structurally robust. Churn is within acceptable parameters. The monitoring infrastructure is fully owned. Everything is fine.",
+    "tags": ["Security Monitoring", "Recurring Revenue", "Consumer", "SaaS-Adjacent"],
+    "icon": "lock-closed",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/shield-home.svg"
+  },
+  {
+    "title": "Midwest Dental Partners",
+    "company": "Healthcare Services · Acquired 2023",
+    "category": "healthcare",
+    "description": "Dental services organization with 22 locations across three states. Strong per-chair economics, resilient patient volumes, and waiting room reading material we are actively in the process of modernizing.",
+    "tags": ["Dental", "Healthcare Services", "DSO", "Multi-Location"],
+    "icon": "eye",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tooth.svg"
+  },
+  {
+    "title": "Clearfield Auto Holdings",
+    "company": "Automotive Services · Acquired 2023",
+    "category": "services",
+    "description": "18-location auto body and collision repair platform. Insurance direct-repair relationships provide consistent volume. Customer relationships tend to be involuntary in nature, which is consistent with the underlying demand driver.",
+    "tags": ["Automotive", "Insurance DRP", "Multi-Location", "Services"],
+    "icon": "wrench-screwdriver",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/car-wrench.svg"
+  },
+  {
+    "title": "Northbrook HVAC Collective",
+    "company": "Home Services · Acquired 2023",
+    "category": "services",
+    "description": "Commercial and residential HVAC services across 6 markets. Summer and winter are both peak revenue seasons. Spring and fall are reserved for planning the next acquisition in the vertical.",
+    "tags": ["HVAC", "Home Services", "Residential", "Commercial"],
+    "icon": "cpu-chip",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hvac.svg"
+  },
+  {
+    "title": "Irongate Distribution",
+    "company": "Distribution · Acquired 2024",
+    "category": "distribution",
+    "description": "B2B distribution of industrial and maintenance supplies across the Mid-Atlantic. The trucks are leased. The customer contracts are not. Favorable working capital dynamics and a sales force that finally has institutional backing.",
+    "tags": ["Distribution", "Industrial Supply", "B2B", "Mid-Atlantic"],
+    "icon": "arrow-path",
+    "backgroundImage": "/images/projects/default-bg.jpg",
+    "link": "#",
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/truck.svg"
+  }
+]

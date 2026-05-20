@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "acquisition-intake",
+    "title": "Acquisition & Intake",
+    "tagline": "Disciplined capital deployment through rigorous origination and transaction execution.",
+    "description": "We identify operating businesses with durable fundamentals, structure acquisitions across all deal configurations, and execute through close. Integration planning begins prior to signing.",
+    "iconKey": "building-office",
+    "highlights": ["Due diligence & valuation", "Deal structure & negotiation", "Capital deployment", "Entity formation & integration"],
+    "theme": {
+      "color": "from-amber-500/20 to-amber-600/5",
+      "border": "border-amber-500/20 hover:border-amber-500/40",
+      "accent": "text-amber-400",
+      "borderAccent": "border-amber-500/20",
+      "badgeBorder": "border-amber-500/30",
+      "badgeBg": "bg-amber-500/5"
+    },
+    "pageMeta": {
+      "title": "Acquisition & Intake",
+      "description": "Strategic business acquisition, due diligence, deal structuring, and portfolio integration. Apex Capital Group deploys capital with conviction."
+    },
+    "intro": {
+      "badge": "Acquisition",
+      "heading": "Acquisition & Intake",
+      "subHeading": "Every holding begins with a transaction. We identify operating businesses with durable fundamentals, conduct rigorous due diligence, and structure deals to close. Integration planning begins before the ink is dry."
+    },
+    "capabilities": [
+      { "title": "Target Identification", "description": "Proprietary deal sourcing across sectors: direct outreach, broker relationships, and management team referrals. Sourcing is conducted with a defined mandate applied consistently across channels." },
+      { "title": "Due Diligence", "description": "Financial, operational, legal, and market due diligence conducted with the rigor appropriate to acquiring an operating business. Every material item is reviewed and documented prior to close." },
+      { "title": "Valuation & Pricing", "description": "DCF, comparable transaction, and earnings-based modeling applied to every target. Pricing discipline is maintained consistently across deal size and sector." },
+      { "title": "Deal Structuring", "description": "Equity, debt, earnouts, seller financing — we structure transactions to align incentives and achieve close. Experience across deal configurations enables efficient execution regardless of complexity." },
+      { "title": "LOI & Definitive Agreement", "description": "From letter of intent through purchase agreement, executed with precision and urgency. Timelines are managed to maintain deal momentum through all intermediate milestones." },
+      { "title": "Regulatory & Compliance Review", "description": "HSR, licensing, environmental, and sector-specific regulatory requirements reviewed pre-close. Material compliance items are resolved before they become conditions to closing." },
+      { "title": "Debt Financing & Capital Stack", "description": "Senior debt, mezzanine, preferred equity — we build capital structures that leave room to operate without sacrificing returns. Lender relationships are maintained across institution types and deal sizes." },
+      { "title": "Management Retention Planning", "description": "Identifying which members of the incumbent leadership team to retain — and structuring the compensation and equity economics to make that retention durable." },
+      { "title": "Integration Planning", "description": "Day-one operational continuity, systems consolidation roadmaps, and vendor transition timelines developed pre-close so operational continuity is maintained through the ownership transfer." },
+      { "title": "Post-Close Reporting Framework", "description": "Board reporting cadences, financial dashboards, and KPI frameworks established in the first 90 days. What gets measured gets managed." }
+    ],
+    "cta": {
+      "heading": "Have a business we should look at?",
+      "body": "We review opportunities across sectors. Submit the details and we will respond with a preliminary assessment of fit against our mandate.",
+      "label": "Submit an Opportunity →"
+    }
+  },
+  {
+    "slug": "operational-efficiency",
+    "title": "Operational Efficiency",
+    "tagline": "Systematic performance improvement across portfolio company operations.",
+    "description": "Each portfolio company receives a structured operational review following acquisition. Improvement roadmaps are prioritized by measurable impact, resourced appropriately, and tracked against baseline metrics.",
+    "iconKey": "chart-bar-square",
+    "highlights": ["Process optimization", "Cost structure analysis", "Vendor consolidation", "KPI establishment"],
+    "theme": {
+      "color": "from-blue-500/20 to-blue-600/5",
+      "border": "border-blue-500/20 hover:border-blue-500/40",
+      "accent": "text-blue-400",
+      "borderAccent": "border-blue-500/20",
+      "badgeBorder": "border-blue-500/30",
+      "badgeBg": "bg-blue-500/5"
+    },
+    "pageMeta": {
+      "title": "Operational Efficiency",
+      "description": "Portfolio company optimization: process improvement, cost structure analysis, vendor consolidation, and KPI-driven performance management."
+    },
+    "intro": {
+      "badge": "Operations",
+      "heading": "Operational Efficiency",
+      "subHeading": "We do not acquire businesses to leave them as-is. Every portfolio company receives a structured operational review, a prioritized improvement roadmap, and the resources to execute against it."
+    },
+    "capabilities": [
+      { "title": "Operational Assessment", "description": "Top-to-bottom review of people, processes, and systems within the first 60 days. We identify what is working, what is broken, and what represents unproductive overhead." },
+      { "title": "Cost Structure Analysis", "description": "Line-by-line P&L review. Costs accumulated through years of inattention are identified and eliminated systematically." },
+      { "title": "Vendor & Supplier Consolidation", "description": "Portfolio-wide purchasing leverage applied to individual company relationships. Fewer vendors. Better terms. Less time managing paperwork." },
+      { "title": "Process Documentation & Standardization", "description": "Institutional knowledge extracted from key personnel and converted into documented, repeatable processes. Institutional knowledge is documented to reduce single-point-of-failure risk across key roles." },
+      { "title": "KPI Framework Deployment", "description": "Identifying the 6-12 metrics that actually predict performance for each business, then building the reporting infrastructure to track them weekly. No vanity metrics." },
+      { "title": "Technology & Systems Audit", "description": "Evaluating existing software, hardware, and workflow tools. We replace what is costing more than it earns and invest in what multiplies output per headcount." },
+      { "title": "Working Capital Optimization", "description": "A/R collection, inventory management, and payment terms renegotiated to free cash flow from the balance sheet. Cash that is sitting is cash that is not working." },
+      { "title": "Headcount & Organizational Design", "description": "Right-sizing the org chart for current revenue and projected growth. Roles are clarified. Accountability is assigned. Structural redundancy is resolved through a defined review process." },
+      { "title": "Margin Improvement Programs", "description": "Pricing analysis, product mix review, and direct cost reduction initiatives layered to systematically improve gross and operating margins over 12-24 months." },
+      { "title": "Performance Incentive Design", "description": "Compensation structures aligned to outcomes. If the business hits its targets, the people who drove those results share in them." }
+    ],
+    "cta": {
+      "heading": "Operational improvement is not a one-time event.",
+      "body": "It is a discipline. We build that discipline into every company we hold.",
+      "label": "Learn How We Operate →"
+    }
+  },
+  {
+    "slug": "portfolio-disposition",
+    "title": "Portfolio Disposition",
+    "tagline": "Structured exit execution from strategic positioning through close.",
+    "description": "Strategic exit planning begins at acquisition. When market conditions and asset performance align, we execute dispositions with the same analytical rigor applied to original underwriting.",
+    "iconKey": "arrow-trending-up",
+    "highlights": ["Exit strategy development", "M&A advisory", "Buyer identification", "Transaction management"],
+    "theme": {
+      "color": "from-emerald-500/20 to-emerald-600/5",
+      "border": "border-emerald-500/20 hover:border-emerald-500/40",
+      "accent": "text-emerald-400",
+      "borderAccent": "border-emerald-500/20",
+      "badgeBorder": "border-emerald-500/30",
+      "badgeBg": "bg-emerald-500/5"
+    },
+    "pageMeta": {
+      "title": "Portfolio Disposition",
+      "description": "Strategic exit planning, M&A advisory, buyer identification, and transaction management for portfolio company divestitures."
+    },
+    "intro": {
+      "badge": "Disposition",
+      "heading": "Portfolio Disposition",
+      "subHeading": "An acquisition is only as good as the exit that follows it. We plan for disposition from the day we close, so when the time is right, we are positioned to execute — not to prepare."
+    },
+    "capabilities": [
+      { "title": "Exit Strategy Development", "description": "Strategic sale, secondary buyout, IPO, or recapitalization — we evaluate the right exit path for each asset based on market timing, buyer landscape, and investor objectives." },
+      { "title": "Business Preparation", "description": "Clean financial statements, documented processes, resolved contingent liabilities, and a management team that can present confidently. We prepare our companies to be acquired with the same discipline we applied at intake." },
+      { "title": "Valuation & Positioning", "description": "Current-market valuation and narrative development. We identify what buyers pay for and ensure our companies communicate that story clearly and with supporting data." },
+      { "title": "Buyer Universe Mapping", "description": "Strategic buyers, financial sponsors, family offices, and management buyout candidates identified and qualified. The right buyer is often not the first one who calls." },
+      { "title": "Marketing Process Management", "description": "Confidential information memorandum, management presentations, and data room managed with discretion. Information goes to qualified buyers, not the market at large." },
+      { "title": "Bid Process & Negotiation", "description": "First-round indications, management meetings, second-round bids, and final negotiations conducted with the experience of a team that has been on both sides of the table." },
+      { "title": "Due Diligence Support", "description": "Buyer diligence is the mirror image of what we conducted on intake. We respond to requests promptly, completely, and without delays that erode buyer confidence." },
+      { "title": "Transaction Structuring", "description": "Purchase price adjustments, representations and warranties, escrows, earnouts, and rollover equity negotiated to protect seller value and close the transaction." },
+      { "title": "Regulatory Clearance", "description": "Antitrust review, sector-specific regulatory approvals, and third-party consents managed from LOI through close." },
+      { "title": "Post-Close Obligations", "description": "Transition services agreements, non-competes, and earnout tracking managed through close and the subsequent obligations period. A deal is not done when it closes." }
+    ],
+    "cta": {
+      "heading": "Thinking about an exit?",
+      "body": "Early planning produces better outcomes regardless of timeline. We are available for a preliminary conversation at any stage.",
+      "label": "Talk to Our Deal Team →"
+    }
+  },
+  {
+    "slug": "leadership-transition",
+    "title": "Leadership Transition & Stakeholder Relations",
+    "tagline": "Disciplined management of executive succession and stakeholder communication.",
+    "description": "Leadership transitions following acquisition present operational and stakeholder risk if not managed with structure. We apply a defined framework covering executive continuity, governance, and communications across every portfolio company.",
+    "iconKey": "user-plus",
+    "highlights": ["Executive onboarding", "Stakeholder communications", "Board governance", "Cultural integration"],
+    "theme": {
+      "color": "from-violet-500/20 to-violet-600/5",
+      "border": "border-violet-500/20 hover:border-violet-500/40",
+      "accent": "text-violet-400",
+      "borderAccent": "border-violet-500/20",
+      "badgeBorder": "border-violet-500/30",
+      "badgeBg": "bg-violet-500/5"
+    },
+    "pageMeta": {
+      "title": "Leadership Transition & Stakeholder Relations",
+      "description": "Executive onboarding, board governance, stakeholder communications, and cultural integration management for portfolio company leadership transitions."
+    },
+    "intro": {
+      "badge": "Leadership",
+      "heading": "Leadership Transition & Stakeholder Relations",
+      "subHeading": "The people side of an acquisition is where most deals underperform after close. We have developed a structured framework for managing transitions that covers planning, communication, and governance — applied consistently across every holding."
+    },
+    "capabilities": [
+      { "title": "Transition Planning", "description": "Pre-close planning for Day 1, Week 1, Month 1, and Quarter 1. Each milestone has an owner, a communication plan, and a definition of success." },
+      { "title": "Executive Assessment & Retention", "description": "Evaluating incumbent executives against the company's next-phase needs. Those who fit stay, with updated economics. Those who do not fit are transitioned through a structured offboarding process." },
+      { "title": "New Leadership Recruitment", "description": "When the role requires an upgrade, we recruit from our network or engage search firms with specific briefs. Selection is based on capability assessment, not résumé review alone." },
+      { "title": "Executive Onboarding", "description": "Structured 90-day onboarding for incoming executives: key relationships, operational overview, quick-win identification, and expectation alignment with the board." },
+      { "title": "Board Governance & Composition", "description": "Board seats, committee structures, information rights, and reporting cadences established post-close to provide appropriate oversight without impeding management." },
+      { "title": "Employee Communication Strategy", "description": "Transparent, consistent communication to the workforce about the acquisition, the new ownership, and what changes and what does not. Uncertainty is the primary driver of attrition during transitions." },
+      { "title": "Customer & Vendor Notification", "description": "Key account outreach, vendor relationship continuity, and contract assignment managed to prevent relationship disruption during the transition period." },
+      { "title": "Cultural Integration Assessment", "description": "Understanding the acquired company's culture — what it values, how it makes decisions, where informal authority sits — before attempting to change anything. Assessment precedes optimization." },
+      { "title": "Stakeholder Reporting", "description": "Investor updates, lender compliance reporting, and board packages delivered on schedule with the information stakeholders need to evaluate performance." },
+      { "title": "Conflict Resolution & Change Management", "description": "When transitions produce friction — and they sometimes do — we have experienced operators who can diagnose the source, mediate the parties, and move the business forward." }
+    ],
+    "cta": {
+      "heading": "Leadership transitions require structured execution.",
+      "body": "We have developed repeatable frameworks for managing them without disruption to operations or stakeholder confidence.",
+      "label": "Contact Our Operating Team →"
+    }
+  }
+]

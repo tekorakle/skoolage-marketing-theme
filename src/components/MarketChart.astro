@@ -1,0 +1,478 @@
+---
+import { withBase } from '@/lib/assetPath';
+---
+
+<style>
+  .wave-bridge {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    min-height: 120px;
+    overflow: hidden;
+    background: var(--bg-deep);
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .wave-bridge__canvas-wrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* :global so Astro doesn't scope the canvas selector —
+     the canvas is created by JS and won't have the Astro data attribute */
+  .wave-bridge__canvas-wrap :global(canvas) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ==========================================
+     OPTION 1: STATIC 2D CHEVRONS STYLES
+     ========================================== */
+  .wave-bridge__hint {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+
+  .wave-bridge__hint--hidden {
+    opacity: 0;
+  }
+
+  .wave-bridge__hint--start {
+    top: 1rem;
+    flex-direction: column-reverse;
+  }
+
+  .wave-bridge__hint--end {
+    bottom: 1rem;
+  }
+
+  .wave-bridge__hint span:not(.wave-bridge__chevron) {
+    font-family: var(--font-oswald), Impact, sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .wave-bridge__chevron {
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid rgb(var(--color-text-ch) / 0.4);
+    border-bottom: 2px solid rgb(var(--color-text-ch) / 0.4);
+    transform: rotate(45deg);
+    animation: wave-chevron-drift 2.4s ease-in-out infinite;
+  }
+
+  .wave-bridge__chevron:nth-child(2) {
+    animation-delay: 0.2s;
+    opacity: 0.5;
+  }
+
+  @keyframes wave-chevron-drift {
+    0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.3; }
+    50% { transform: rotate(45deg) translateY(6px); opacity: 0.85; }
+  }
+
+  /* ==========================================
+     OPTION 2: 3D GLOW TEXT STYLES (Original)
+     ========================================== */
+  .wave-bridge__text-3d {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-oswald), Impact, sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: clamp(0.9rem, 2vw, 40px);
+    letter-spacing: 6px;
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgb(var(--color-text-ch) / 0.5);
+    z-index: 3;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+
+  .wave-bridge__text-3d--start {
+    top: 10%;
+  }
+
+  .wave-bridge__text-3d--end {
+    bottom: 10%;
+  }
+
+  .wave-bridge__text-3d--hidden {
+    opacity: 0;
+  }
+
+  /* ==========================================
+     SHARED STYLES
+     ========================================== */
+  @media (prefers-reduced-motion: reduce) {
+    .wave-bridge__chevron {
+      animation: none;
+      opacity: 0.45;
+    }
+    .wave-bridge__hint,
+    .wave-bridge__text-3d {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wave-bridge {
+      min-height: 100px;
+    }
+  }
+
+  @media (max-width: 689px) {
+    .wave-bridge {
+       display: none;
+    }
+  }
+
+</style>
+
+
+<div class="wave-bridge" aria-hidden="true">
+  <div class="wave-bridge__canvas-wrap" id="wave-canvas-wrap"></div>
+
+  <!-- ==========================================
+       OPTION 1: STATIC 2D VERSION (Currently OFF)
+       ==========================================
+  <div class="wave-bridge__hint wave-bridge__hint--start" id="wave-hint-start" aria-hidden="true">
+    <span class="wave-bridge__chevron"></span>
+    <span class="wave-bridge__chevron"></span>
+    <span>Scroll down</span>
+  </div>
+  <div class="wave-bridge__hint wave-bridge__hint--end" id="wave-hint-end" aria-hidden="true">
+    <span>Keep going</span>
+    <span class="wave-bridge__chevron"></span>
+    <span class="wave-bridge__chevron"></span>
+  </div>
+  END OPTION 1 -->
+
+  <!-- ==========================================
+       OPTION 2: 3D GLOW TEXT VERSION (Currently OFF)
+       ==========================================
+  <div class="wave-bridge__text-3d wave-bridge__text-3d--start" id="wave-hint-start-3d" aria-hidden="true">
+    Scroll down
+  </div>
+  <div class="wave-bridge__text-3d wave-bridge__text-3d--end" id="wave-hint-end-3d" aria-hidden="true">
+    Keep going
+  </div>
+  END OPTION 2 -->
+</div>
+
+<script is:inline define:vars={{ threeSrc: withBase('/scripts/three.min.js') }} data-astro-rerun>
+  (function () {
+    var wrap = document.getElementById('wave-canvas-wrap');
+    if (!wrap) return;
+
+    function init() {
+      if (typeof THREE === 'undefined') return;
+
+      if (window.__waveBridgeRAF) {
+      cancelAnimationFrame(window.__waveBridgeRAF);
+      window.__waveBridgeRAF = null;
+    }
+    var oldCanvas = wrap.querySelector('canvas');
+    if (oldCanvas) oldCanvas.remove();
+
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var W = wrap.clientWidth, H = wrap.clientHeight;
+    var aspect = W / H;
+
+    // Orthographic camera — clean flat chart, no perspective distortion
+    var VIEW_H = 8;
+    var VIEW_W = VIEW_H * aspect;
+    var scene = new THREE.Scene();
+    var camera = new THREE.OrthographicCamera(
+      -VIEW_W / 2, VIEW_W / 2,
+      VIEW_H / 2, -VIEW_H / 2,
+      0.1, 100
+    );
+    camera.position.z = 10;
+
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H, false);
+    // Explicitly set CSS so the canvas fills its container regardless of
+    // Astro's CSS scoping (dynamically-created elements don't get the scope attribute)
+    var domCanvas = renderer.domElement;
+    domCanvas.style.display = 'block';
+    domCanvas.style.width = '100%';
+    domCanvas.style.height = '100%';
+    wrap.appendChild(domCanvas);
+
+    // Chart world-space bounds
+    var CX0 = -VIEW_W / 2 * 0.94;
+    var CX1 =  VIEW_W / 2 * 0.94;
+    var CY0 = -VIEW_H / 2 * 0.55;  // bottom
+    var CY1 =  VIEW_H / 2 * 0.78;  // top
+    var CYB =  CY0 + 0.15;          // fill baseline
+
+    var N = 150; // visible data points
+
+    // Generate stock data: upward trend with realistic volatility
+    function buildPool(n) {
+      var pool = [];
+      var y = CY0 + (CY1 - CY0) * 0.18;
+      var targetY = CY0 + (CY1 - CY0) * 0.82;
+      for (var i = 0; i < n + 80; i++) {
+        var target = y + (targetY - y) * 0.055;
+        var trendPull = (target - y) * 0.07;
+        var noise = (Math.random() - 0.47) * 0.13;
+        if (Math.random() < 0.04) noise += (Math.random() - 0.33) * 0.38;
+        y = Math.max(CY0 + 0.3, Math.min(CY1 - 0.3, y + trendPull + noise));
+        pool.push(y);
+      }
+      return pool;
+    }
+
+    var pool = buildPool(N);
+    var offset = 0; // left edge of visible window
+
+    function extendPool() {
+      var last = pool[pool.length - 1];
+      var trendPull = (CY1 - 0.6 - last) * 0.02;
+      var noise = (Math.random() - 0.48) * 0.13;
+      if (Math.random() < 0.03) noise += (Math.random() - 0.32) * 0.38;
+      pool.push(Math.max(CY0 + 0.3, Math.min(CY1 - 0.3, last + trendPull + noise)));
+    }
+
+    function windowData() {
+      return pool.slice(offset, offset + N);
+    }
+
+    // Horizontal grid lines
+    var gridPts = [];
+    var GRID_LINES = 5;
+    for (var g = 0; g <= GRID_LINES; g++) {
+      var gy = CY0 + (CY1 - CY0) * (g / GRID_LINES);
+      gridPts.push(CX0, gy, -0.3, CX1, gy, -0.3);
+    }
+    var gridGeo = new THREE.BufferGeometry();
+    gridGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(gridPts), 3));
+    scene.add(new THREE.LineSegments(gridGeo, new THREE.LineBasicMaterial({
+      color: 0x0d2a14,
+      transparent: true,
+      opacity: 0.6
+    })));
+
+    // Baseline (x-axis)
+    var baseGeo = new THREE.BufferGeometry();
+    baseGeo.setAttribute('position', new THREE.BufferAttribute(
+      new Float32Array([CX0, CYB, -0.2, CX1, CYB, -0.2]), 3
+    ));
+    scene.add(new THREE.Line(baseGeo, new THREE.LineBasicMaterial({
+      color: 0x1a4a22,
+      transparent: true,
+      opacity: 0.5
+    })));
+
+    // Fill area (triangle strip under the chart line)
+    var fillPts = new Float32Array(N * 2 * 3);
+    var fillIdx = [];
+    for (var fi = 0; fi < N - 1; fi++) {
+      var fb = fi * 2;
+      fillIdx.push(fb, fb + 1, fb + 2, fb + 1, fb + 3, fb + 2);
+    }
+    var fillGeo = new THREE.BufferGeometry();
+    fillGeo.setAttribute('position', new THREE.BufferAttribute(fillPts, 3));
+    fillGeo.setIndex(fillIdx);
+    scene.add(new THREE.Mesh(fillGeo, new THREE.MeshBasicMaterial({
+      color: 0x00c853,
+      transparent: true,
+      opacity: 0.09,
+      side: THREE.DoubleSide,
+      depthWrite: false
+    })));
+
+    // Chart line
+    var linePts = new Float32Array(N * 3);
+    var lineGeo = new THREE.BufferGeometry();
+    lineGeo.setAttribute('position', new THREE.BufferAttribute(linePts, 3));
+    var lineMat = new THREE.LineBasicMaterial({
+      color: 0x00e676,
+      transparent: true,
+      opacity: 0.92,
+      blending: THREE.AdditiveBlending
+    });
+    scene.add(new THREE.Line(lineGeo, lineMat));
+
+    // Live-price dot
+    var dotGeo = new THREE.CircleGeometry(0.11, 14);
+    var dotMat = new THREE.MeshBasicMaterial({ color: 0x69ffb0, transparent: true });
+    var dot = new THREE.Mesh(dotGeo, dotMat);
+    scene.add(dot);
+
+    // Pulse ring around dot
+    var ringGeo = new THREE.RingGeometry(0.15, 0.23, 20);
+    var ringMat = new THREE.MeshBasicMaterial({
+      color: 0x00e676,
+      transparent: true,
+      opacity: 0.35,
+      side: THREE.DoubleSide
+    });
+    var ring = new THREE.Mesh(ringGeo, ringMat);
+    scene.add(ring);
+
+    function updateGeometry(data) {
+      var lp = lineGeo.attributes.position.array;
+      var fp = fillGeo.attributes.position.array;
+      var count = data.length;
+
+      for (var i = 0; i < N; i++) {
+        var xv = CX0 + (i / (N - 1)) * (CX1 - CX0);
+        var yv = i < count ? data[i] : (count > 0 ? data[count - 1] : CYB);
+        lp[i * 3]     = xv;
+        lp[i * 3 + 1] = yv;
+        lp[i * 3 + 2] = 0;
+        // top vertex
+        fp[i * 6]     = xv;
+        fp[i * 6 + 1] = yv;
+        fp[i * 6 + 2] = -0.1;
+        // bottom vertex
+        fp[i * 6 + 3] = xv;
+        fp[i * 6 + 4] = CYB;
+        fp[i * 6 + 5] = -0.1;
+      }
+
+      lineGeo.attributes.position.needsUpdate = true;
+      fillGeo.attributes.position.needsUpdate = true;
+
+      if (count > 0) {
+        var li = count - 1;
+        var lx = CX0 + (li / (N - 1)) * (CX1 - CX0);
+        dot.position.set(lx, data[li], 0.1);
+        ring.position.set(lx, data[li], 0.05);
+      }
+    }
+
+    var clock = new THREE.Clock();
+    var lastScroll = 0;
+    var SCROLL_RATE = 0.065;
+    var visible = false;
+
+    // Render one static frame when reduced-motion is preferred
+    if (prefersReduced) {
+      updateGeometry(windowData());
+      dotMat.opacity = 0.8;
+      ringMat.opacity = 0.25;
+      renderer.render(scene, camera);
+    }
+
+    function animate() {
+      if (!visible) { window.__waveBridgeRAF = null; return; }
+      window.__waveBridgeRAF = requestAnimationFrame(animate);
+      var t = clock.getElapsedTime();
+
+      if (t - lastScroll > SCROLL_RATE) {
+        if (offset + N < pool.length) {
+          offset++;
+        } else {
+          extendPool();
+          offset++;
+        }
+        lastScroll = t;
+      }
+
+      updateGeometry(windowData());
+
+      // Pulse the live dot
+      var pulse = 0.55 + 0.45 * Math.sin(t * 4.8);
+      dotMat.opacity = pulse;
+      ringMat.opacity = 0.12 + 0.22 * Math.sin(t * 4.8 - 0.6);
+      ring.scale.setScalar(1 + 0.35 * Math.abs(Math.sin(t * 2.4)));
+
+      renderer.render(scene, camera);
+    }
+
+    // Only run the RAF loop while the chart is on-screen
+    var visObserver = new IntersectionObserver(function(entries) {
+      visible = entries[0].isIntersecting;
+      if (visible && !window.__waveBridgeRAF && !prefersReduced) {
+        clock.start();
+        animate();
+      }
+    }, { threshold: 0.05 });
+    visObserver.observe(wrap);
+
+    var resizeTimer;
+    function onResize(nw, nh) {
+      if (!nw || !nh) return;
+      var na = nw / nh;
+      var nvW = VIEW_H * na;
+      camera.left   = -nvW / 2;
+      camera.right  =  nvW / 2;
+      camera.updateProjectionMatrix();
+      renderer.setSize(nw, nh, false);
+    }
+
+    // ResizeObserver covers both window resize and sidebar collapse/expand
+    var ro = new ResizeObserver(function(entries) {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        var e = entries[0];
+        if (!e) return;
+        var nw = Math.round(e.contentRect.width);
+        var nh = Math.round(e.contentRect.height);
+        onResize(nw, nh);
+      }, 80);
+    });
+    ro.observe(wrap);
+
+    function cleanup() {
+      if (window.__waveBridgeRAF) {
+        cancelAnimationFrame(window.__waveBridgeRAF);
+        window.__waveBridgeRAF = null;
+      }
+      ro.disconnect();
+      visObserver.disconnect();
+      renderer.dispose();
+      gridGeo.dispose();
+      baseGeo.dispose();
+      fillGeo.dispose();
+      lineGeo.dispose();
+      dotGeo.dispose();
+      ringGeo.dispose();
+    }
+    document.addEventListener('astro:before-swap', cleanup, { once: true });
+    } // end init()
+
+    if (typeof THREE !== 'undefined') {
+      init();
+      return;
+    }
+
+    // Inject Three.js async — non-blocking. On subsequent navigations THREE is
+    // already in scope so init() runs immediately above.
+    var existing = document.querySelector('script[data-three-loader]');
+    if (!existing) {
+      var s = document.createElement('script');
+      s.src = threeSrc;
+      s.setAttribute('data-three-loader', '');
+      s.addEventListener('load', init, { once: true });
+      document.head.appendChild(s);
+    } else if (typeof THREE !== 'undefined') {
+      init();
+    } else {
+      existing.addEventListener('load', init, { once: true });
+    }
+  })();
+</script>

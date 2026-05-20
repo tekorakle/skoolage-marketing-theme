@@ -1,0 +1,90 @@
+---
+import { withBase } from '@/lib/assetPath';
+import servicesData from '@/data/services/services.json';
+import servicesIndex from '@/data/services/services-index.json';
+import { icons } from '@/lib/icons';
+---
+
+<div class="site-band"></div>
+
+<section id="services" class="relative py-20 px-6 lg:px-12" style="background: var(--bg-deep);" aria-labelledby="services-heading">
+  <div class="max-w-5xl mx-auto">
+    <!-- Section header -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="h-px w-8" style="background: var(--color-primary);"></div>
+        <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">{servicesIndex.componentEyebrow}</span>
+      </div>
+      <h2 id="services-heading" class="font-display font-bold text-4xl sm:text-5xl text-white uppercase tracking-wide mb-4">
+        {servicesIndex.componentHeading}
+      </h2>
+      <p class="text-site-text-muted text-lg max-w-2xl border-l-2 pl-4" style="border-color: var(--color-primary);" set:html={servicesIndex.componentBlurb} />
+    </div>
+
+    <!-- Service cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-site-border">
+      {servicesData.map((service) => (
+        <a
+          href={withBase(`/services/${service.slug}`)}
+          class={`group relative flex flex-col p-6 bg-navy-800 hover:bg-navy-700 transition-all duration-200`}
+        >
+          {/* Badge */}
+          {"badge" in service && service.badge && (
+            <div class="absolute top-4 right-4">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 text-[9px] font-display font-bold uppercase tracking-[2px]" style="background: var(--color-primary); color: var(--bg-deep);">
+                {service.badge}
+              </span>
+            </div>
+          )}
+
+          <!-- Left green border accent on hover -->
+          <div class="absolute left-0 top-0 bottom-0 w-0.5 transition-all duration-200" style="background: var(--color-primary); opacity: 0;" data-service-accent></div>
+
+          <div class="flex items-start gap-4">
+            <!-- Icon -->
+            <div class="flex-shrink-0 p-3 border border-site-border bg-site-surface" style="color: var(--color-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icons[service.iconKey]} />
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <p class="text-xs font-mono font-medium mb-1" style="color: var(--color-primary);">{service.tagline}</p>
+              <h3 class="font-display font-bold text-lg text-white uppercase tracking-wide mb-2 leading-tight">{service.title}</h3>
+              <p class="text-site-text-muted text-sm leading-relaxed mb-4">{service.description}</p>
+
+              <!-- Highlights -->
+              <ul class="flex flex-wrap gap-2">
+                {service.highlights.map((h) => (
+                  <li class="text-xs px-2.5 py-1 border border-site-border font-mono text-site-muted">
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div class="mt-4 flex justify-end">
+            <span class="inline-flex items-center gap-1 text-xs font-display font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-200" style="color: var(--color-primary);">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Gray band -->
+<div class="site-band"></div>
+
+<script>
+  document.querySelectorAll('[data-service-accent]').forEach(el => {
+    const card = el.closest('a');
+    card?.addEventListener('mouseenter', () => { (el as HTMLElement).style.opacity = '1'; });
+    card?.addEventListener('mouseleave', () => { (el as HTMLElement).style.opacity = '0'; });
+  });
+</script>

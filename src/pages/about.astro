@@ -1,0 +1,302 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import { withBase } from "@/lib/assetPath";
+import aboutData from "@/data/about/about.json";
+import servicesData from "@/data/services/services.json";
+import { icons } from "@/lib/icons";
+
+const colorRgbMap: Record<string, string> = {
+  blue:    '96,165,250',
+  emerald: '52,211,153',
+  violet:  '167,139,250',
+  amber:   '251,191,36',
+};
+
+interface CapItem {
+  title: string;
+  description: string;
+  href: string;
+  serviceTitle: string;
+  colorRgb: string;
+}
+
+const capabilities: CapItem[] = (servicesData as any[]).flatMap((svc: any) => {
+  const match    = String(svc.theme?.accent ?? '').match(/text-(\w+)-/);
+  const colorKey = match?.[1] ?? 'blue';
+  const rgb      = colorRgbMap[colorKey] ?? '96,165,250';
+  const badge    = String(svc.intro?.badge ?? svc.title);
+  const href     = withBase(`/services/${svc.slug}`);
+  return (svc.capabilities as { title: string; description: string }[]).map((cap) => ({
+    title:        cap.title,
+    description:  cap.description,
+    href,
+    serviceTitle: badge,
+    colorRgb:     rgb,
+  }));
+});
+
+// Shuffle at build time
+const shuffled = [...capabilities];
+for (let i = shuffled.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+}
+---
+
+<Layout title={aboutData.pageTitle} description={aboutData.pageDescription}>
+
+  <!-- ═══ Upper content ══════════════════════════════════════════════════ -->
+  <div class="px-6 lg:px-12 pt-16 pb-0">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">About</li>
+        </ol>
+      </nav>
+
+      <!-- Contact bar -->
+      <div class="flex flex-wrap gap-x-8 gap-y-2 mb-10 pb-8 border-b border-site-border/40">
+        {aboutData.contactBar.items.map((item) => (
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono uppercase tracking-widest text-site-muted">{item.label}:</span>
+            {item.href ? (
+              <a href={item.href} class="text-sm font-mono transition-colors hover:text-white" style="color: var(--color-primary);">{item.value}</a>
+            ) : (
+              <span class="text-sm font-mono text-site-text">{item.value}</span>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Page heading + original text -->
+      <div class="mb-16">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl text-white mb-8">{aboutData.pageTitle}</h1>
+        <div class="prose-custom max-w-3xl space-y-5 text-site-text-muted text-lg leading-relaxed">
+          {aboutData.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+
+      <!-- Service pillars -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="h-px w-8" style="background: var(--color-primary);"></div>
+          <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">Services</span>
+        </div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-white uppercase tracking-wide mb-6">{aboutData.pillarsHeading}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {aboutData.pillars.map((pillar) => (
+            <div class="group p-5 rounded-xl border border-site-border/60 bg-site-surface/20 hover:bg-site-surface/40 hover:border-electric-blue/40 transition-all duration-300">
+              <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4"
+                   style="background: rgb(var(--primary-ch) / 0.08); border: 1px solid rgb(var(--primary-ch) / 0.15);">
+                <svg class="w-4 h-4" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" set:html={icons[pillar.icon]} />
+              </div>
+              <h3 class="font-display font-bold text-sm text-white uppercase tracking-wide mb-2">{pillar.title}</h3>
+              <p class="text-xs text-site-muted leading-relaxed">{pillar.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      <!-- Who We Work With -->
+      <div class="mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="h-px w-8" style="background: var(--color-primary);"></div>
+              <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">{aboutData.clientTypes.eyebrow}</span>
+            </div>
+            <h2 class="font-display font-bold text-2xl sm:text-3xl text-white uppercase tracking-wide mb-4">{aboutData.clientTypes.heading}</h2>
+            <p class="text-site-text-muted leading-relaxed">{aboutData.clientTypes.body}</p>
+          </div>
+          <div class="flex flex-wrap gap-3 lg:pt-12">
+            {aboutData.clientTypes.items.map((item) => (
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono text-site-text border border-site-border/50 bg-site-surface/20">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background: var(--color-primary);"></span>
+                {item.label}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ Capabilities carousel — full bleed ═════════════════════════════ -->
+  <section class="py-16" style="background: linear-gradient(180deg, transparent 0%, rgb(var(--bg-elevated-ch) / 0.35) 50%, transparent 100%);">
+
+    <!-- Heading -->
+    <div class="px-6 lg:px-12 max-w-5xl mx-auto mb-10">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="h-px w-8" style="background: var(--color-primary);"></div>
+        <span class="text-xs font-mono font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">{aboutData.capabilitiesShowcase.eyebrow}</span>
+      </div>
+      <h2 class="font-display font-bold text-4xl sm:text-5xl text-white uppercase tracking-wide mb-3">
+        {aboutData.capabilitiesShowcase.heading}
+      </h2>
+      <p class="text-site-text-muted text-lg max-w-xl">{aboutData.capabilitiesShowcase.subheading}</p>
+    </div>
+
+    <!-- Marquee row — overflow:hidden wrapper, duplicated cards, CSS animation -->
+    <div class="cap-outer">
+      <div class="cap-track">
+        {[...shuffled, ...shuffled].map((cap) => (
+          <a href={cap.href}
+             class="cap-card"
+             style={`border-top-color: rgb(${cap.colorRgb}); background: linear-gradient(160deg, rgba(${cap.colorRgb},0.09) 0%, rgba(${cap.colorRgb},0.02) 40%, transparent 65%), rgba(14,18,32,0.88);`}>
+            <span class="cap-badge" style={`color: rgb(${cap.colorRgb}); border-color: rgba(${cap.colorRgb},0.38);`}>
+              {cap.serviceTitle}
+            </span>
+            <h3 class="cap-title">{cap.title}</h3>
+            <p class="cap-desc">{cap.description}</p>
+            <span class="cap-cta" style={`color: rgb(${cap.colorRgb});`}>Explore service →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Lower content ══════════════════════════════════════════════════ -->
+  <div class="px-6 lg:px-12 pb-20">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Tech Stack -->
+      <div class="p-6 rounded-2xl border border-site-border bg-site-surface/30 mb-16">
+        <h2 class="font-display font-bold text-xl text-white mb-5">{aboutData.techStackHeading}</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {aboutData.techStackGroups.map((group) => (
+            <div>
+              <p class="text-xs font-mono font-bold uppercase tracking-wider mb-2" style="color: var(--color-primary);">{group.cat}</p>
+              <ul class="space-y-1">
+                {group.items.map((item) => <li class="text-sm text-site-text-muted">{item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="p-8 rounded-2xl border border-electric-blue/20 bg-site-surface/40 text-center">
+        <h2 class="font-display font-bold text-2xl text-white mb-3">{aboutData.cta.heading}</h2>
+        <p class="text-site-muted mb-6">{aboutData.cta.body}</p>
+        <a href={withBase(aboutData.cta.href)}
+           class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300">
+          {aboutData.cta.label}
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <Footer />
+
+</Layout>
+
+<style>
+  /* Outer: full-bleed within the main content area (sidebar-aware) */
+  .cap-outer {
+    overflow: hidden;
+    width: 100vw; /* mobile: sidebar is off-screen */
+  }
+
+  /* lg: sidebar is w-60 = 15rem */
+  @media (min-width: 1024px) {
+    .cap-outer { width: calc(100vw - 15rem); }
+  }
+
+  /* xl: sidebar is w-64 = 16rem */
+  @media (min-width: 1280px) {
+    .cap-outer { width: calc(100vw - 16rem); }
+  }
+
+  /* collapsed sidebar = 4rem at any lg+ breakpoint */
+  @media (min-width: 1024px) {
+    :global(.sidebar-collapsed) .cap-outer { width: calc(100vw - 4rem); }
+  }
+
+  /* Track: inline-flex, animates -50% (content duplicated = seamless loop) */
+  .cap-track {
+    display: inline-flex;
+    gap: 16px;
+    padding: 8px 0;
+    animation: capScroll 55s linear infinite;
+  }
+  .cap-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes capScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* Card */
+  .cap-card {
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 260px;
+    white-space: normal;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top-width: 3px;
+    padding: 20px 18px 16px;
+    text-decoration: none;
+    vertical-align: top;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .cap-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  }
+
+  .cap-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 3px 7px;
+    border-radius: 4px;
+    border: 1px solid;
+    display: inline-block;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .cap-title {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .cap-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(185, 195, 215, 0.75);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .cap-cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-top: auto;
+  }
+</style>

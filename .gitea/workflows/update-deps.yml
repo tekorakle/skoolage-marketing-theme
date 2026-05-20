@@ -1,0 +1,104 @@
+name: Update Dependencies
+
+# Gitea Actions / Forgejo Actions / Codeberg CI
+#
+# Manual trigger — run from the Actions tab → Run workflow.
+# Updates all pinned packages to latest, verifies the vite override is in effect,
+# audits for CVEs, pins the three.js CDN version, and commits the result back.
+#
+# Required secret: GH_TOKEN with read/write access to this repository.
+# (Same token used by the build workflow for GitHub API calls.)
+
+on:
+  workflow_dispatch:
+
+  # ── Scheduled / automatic cron run ──────────────────────────────────────────
+  # Uncomment the block below to run this workflow automatically on a schedule.
+  # Gitea/Forgejo/Codeberg Actions supports the same cron syntax as GitHub Actions.
+  # Recommended: weekly on Monday at 06:00 UTC.
+  # The job is idempotent — if nothing is outdated it exits without committing.
+  #
+  # Note: the GH_TOKEN used for checkout must also have write access to the repo
+  # so the scheduled run can push the updated lockfile back without manual input.
+  #
+  # schedule:
+  #   - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
+
+concurrency:
+  group: update-deps
+  cancel-in-progress: true
+
+jobs:
+  update-deps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Update pinned packages to latest
+        run: |
+          PKGS="astro tailwindcss @tailwindcss/vite @astrojs/sitemap @astrojs/check \
+                typescript eslint @typescript-eslint/parser eslint-plugin-astro \
+                @types/node rss-parser prettier prettier-plugin-astro \
+                prettier-plugin-tailwindcss"
+          pnpm update $PKGS --latest
+
+      - name: Verify vite override (must resolve to standard Vite 6)
+        run: |
+          VITE_VER=$(grep "^  vite@" pnpm-lock.yaml | head -1 | sed "s/^  vite@//;s/:.*//")
+          echo "Resolved: vite@${VITE_VER}"
+          case "$VITE_VER" in
+            6.*) echo "PASS: standard Vite 6 in use (not rolldown-vite)" ;;
+            *)
+              echo "FAIL: vite@${VITE_VER} — expected 6.x from pnpm-workspace.yaml override"
+              echo "If you intentionally changed the override, update this check to match."
+              exit 1
+              ;;
+          esac
+
+      - name: Security audit
+        run: pnpm audit --audit-level=high
+
+      - name: Pin three.js CDN version
+        run: |
+          THREE_LATEST=$(pnpm view three version)
+          OLD_THREE=$(sed -n 's|.*cdn\.jsdelivr\.net/npm/three@\([^/]*\)/.*|\1|p' \
+            scripts/download-assets.mjs | head -1)
+          if [ "$OLD_THREE" != "$THREE_LATEST" ]; then
+            sed -i "s|/npm/three@[^/]*/|/npm/three@$THREE_LATEST/|g" scripts/download-assets.mjs
+            rm -f public/scripts/three.min.js
+            echo "three.js: $OLD_THREE → $THREE_LATEST"
+          else
+            echo "three.js already at $THREE_LATEST — no change"
+          fi
+
+      - name: Update README timestamp
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%d")
+          MARKER="<!-- packages-last-updated:"
+          NEW_LINE="<!-- packages-last-updated: ${TIMESTAMP} -->"
+          if grep -q "$MARKER" README.md; then
+            sed -i "s|${MARKER}[^>]*>|${NEW_LINE}|" README.md
+          else
+            printf "\n---\n\n%s\n" "$NEW_LINE" >> README.md
+          fi
+
+      - name: Commit and push updated lockfile
+        run: |
+          git config user.name "gitea-actions[bot]"
+          git config user.email "gitea-actions[bot]@noreply.localhost"
+          git add package.json pnpm-lock.yaml README.md scripts/download-assets.mjs
+          if git diff --cached --quiet; then
+            echo "All packages already up to date — nothing to commit."
+          else
+            git commit -m "chore: update pinned dependencies"
+            git push
+          fi

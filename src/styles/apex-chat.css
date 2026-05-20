@@ -1,0 +1,154 @@
+  /* Date label */
+  .c-date {
+    text-align: center;
+    font-size: 0.59rem;
+    color: var(--color-text-subtle);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: ui-monospace, monospace;
+    padding: 0.15rem 0;
+  }
+
+  /* Message entry animation */
+  @keyframes c-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Incoming (Apex) ── */
+  .c-incoming {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.45rem;
+    animation: c-in 0.22s ease forwards;
+    opacity: 0;
+  }
+
+  .c-in-av {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: rgb(var(--primary-ch) / 0.1);
+    border: 1px solid rgb(var(--primary-ch) / 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .c-in-body {
+    display: flex;
+    flex-direction: column;
+    max-width: 78%;
+  }
+
+  /* Pill bubble — incoming */
+  .c-bubble-in {
+    background: rgb(var(--primary-ch) / 0.13);
+    border: 1px solid rgb(var(--primary-ch) / 0.2);
+    color: var(--color-text);
+    padding: 0.45rem 0.8rem;
+    font-size: 0.74rem;
+    line-height: 1.52;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    border-radius: 2px 18px 18px 2px;
+  }
+
+  /* ── Outgoing (User) ── */
+  .c-outgoing {
+    display: flex;
+    justify-content: flex-end;
+    animation: c-in 0.22s ease forwards;
+    opacity: 0;
+  }
+
+  .c-out-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 78%;
+  }
+
+  /* User label */
+  .c-out-label {
+    font-size: 0.57rem;
+    color: var(--color-text-subtle);
+    margin-bottom: 2px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    text-align: right;
+  }
+
+  /* Pill bubble — outgoing demo */
+  .c-bubble-out {
+    background: var(--bg-raised);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.45rem 0.8rem;
+    font-size: 0.74rem;
+    line-height: 1.52;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    border-radius: 18px 2px 2px 18px;
+  }
+
+  /* Real visitor messages — green tint */
+  .c-bubble-visitor {
+    background: rgb(var(--primary-ch) / 0.1);
+    border-color: rgb(var(--primary-ch) / 0.22);
+    color: var(--color-text);
+  }
+
+  /* Timestamp */
+  .c-time {
+    display: block;
+    font-size: 0.57rem;
+    color: var(--color-text-subtle);
+    margin-top: 3px;
+    font-family: ui-monospace, monospace;
+  }
+
+  .c-incoming .c-time { padding-left: 0.05rem; }
+  .c-outgoing .c-time { text-align: right; }
+
+  /* Typing indicator */
+  .c-typing {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.45rem;
+    animation: c-in 0.18s ease forwards;
+    opacity: 0;
+  }
+
+  .c-typing-dots {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: rgb(var(--primary-ch) / 0.07);
+    border: 1px solid rgb(var(--primary-ch) / 0.16);
+    padding: 0.42rem 0.65rem;
+    border-radius: 2px 18px 18px 2px;
+  }
+
+  .c-typing-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgb(var(--primary-ch) / 0.5);
+    animation: c-dot 1.2s ease infinite;
+  }
+
+  .c-typing-dots span:nth-child(2) { animation-delay: 0.18s; }
+  .c-typing-dots span:nth-child(3) { animation-delay: 0.36s; }
+
+  @keyframes c-dot {
+    0%, 60%, 100% { transform: translateY(0);   opacity: 0.4; }
+    30%           { transform: translateY(-4px); opacity: 1; }
+  }
+
+  /* Sent status (targets #chatStatus) */
+  .c-status.sent {
+    color: var(--color-primary);
+  }
