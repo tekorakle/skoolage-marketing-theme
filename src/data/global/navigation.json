@@ -14,7 +14,8 @@
         { "label": "Enterprise Learning", "href": "/services/leadership-transition", "iconKey": "support" }
       ]
     },
-    { "label": "About Us", "href": "/about", "iconKey": "user" },
+    { "label": "AI Skills", "href": "/projects", "iconKey": "monitor" },
+    { "label": "AI Mastery", "href": "/ai-mastery", "iconKey": "monitor" },
     {
       "label": "Resources",
       "href": "/blog",
@@ -25,8 +26,7 @@
         { "label": "Timeline", "href": "/blog/timeline", "iconKey": "clock" }
       ]
     },
-    { "label": "AI Skills", "href": "/projects", "iconKey": "monitor" },
-    { "label": "AI Mastery", "href": "/ai-mastery", "iconKey": "monitor" },
+    { "label": "About", "href": "/about", "iconKey": "user" },
     { "label": "Admissions", "href": "/contact", "iconKey": "mail" }
   ],
   "footerTagline": "Skoolage helps professionals, entrepreneurs, and organizations master artificial intelligence through a personal AI Tutor, practical Learning Paths, and AI.M certification — built for a world where learning never ends.",

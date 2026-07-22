@@ -1,28 +1,20 @@
 {
-  "pageTitle": "AI Mastery Skills — Skoolage",
-  "pageDescription": "The AI capabilities every Skoolage learner develops across AI.M — from Foundations to Research, Automation, and Leadership.",
+  "pageTitle": "AI Skills — Skoolage",
+  "pageDescription": "Explore Skoolage's AI Skills: guided tutoring, study companions, practical skills, and educator tools built for the AI era.",
   "featuredEyebrow": "Skill Highlights",
   "featuredHeading": "Featured",
-  "featuredAccent": "Capabilities",
-  "allEyebrow": "Full Curriculum",
-  "allHeading": "AI Mastery",
+  "featuredAccent": "Skills",
+  "allEyebrow": "Full Library",
+  "allHeading": "AI",
   "allAccent": "Skills",
-  "viewAllLabel": "View full curriculum",
-  "viewAllUnit": "capabilities",
+  "viewAllLabel": "View full skill library",
+  "viewAllUnit": "skills",
   "featuredPortfolioLabel": "Skill Highlights",
   "filters": [
-  { "label": "All",                    "value": "all" },
-  { "label": "Business",                "value": "business" },
-  { "label": "Finance",                 "value": "finance" },
-  { "label": "Healthcare",              "value": "healthcare" },
-  { "label": "Education",               "value": "education" },
-  { "label": "Law",                     "value": "law" },
-  { "label": "Engineering & Tech",      "value": "engineering" },
-  { "label": "Agriculture",             "value": "agriculture" },
-  { "label": "Public Service",          "value": "publicservice" },
-  { "label": "Creative",                "value": "creative" },
-  { "label": "Research",                "value": "research" },
-  { "label": "Trades",                  "value": "trades" },
-  { "label": "Sales & Marketing",       "value": "salesmarketing" }
-]
+    { "label": "All",           "value": "all" },
+    { "label": "Academics",     "value": "academics" },
+    { "label": "Companions",    "value": "companions" },
+    { "label": "Skills & Interests", "value": "skills" },
+    { "label": "For Educators", "value": "educators" }
+  ]
 }
