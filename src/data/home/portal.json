@@ -1,28 +1,28 @@
 {
-  "sectionLabel": "Client Access",
-  "heading": "Partner",
-  "headingAccent": "Portal",
+  "sectionLabel": "Learner Access",
+  "heading": "Learner",
+  "headingAccent": "Workspace",
   "personalSiteCard": {
     "label": "Secure Access",
-    "displayName": "client.apexcap.example",
-    "description": "Authorized clients and business partners access portfolio summaries, asset documentation, billing statements, and payment records through the secure client portal.",
-    "visitLabel": "Log in to Portal"
+    "displayName": "learn.skoolage.com",
+    "description": "Members access their AI Tutor, Learning Paths, progress records, and AI.M certification journey through the secure Learner Workspace.",
+    "visitLabel": "Log in to Workspace"
   },
   "quickStats": {
-    "label": "Portal Overview",
+    "label": "Institution Overview",
     "items": [
-      { "key": "Asset Modules", "valueKey": "yearsExperience", "suffix": "" },
-      { "key": "Billing Cycles", "value": "Active" },
-      { "key": "Active Sectors", "value": "5" }
+      { "key": "Learning Paths", "valueKey": "yearsExperience", "suffix": "" },
+      { "key": "Membership", "value": "Active" },
+      { "key": "Professions Served", "value": "12+" }
     ]
   },
   "infoLabels": {
-    "role": "Account Type",
-    "location": "Primary Jurisdiction",
-    "experience": "Relationship Status",
-    "experienceSuffix": " years on platform",
-    "education": "Entity Classification",
+    "role": "Institution Type",
+    "location": "Headquarters",
+    "experience": "Founded",
+    "experienceSuffix": " years building AI-era education",
+    "education": "Institutional Model",
     "blog": "Resource Library",
-    "contact": "Support Portal"
+    "contact": "Admissions"
   }
 }

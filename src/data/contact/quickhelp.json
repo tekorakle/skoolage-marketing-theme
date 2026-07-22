@@ -1,28 +1,24 @@
 {
   "sectionLabel": "Quick Contact",
-  "heading": "What are we discussing?",
-  "blurb": "Tell us in a few seconds. Select the topic below, provide your contact information, and we will follow up appropriately.",
+  "heading": "What are you hoping to learn?",
+  "blurb": "Tell us in a few seconds. Select a topic below, share your contact info, and we'll follow up.",
   "stepLabels": ["Select topic", "Your info"],
   "services": [
-    { "label": "Acquisition",   "subLabel": "Deal sourcing & intake",      "serviceValue": "Acquisition Inquiry",     "iconKey": "search"     },
-    { "label": "Investor",      "subLabel": "LP & investor relations",      "serviceValue": "Investor Relations",      "iconKey": "chart"      },
-    { "label": "Operations",    "subLabel": "Portfolio company support",    "serviceValue": "Portfolio Operations",    "iconKey": "settings"   },
-    { "label": "Leadership",    "subLabel": "Management & transition",      "serviceValue": "Leadership Transition",   "iconKey": "person"     },
-    { "label": "Exit Planning", "subLabel": "Disposition & sale",          "serviceValue": "Portfolio Disposition",   "iconKey": "lightbulb2" },
-    { "label": "Other",         "subLabel": "General inquiry",              "serviceValue": "General Inquiry",         "iconKey": "list"       }
+    { "label": "Foundations", "subLabel": "AI literacy & onboarding", "serviceValue": "AI Foundations Inquiry", "iconKey": "search" },
+    { "label": "Certification", "subLabel": "AI.M pathway questions", "serviceValue": "AI.M Certification", "iconKey": "chart" },
+    { "label": "Enterprise", "subLabel": "Workforce learning programs", "serviceValue": "Enterprise Learning", "iconKey": "settings" },
+    { "label": "Membership", "subLabel": "Plans & pricing", "serviceValue": "Membership Question", "iconKey": "person" },
+    { "label": "Partnerships", "subLabel": "Institutions & associations", "serviceValue": "Partnership Inquiry", "iconKey": "lightbulb2" },
+    { "label": "Other", "subLabel": "General inquiry", "serviceValue": "General Inquiry", "iconKey": "list" }
   ],
   "formLabels": {
     "name": "Your Name",
     "email": "Email",
-    "namePlaceholder": "Name or Company",
-    "emailPlaceholder": "your_email@company.example"
+    "namePlaceholder": "Name or Organization",
+    "emailPlaceholder": "you@example.com"
   },
-  "buttons": {
-    "next": "Next",
-    "back": "Back",
-    "submit": "Send It"
-  },
+  "buttons": { "next": "Next", "back": "Back", "submit": "Send It" },
   "footerNote": "Expect a confirmation and a response within one business day.",
   "successTitle": "Received.",
-  "successMessage": "Expect a response from our team to the email you provided."
+  "successMessage": "Our admissions team will follow up at the email you provided."
 }

@@ -1,10 +1,10 @@
 {
-  "eyebrow": "Capital Deployment · Portfolio Management",
-  "heading": "Apex Capital.",
-  "subHeading": "Acquiring Tomorrow. Today.",
-  "blurb": "We identify undervalued operating businesses, deploy capital with conviction, and optimize performance across our diversified portfolio. Our subsidiaries don't just survive the acquisition — they thrive after it. You're welcome, shareholders.",
+  "eyebrow": "AI won’t replace you. Someone using AI will. Be that person.",
+  "heading": "Skoolage",
+  "subHeading": "The School for the AI Era. Graduate in 30 Days.",
+  "blurb": "Skoolage is the lifelong AI education platform built to help professionals master artificial intelligence through structured learning, personal AI tutoring, practical projects, and globally recognized certifications. Whether you are a student preparing for your career, a professional growing your skills, an entrepreneur building your business, or an organization preparing your workforce — Skoolage helps you become ready for the AI era.",
   "ctas": [
-    { "label": "Our Portfolio", "href": "/projects", "style": "primary" },
-    { "label": "Investor Inquiry", "href": "/contact", "style": "secondary" }
+    { "label": "Start Your AI Journey", "href": "/projects", "style": "primary" },
+    { "label": "Admissions Inquiry", "href": "/contact", "style": "secondary" }
   ]
 }

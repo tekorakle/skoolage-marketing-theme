@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import AIMastery from "@/components/AIMastery.astro";
+import Footer from "@/components/Footer.astro";
+import { withBase } from "@/lib/assetPath";
+// @ts-ignore
+import pageData from "@/data/ai-mastery/ai-mastery-page.json";
+---
+<Layout
+  title={pageData.pageTitle}
+  description={pageData.pageDescription}
+>
+  <div class="px-0">
+    <div class="px-6 lg:px-12 pt-16 pb-4 max-w-7xl mx-auto">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-sm text-site-muted font-mono">
+          <li><a href={withBase('/')} data-astro-reload class="hover:text-white transition-colors">Home</a></li>
+          <li class="text-site-border">/</li>
+          <li class="text-electric-cyan">AI Mastery</li>
+        </ol>
+      </nav>
+    </div>
+    <AIMastery />
+  </div>
+  <Footer />
+</Layout>

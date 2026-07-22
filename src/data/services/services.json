@@ -1,170 +1,146 @@
 [
   {
     "slug": "acquisition-intake",
-    "title": "Acquisition & Intake",
-    "tagline": "Disciplined capital deployment through rigorous origination and transaction execution.",
-    "description": "We identify operating businesses with durable fundamentals, structure acquisitions across all deal configurations, and execute through close. Integration planning begins prior to signing.",
+    "title": "AI Foundations",
+    "tagline": "Every learner begins with curiosity, guided by a personal AI Tutor.",
+    "description": "Skoolage begins every learner the same way: understanding who you are, what you already know, and where AI can help. Foundational literacy, responsible AI use, and a personalized roadmap — before a single lesson is assigned.",
     "iconKey": "building-office",
-    "highlights": ["Due diligence & valuation", "Deal structure & negotiation", "Capital deployment", "Entity formation & integration"],
+    "highlights": ["AI literacy & prompting", "Skill assessment", "Personalized roadmap", "AI Tutor onboarding"],
     "theme": {
-      "color": "from-amber-500/20 to-amber-600/5",
-      "border": "border-amber-500/20 hover:border-amber-500/40",
-      "accent": "text-amber-400",
-      "borderAccent": "border-amber-500/20",
-      "badgeBorder": "border-amber-500/30",
-      "badgeBg": "bg-amber-500/5"
+      "color": "from-amber-500/20 to-amber-600/5", "border": "border-amber-500/20 hover:border-amber-500/40",
+      "accent": "text-amber-400", "borderAccent": "border-amber-500/20",
+      "badgeBorder": "border-amber-500/30", "badgeBg": "bg-amber-500/5"
     },
-    "pageMeta": {
-      "title": "Acquisition & Intake",
-      "description": "Strategic business acquisition, due diligence, deal structuring, and portfolio integration. Apex Capital Group deploys capital with conviction."
-    },
+    "pageMeta": { "title": "AI Foundations", "description": "Personalized AI literacy, prompting fundamentals, and roadmap-building with your Skoolage AI Tutor." },
     "intro": {
-      "badge": "Acquisition",
-      "heading": "Acquisition & Intake",
-      "subHeading": "Every holding begins with a transaction. We identify operating businesses with durable fundamentals, conduct rigorous due diligence, and structure deals to close. Integration planning begins before the ink is dry."
+      "badge": "Foundations",
+      "heading": "AI Foundations",
+      "subHeading": "Every Skoolage journey starts here. Your AI Tutor learns who you are, what your profession is, and what you already know — then builds a learning path around it, not a generic curriculum."
     },
     "capabilities": [
-      { "title": "Target Identification", "description": "Proprietary deal sourcing across sectors: direct outreach, broker relationships, and management team referrals. Sourcing is conducted with a defined mandate applied consistently across channels." },
-      { "title": "Due Diligence", "description": "Financial, operational, legal, and market due diligence conducted with the rigor appropriate to acquiring an operating business. Every material item is reviewed and documented prior to close." },
-      { "title": "Valuation & Pricing", "description": "DCF, comparable transaction, and earnings-based modeling applied to every target. Pricing discipline is maintained consistently across deal size and sector." },
-      { "title": "Deal Structuring", "description": "Equity, debt, earnouts, seller financing — we structure transactions to align incentives and achieve close. Experience across deal configurations enables efficient execution regardless of complexity." },
-      { "title": "LOI & Definitive Agreement", "description": "From letter of intent through purchase agreement, executed with precision and urgency. Timelines are managed to maintain deal momentum through all intermediate milestones." },
-      { "title": "Regulatory & Compliance Review", "description": "HSR, licensing, environmental, and sector-specific regulatory requirements reviewed pre-close. Material compliance items are resolved before they become conditions to closing." },
-      { "title": "Debt Financing & Capital Stack", "description": "Senior debt, mezzanine, preferred equity — we build capital structures that leave room to operate without sacrificing returns. Lender relationships are maintained across institution types and deal sizes." },
-      { "title": "Management Retention Planning", "description": "Identifying which members of the incumbent leadership team to retain — and structuring the compensation and equity economics to make that retention durable." },
-      { "title": "Integration Planning", "description": "Day-one operational continuity, systems consolidation roadmaps, and vendor transition timelines developed pre-close so operational continuity is maintained through the ownership transfer." },
-      { "title": "Post-Close Reporting Framework", "description": "Board reporting cadences, financial dashboards, and KPI frameworks established in the first 90 days. What gets measured gets managed." }
+      { "title": "Learner Discovery", "description": "Your AI Tutor asks what you do, what you're curious about, and what's holding you back — before recommending a single lesson." },
+      { "title": "AI Literacy", "description": "Plain-language grounding in what AI is, how it works, and where it fits into your daily work." },
+      { "title": "Responsible AI Use", "description": "Verification, human oversight, and ethical judgment taught alongside every technical skill." },
+      { "title": "Prompting Fundamentals", "description": "Practical prompting patterns you'll actually use, taught through your own profession's examples." },
+      { "title": "Skill Assessment", "description": "A quick, low-pressure assessment that identifies strengths and gaps — no exam anxiety, just a starting point." },
+      { "title": "Personalized Roadmap", "description": "A learning path built around your goals, pace, and profession, not a fixed syllabus everyone follows." },
+      { "title": "AI Tutor Relationship", "description": "The beginning of a continuous relationship — your Tutor remembers your progress and adapts as you grow." },
+      { "title": "Professional Context Setting", "description": "Early lessons use examples from your field, whether that's healthcare, law, education, or business." },
+      { "title": "Confidence Building", "description": "Structured early wins so learners feel capable within the first sessions, not overwhelmed." },
+      { "title": "Community Introduction", "description": "A first connection to the Skoolage learning community — you're joining an institution, not starting alone." }
     ],
     "cta": {
-      "heading": "Have a business we should look at?",
-      "body": "We review opportunities across sectors. Submit the details and we will respond with a preliminary assessment of fit against our mandate.",
-      "label": "Submit an Opportunity →"
+      "heading": "Ready to meet your AI Tutor?",
+      "body": "Foundations take days, not months. Begin whenever you're ready — there's no enrollment deadline.",
+      "label": "Begin AI Foundations →"
     }
   },
   {
     "slug": "operational-efficiency",
-    "title": "Operational Efficiency",
-    "tagline": "Systematic performance improvement across portfolio company operations.",
-    "description": "Each portfolio company receives a structured operational review following acquisition. Improvement roadmaps are prioritized by measurable impact, resourced appropriately, and tracked against baseline metrics.",
+    "title": "Practice & Application",
+    "tagline": "Knowledge becomes capability through real, professional application.",
+    "description": "Learning that stays theoretical doesn't change how you work. Every learner applies AI directly within their profession — solving real problems, building real workflows, guided by continuous feedback.",
     "iconKey": "chart-bar-square",
-    "highlights": ["Process optimization", "Cost structure analysis", "Vendor consolidation", "KPI establishment"],
+    "highlights": ["Profession-specific Learning Paths", "Guided exercises", "Real-world projects", "Continuous feedback"],
     "theme": {
-      "color": "from-blue-500/20 to-blue-600/5",
-      "border": "border-blue-500/20 hover:border-blue-500/40",
-      "accent": "text-blue-400",
-      "borderAccent": "border-blue-500/20",
-      "badgeBorder": "border-blue-500/30",
-      "badgeBg": "bg-blue-500/5"
+      "color": "from-blue-500/20 to-blue-600/5", "border": "border-blue-500/20 hover:border-blue-500/40",
+      "accent": "text-blue-400", "borderAccent": "border-blue-500/20",
+      "badgeBorder": "border-blue-500/30", "badgeBg": "bg-blue-500/5"
     },
-    "pageMeta": {
-      "title": "Operational Efficiency",
-      "description": "Portfolio company optimization: process improvement, cost structure analysis, vendor consolidation, and KPI-driven performance management."
-    },
+    "pageMeta": { "title": "Practice & Application", "description": "Profession-specific Learning Paths, guided exercises, and real-world AI application with continuous AI Tutor feedback." },
     "intro": {
-      "badge": "Operations",
-      "heading": "Operational Efficiency",
-      "subHeading": "We do not acquire businesses to leave them as-is. Every portfolio company receives a structured operational review, a prioritized improvement roadmap, and the resources to execute against it."
+      "badge": "Application",
+      "heading": "Practice & Application",
+      "subHeading": "Skoolage does not stop at explaining concepts. Every learner practices AI within their own profession, turning understanding into a habit that shows up in daily work."
     },
     "capabilities": [
-      { "title": "Operational Assessment", "description": "Top-to-bottom review of people, processes, and systems within the first 60 days. We identify what is working, what is broken, and what represents unproductive overhead." },
-      { "title": "Cost Structure Analysis", "description": "Line-by-line P&L review. Costs accumulated through years of inattention are identified and eliminated systematically." },
-      { "title": "Vendor & Supplier Consolidation", "description": "Portfolio-wide purchasing leverage applied to individual company relationships. Fewer vendors. Better terms. Less time managing paperwork." },
-      { "title": "Process Documentation & Standardization", "description": "Institutional knowledge extracted from key personnel and converted into documented, repeatable processes. Institutional knowledge is documented to reduce single-point-of-failure risk across key roles." },
-      { "title": "KPI Framework Deployment", "description": "Identifying the 6-12 metrics that actually predict performance for each business, then building the reporting infrastructure to track them weekly. No vanity metrics." },
-      { "title": "Technology & Systems Audit", "description": "Evaluating existing software, hardware, and workflow tools. We replace what is costing more than it earns and invest in what multiplies output per headcount." },
-      { "title": "Working Capital Optimization", "description": "A/R collection, inventory management, and payment terms renegotiated to free cash flow from the balance sheet. Cash that is sitting is cash that is not working." },
-      { "title": "Headcount & Organizational Design", "description": "Right-sizing the org chart for current revenue and projected growth. Roles are clarified. Accountability is assigned. Structural redundancy is resolved through a defined review process." },
-      { "title": "Margin Improvement Programs", "description": "Pricing analysis, product mix review, and direct cost reduction initiatives layered to systematically improve gross and operating margins over 12-24 months." },
-      { "title": "Performance Incentive Design", "description": "Compensation structures aligned to outcomes. If the business hits its targets, the people who drove those results share in them." }
+      { "title": "Profession-Specific Paths", "description": "AI for Business, Healthcare, Law, Education, Finance, and more — each path built around real professional workflows." },
+      { "title": "Guided Exercises", "description": "Structured practice tasks that mirror situations learners will actually encounter at work." },
+      { "title": "Real-World Projects", "description": "Learners complete practical projects — a business proposal, a lesson plan, a research summary — using AI responsibly." },
+      { "title": "Continuous AI Tutor Feedback", "description": "Every exercise is reviewed for understanding, not just correctness, with guidance on what to try next." },
+      { "title": "Cross-Disciplinary Exploration", "description": "Learners are encouraged to explore adjacent Learning Paths — an accountant studying entrepreneurship, a teacher studying leadership." },
+      { "title": "Workflow Integration", "description": "Practice designed to fit alongside real work rather than requiring learners to step away from their jobs." },
+      { "title": "Reflection & Iteration", "description": "Structured reflection after each project: what worked, what to verify, what to improve next time." },
+      { "title": "Progress Tracking", "description": "Visible skill development across the Learning Workspace, updated as capability grows." },
+      { "title": "Peer Learning", "description": "Community discussions and study groups connect learners working through similar Learning Paths." },
+      { "title": "Confidence Through Repetition", "description": "Consistent practice, not one-time exposure, builds the kind of fluency that survives outside the lesson." }
     ],
     "cta": {
-      "heading": "Operational improvement is not a one-time event.",
-      "body": "It is a discipline. We build that discipline into every company we hold.",
-      "label": "Learn How We Operate →"
+      "heading": "Ready to put AI to work in your profession?",
+      "body": "Practice is personalized to your field — explore the Learning Paths available for what you do.",
+      "label": "Explore Learning Paths →"
     }
   },
   {
     "slug": "portfolio-disposition",
-    "title": "Portfolio Disposition",
-    "tagline": "Structured exit execution from strategic positioning through close.",
-    "description": "Strategic exit planning begins at acquisition. When market conditions and asset performance align, we execute dispositions with the same analytical rigor applied to original underwriting.",
+    "title": "AI.M Certification",
+    "tagline": "Recognition for demonstrated capability, not course completion.",
+    "description": "AI.M (Artificial Intelligence Mastery) recognizes learners who can apply AI responsibly and effectively within their profession. It is not a participation certificate — it is evidence of real capability.",
     "iconKey": "arrow-trending-up",
-    "highlights": ["Exit strategy development", "M&A advisory", "Buyer identification", "Transaction management"],
+    "highlights": ["Practical assessment", "Responsible AI use", "Verified credential", "Graduate community"],
     "theme": {
-      "color": "from-emerald-500/20 to-emerald-600/5",
-      "border": "border-emerald-500/20 hover:border-emerald-500/40",
-      "accent": "text-emerald-400",
-      "borderAccent": "border-emerald-500/20",
-      "badgeBorder": "border-emerald-500/30",
-      "badgeBg": "bg-emerald-500/5"
+      "color": "from-emerald-500/20 to-emerald-600/5", "border": "border-emerald-500/20 hover:border-emerald-500/40",
+      "accent": "text-emerald-400", "borderAccent": "border-emerald-500/20",
+      "badgeBorder": "border-emerald-500/30", "badgeBg": "bg-emerald-500/5"
     },
-    "pageMeta": {
-      "title": "Portfolio Disposition",
-      "description": "Strategic exit planning, M&A advisory, buyer identification, and transaction management for portfolio company divestitures."
-    },
+    "pageMeta": { "title": "AI.M Certification", "description": "Earn AI.M — Skoolage's signature credential recognizing practical, demonstrated AI capability within your profession." },
     "intro": {
-      "badge": "Disposition",
-      "heading": "Portfolio Disposition",
-      "subHeading": "An acquisition is only as good as the exit that follows it. We plan for disposition from the day we close, so when the time is right, we are positioned to execute — not to prepare."
+      "badge": "Certification",
+      "heading": "AI.M Certification",
+      "subHeading": "AI.M is earned through demonstrated capability — not memorization, not attendance. Learners solve real problems, reflect on their reasoning, and prove they can work responsibly with AI."
     },
     "capabilities": [
-      { "title": "Exit Strategy Development", "description": "Strategic sale, secondary buyout, IPO, or recapitalization — we evaluate the right exit path for each asset based on market timing, buyer landscape, and investor objectives." },
-      { "title": "Business Preparation", "description": "Clean financial statements, documented processes, resolved contingent liabilities, and a management team that can present confidently. We prepare our companies to be acquired with the same discipline we applied at intake." },
-      { "title": "Valuation & Positioning", "description": "Current-market valuation and narrative development. We identify what buyers pay for and ensure our companies communicate that story clearly and with supporting data." },
-      { "title": "Buyer Universe Mapping", "description": "Strategic buyers, financial sponsors, family offices, and management buyout candidates identified and qualified. The right buyer is often not the first one who calls." },
-      { "title": "Marketing Process Management", "description": "Confidential information memorandum, management presentations, and data room managed with discretion. Information goes to qualified buyers, not the market at large." },
-      { "title": "Bid Process & Negotiation", "description": "First-round indications, management meetings, second-round bids, and final negotiations conducted with the experience of a team that has been on both sides of the table." },
-      { "title": "Due Diligence Support", "description": "Buyer diligence is the mirror image of what we conducted on intake. We respond to requests promptly, completely, and without delays that erode buyer confidence." },
-      { "title": "Transaction Structuring", "description": "Purchase price adjustments, representations and warranties, escrows, earnouts, and rollover equity negotiated to protect seller value and close the transaction." },
-      { "title": "Regulatory Clearance", "description": "Antitrust review, sector-specific regulatory approvals, and third-party consents managed from LOI through close." },
-      { "title": "Post-Close Obligations", "description": "Transition services agreements, non-competes, and earnout tracking managed through close and the subsequent obligations period. A deal is not done when it closes." }
+      { "title": "Practical Assessment", "description": "Assessments mirror real professional scenarios — business decisions, patient communication, legal research — not multiple-choice exams." },
+      { "title": "AI Is Expected", "description": "Unlike traditional exams, AI use is expected and evaluated: judgment, prompting, and verification matter more than raw recall." },
+      { "title": "Responsible AI Standards", "description": "Ethical use, privacy awareness, and human oversight are assessed alongside technical capability." },
+      { "title": "Reflection & Reasoning", "description": "Learners explain their choices — why they trusted an output, what they verified, what they'd improve." },
+      { "title": "Profession-Specific Tracks", "description": "AI.M for Business, Healthcare, Law, Education, Finance, and more — capability measured within real context." },
+      { "title": "Secure Credential Verification", "description": "Graduates can share and verify their AI.M credential with confidence, backed by transparent standards." },
+      { "title": "Graduation Ceremony", "description": "Achievement is recognized and celebrated — a meaningful milestone, not a quiet checkbox." },
+      { "title": "Lifelong Learning Record", "description": "AI.M becomes part of a growing learning record that expands with future pathways and specializations." },
+      { "title": "Alumni Network Entry", "description": "Graduation is the beginning of Alumni Network membership — not the end of the Skoolage relationship." },
+      { "title": "Continuous Standards", "description": "As AI evolves, AI.M evolves — credential integrity is protected through consistent, transparent evaluation." }
     ],
     "cta": {
-      "heading": "Thinking about an exit?",
-      "body": "Early planning produces better outcomes regardless of timeline. We are available for a preliminary conversation at any stage.",
-      "label": "Talk to Our Deal Team →"
+      "heading": "Ready to demonstrate your AI capability?",
+      "body": "AI.M recognizes what you can actually do. Start the certification pathway whenever your Learning Path is ready.",
+      "label": "Explore AI.M →"
     }
   },
   {
     "slug": "leadership-transition",
-    "title": "Leadership Transition & Stakeholder Relations",
-    "tagline": "Disciplined management of executive succession and stakeholder communication.",
-    "description": "Leadership transitions following acquisition present operational and stakeholder risk if not managed with structure. We apply a defined framework covering executive continuity, governance, and communications across every portfolio company.",
+    "title": "Enterprise Learning",
+    "tagline": "Building AI-capable workforces, one learner at a time.",
+    "description": "Organizations do not become AI-powered by purchasing tools. They become AI-powered when their people know how to use them. Skoolage helps companies build that capability across every department.",
     "iconKey": "user-plus",
-    "highlights": ["Executive onboarding", "Stakeholder communications", "Board governance", "Cultural integration"],
+    "highlights": ["Workforce AI assessment", "Department-specific paths", "Team dashboards", "AI.M enterprise certification"],
     "theme": {
-      "color": "from-violet-500/20 to-violet-600/5",
-      "border": "border-violet-500/20 hover:border-violet-500/40",
-      "accent": "text-violet-400",
-      "borderAccent": "border-violet-500/20",
-      "badgeBorder": "border-violet-500/30",
-      "badgeBg": "bg-violet-500/5"
+      "color": "from-violet-500/20 to-violet-600/5", "border": "border-violet-500/20 hover:border-violet-500/40",
+      "accent": "text-violet-400", "borderAccent": "border-violet-500/20",
+      "badgeBorder": "border-violet-500/30", "badgeBg": "bg-violet-500/5"
     },
-    "pageMeta": {
-      "title": "Leadership Transition & Stakeholder Relations",
-      "description": "Executive onboarding, board governance, stakeholder communications, and cultural integration management for portfolio company leadership transitions."
-    },
+    "pageMeta": { "title": "Enterprise Learning", "description": "Workforce AI literacy, department-specific Learning Paths, and AI.M certification for organizations building AI-ready teams." },
     "intro": {
-      "badge": "Leadership",
-      "heading": "Leadership Transition & Stakeholder Relations",
-      "subHeading": "The people side of an acquisition is where most deals underperform after close. We have developed a structured framework for managing transitions that covers planning, communication, and governance — applied consistently across every holding."
+      "badge": "Enterprise",
+      "heading": "Enterprise Learning",
+      "subHeading": "Skoolage Enterprise helps organizations build AI-capable teams through personalized learning, department-specific pathways, and measurable workforce transformation."
     },
     "capabilities": [
-      { "title": "Transition Planning", "description": "Pre-close planning for Day 1, Week 1, Month 1, and Quarter 1. Each milestone has an owner, a communication plan, and a definition of success." },
-      { "title": "Executive Assessment & Retention", "description": "Evaluating incumbent executives against the company's next-phase needs. Those who fit stay, with updated economics. Those who do not fit are transitioned through a structured offboarding process." },
-      { "title": "New Leadership Recruitment", "description": "When the role requires an upgrade, we recruit from our network or engage search firms with specific briefs. Selection is based on capability assessment, not résumé review alone." },
-      { "title": "Executive Onboarding", "description": "Structured 90-day onboarding for incoming executives: key relationships, operational overview, quick-win identification, and expectation alignment with the board." },
-      { "title": "Board Governance & Composition", "description": "Board seats, committee structures, information rights, and reporting cadences established post-close to provide appropriate oversight without impeding management." },
-      { "title": "Employee Communication Strategy", "description": "Transparent, consistent communication to the workforce about the acquisition, the new ownership, and what changes and what does not. Uncertainty is the primary driver of attrition during transitions." },
-      { "title": "Customer & Vendor Notification", "description": "Key account outreach, vendor relationship continuity, and contract assignment managed to prevent relationship disruption during the transition period." },
-      { "title": "Cultural Integration Assessment", "description": "Understanding the acquired company's culture — what it values, how it makes decisions, where informal authority sits — before attempting to change anything. Assessment precedes optimization." },
-      { "title": "Stakeholder Reporting", "description": "Investor updates, lender compliance reporting, and board packages delivered on schedule with the information stakeholders need to evaluate performance." },
-      { "title": "Conflict Resolution & Change Management", "description": "When transitions produce friction — and they sometimes do — we have experienced operators who can diagnose the source, mediate the parties, and move the business forward." }
+      { "title": "Workforce AI Assessment", "description": "Understand current AI literacy across the organization before designing a rollout." },
+      { "title": "Department-Specific Learning Paths", "description": "Sales, marketing, finance, HR, and engineering each receive learning tailored to their real workflows." },
+      { "title": "Workforce Dashboard", "description": "Leaders see participation, progress, and capability growth across teams — without micromanaging individuals." },
+      { "title": "Learning Assignment", "description": "Structured programs like 'All employees complete AI Foundations' or 'Marketing completes AI for Marketing.'" },
+      { "title": "AI.M Enterprise Certification", "description": "Recognized capability standards across the workforce, building a shared language for AI readiness." },
+      { "title": "Executive AI Strategy", "description": "Leadership-focused learning on AI strategy, decision-making, and organizational transformation." },
+      { "title": "Continuous Capability Building", "description": "Training that evolves with AI itself — not a one-time workshop that goes stale within a year." },
+      { "title": "Data & Privacy Standards", "description": "Enterprise learning built on clear data protection, secure access, and responsible analytics." },
+      { "title": "Change Management Support", "description": "Guidance for rolling out AI adoption without creating fear or resistance among employees." },
+      { "title": "Long-Term Partnership", "description": "Skoolage remains a learning partner well past the initial rollout, evolving alongside your organization." }
     ],
     "cta": {
-      "heading": "Leadership transitions require structured execution.",
-      "body": "We have developed repeatable frameworks for managing them without disruption to operations or stakeholder confidence.",
-      "label": "Contact Our Operating Team →"
+      "heading": "Ready to build an AI-ready workforce?",
+      "body": "We work with organizations of every size to design a rollout that fits their teams and timeline.",
+      "label": "Talk to Our Enterprise Team →"
     }
   }
 ]

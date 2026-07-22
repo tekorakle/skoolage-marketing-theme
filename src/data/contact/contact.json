@@ -1,31 +1,23 @@
 {
-  "pageTitle": "Contact",
-  "pageDescription": "Contact Apex Capital Group regarding investment inquiries, portfolio matters, or institutional partnership opportunities.",
-  "heading": "Get in Touch.",
-  "subHeading": "Direct inquiries are reviewed by the relevant team and responded to within one business day.",
+  "pageTitle": "Enroll",
+  "pageDescription": "Contact Skoolage admissions regarding individual membership, AI.M certification, or enterprise learning programs.",
+  "heading": "Start Learning.",
+  "subHeading": "Admissions inquiries are reviewed by our team and answered within one business day.",
   "contactMethods": [
-    {
-      "iconKey": "phone",
-      "label": "Direct Line",
-      "note": "Mon–Fri, 8am–6pm"
-    },
-    {
-      "iconKey": "envelope",
-      "label": "Investor Relations",
-      "note": "Response within one business day"
-    }
+    { "iconKey": "phone", "label": "Admissions Line", "note": "Mon–Fri, 8am–6pm" },
+    { "iconKey": "envelope", "label": "Admissions Email", "note": "Response within one business day" }
   ],
   "form": {
     "heading": "Send a Message",
     "fields": {
       "name": { "label": "Name", "placeholder": "Your name or organization" },
-      "email": { "label": "Email", "placeholder": "you@organization.example" },
-      "message": { "label": "Message", "placeholder": "Describe your inquiry. Include relevant context — deal size, sector, timeline — as applicable." }
+      "email": { "label": "Email", "placeholder": "you@example.com" },
+      "message": { "label": "Message", "placeholder": "Tell us what you're hoping to learn — individual, team, or full enterprise program." }
     },
     "submitLabel": "Send Message",
     "sendingLabel": "Sending…",
     "confirmationText": "You will receive an email confirmation of receipt.",
-    "successMessage": "Message received. We will be in touch shortly.",
+    "successMessage": "Message received. Our admissions team will be in touch shortly.",
     "errorFallback": "Something went wrong. Please try again.",
     "networkError": "Network error. Check your connection and try again."
   }

@@ -1,32 +1,8 @@
 [
-  {
-    "emoji": "📊",
-    "title": "Investment Inquiry",
-    "description": "Considering a co-investment or partnership opportunity? Submit your mandate details and a member of our team will follow up with qualified prospective partners."
-  },
-  {
-    "emoji": "🏢",
-    "title": "Business Acquisition",
-    "description": "Operating a business and exploring a sale or recapitalization? Submit your details for a confidential preliminary evaluation from our deal team."
-  },
-  {
-    "emoji": "📋",
-    "title": "Portfolio Matter",
-    "description": "Existing portfolio company stakeholders, lender representatives, or board members may use this form for direct correspondence with the Apex Capital Group management team."
-  },
-  {
-    "emoji": "🤝",
-    "title": "Institutional Partnership",
-    "description": "Family offices, institutional allocators, and intermediaries seeking to discuss deal flow, co-investment structures, or referral arrangements are welcome to reach out directly."
-  },
-  {
-    "emoji": "⚖️",
-    "title": "Legal or Compliance",
-    "description": "Regulatory filings, compliance inquiries, and legal correspondence should be directed here. All legal communications are logged and routed to counsel."
-  },
-  {
-    "emoji": "📬",
-    "title": "General Inquiry",
-    "description": "For inquiries not covered above, use this form to reach the appropriate team. Include sufficient context so the correct party can respond promptly."
-  }
+  { "emoji": "🎓", "title": "Individual Membership", "description": "Ready to begin? Tell us about your goals and we'll recommend the right Learning Path and membership level." },
+  { "emoji": "🏢", "title": "Enterprise Learning", "description": "Building an AI-ready workforce? Submit your details for a preliminary workforce assessment from our enterprise team." },
+  { "emoji": "📜", "title": "AI.M Certification", "description": "Questions about earning AI.M or verifying a credential? Reach out and we'll route you to the right team." },
+  { "emoji": "🤝", "title": "Partnership Inquiry", "description": "Educational institutions, professional associations, and technology partners are welcome to reach out directly." },
+  { "emoji": "⚖️", "title": "Legal or Compliance", "description": "Regulatory, privacy, and legal correspondence should be directed here and will be routed to counsel." },
+  { "emoji": "📬", "title": "General Inquiry", "description": "For anything not covered above, use this form and include enough context for the right team to respond." }
 ]

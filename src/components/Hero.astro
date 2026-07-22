@@ -11,7 +11,7 @@ import { icons } from '@/lib/icons';
   aria-labelledby="hero-heading"
 >
   <!-- Subtle top accent line -->
-  <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(90deg, transparent, var(--color-primary), transparent);"></div>
+  <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(90deg, transparent, var(--color-primary), transparent);"></div> 
 
   <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-12 pt-10 sm:pt-16 xl:pt-28 pb-2 xl:pb-28">
 
@@ -46,7 +46,6 @@ import { icons } from '@/lib/icons';
     </p>
 
     <!-- Gray band separator -->
-    <div class="site-band mb-10 max-w-xs" style="animation-delay: 0.15s;"></div>
 
     <!-- CTAs -->
     <div
@@ -73,16 +72,16 @@ import { icons } from '@/lib/icons';
       ))}
     </div>
 
-    <!-- Stats row
+    <!-- Stats row -->
     <div
       class="grid grid-cols-2 sm:grid-cols-4 gap-0 animate-slide-up border border-site-border"
       style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;"
     >
       {[
-        { value: "99.9%", label: "Uptime SLA" },
-        { value: "< 1hr", label: "Response Time" },
-        { value: "100%", label: "Human Support" },
-        { value: "24/7", label: "Monitoring" },
+        { value: "100K+", label: "AI driven layoffs in 2025" },
+        { value: "45K+", label: "Tech jobs cut in early 2026" },
+        { value: "56%", label: "Wage premium for AI-skilled workers" },
+        { value: "7.5%", label: "Growth in AI job postings while overall hiring fell" },
       ].map((stat, i) => (
         <div class={`px-6 py-4 ${i < 3 ? "border-r border-site-border" : ""} bg-navy-800`}>
           <div class="text-2xl font-display font-bold uppercase tracking-wide" style="color: var(--color-primary);">{stat.value}</div>
@@ -90,7 +89,7 @@ import { icons } from '@/lib/icons';
         </div>
       ))}
     </div>
-    End Stats row -->
+    <!-- End Stats row -->
   </div>
 </section>
 

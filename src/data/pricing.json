@@ -1,0 +1,38 @@
+{  
+  "sectionLabel": "Pricing",  
+  "heading": "Choose Your",  
+  "headingAccent": "Plan",  
+  "plans": [  
+    {  
+      "slug": "starter",  
+      "name": "Starter",  
+      "price": "$99",  
+      "period": "/month",  
+      "tagline": "For individuals",  
+      "description": "Perfect for getting started with AI education.",  
+      "iconKey": "user",  
+      "theme": {  
+        "color": "from-blue-500/20 to-blue-600/5",  
+        "border": "border-blue-500/20 hover:border-blue-500/40",  
+        "accent": "text-blue-400"  
+      },  
+      "features": ["5 Courses", "Community Access", "Email Support"]  
+    },  
+    {  
+      "slug": "pro",  
+      "name": "Professional",  
+      "price": "$299",  
+      "period": "/month",  
+      "tagline": "For teams",  
+      "description": "Advanced features for growing teams.",  
+      "iconKey": "users",  
+      "badge": "Popular",  
+      "theme": {  
+        "color": "from-amber-500/20 to-amber-600/5",  
+        "border": "border-amber-500/20 hover:border-amber-500/40",  
+        "accent": "text-amber-400"  
+      },  
+      "features": ["All Starter features", "20 Courses", "Priority Support", "Team Dashboard"]  
+    }  
+  ]  
+}

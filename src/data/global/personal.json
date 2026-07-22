@@ -1,15 +1,15 @@
 {
-  "name": "The Leadership Team",
-  "title": "Managing Partners & Operating Executives",
-  "email": "ir@apexcap.example",
-  "location": "New York, New York",
-  "linkedin": "apex-capital-group",
+  "name": "The Skoolage Team",
+  "title": "AI Tutors, Learning Designers & Institutional Staff",
+  "email": "admissions@skoolage.com",
+  "location": "Nsukka, Nigeria",
+  "linkedin": "skoolage",
   "github": "",
-  "education": "Combined +40 Years Capital Markets & Operations Experience",
-  "yearsExperience": "20+",
-  "personal_url": "https://apexcap.example",
-  "apex_url": "https://apexcap.example",
-  "apex_email": "ir@apexcap.example",
-  "blog_url": "https://apexcap.example/blog",
-  "aboutLong": "Apex Capital Group is a private holding company focused on the disciplined acquisition and optimization of operating businesses. We identify companies with durable fundamentals that benefit from strategic capital injection and operational expertise. Our portfolio spans multiple sectors with a unified mandate: generate superior risk-adjusted returns for investors while building companies that outlast the deal."
+  "education": "Built on a belief that AI literacy is the new computer literacy",
+  "yearsExperience": "1000+",
+  "personal_url": "https://skoolage.com",
+  "apex_url": "https://skoolage.com",
+  "apex_email": "admissions@skoolage.com",
+  "blog_url": "https://skoolage.com/blog",
+  "aboutLong": "Skoolage exists because the world changed faster than education did. We are a lifelong learning institution built for the AI era — not a course marketplace, not a chatbot, not a temporary training vendor. Every learner receives a personalized AI Tutor, a structured Learning Path, and the opportunity to earn AI.M, our signature credential recognizing demonstrated practical capability. Graduation is not the end of the relationship. It is the beginning of lifelong membership — because as AI evolves, your education should evolve with it."
 }

@@ -55,14 +55,14 @@ const otherSites = navigationData.otherSites ?? [];
   <!-- Logo bar -->
   <div id="sidebar-logo-bar" class="bg-navy-800 flex items-center justify-center py-0 border-b border-black" style="height: 80px;">
     <!-- Expanded logo — flex keeps the existing show/hide CSS working; text is absolutely placed -->
-    <a href={withBase('/')} data-astro-reload aria-label="Apex Capital Group home" id="sidebar-logo-box" class="sidebar-logo-expanded site-logo-box flex items-center justify-center flex-shrink-0" style="width: 164px; height: 94px; margin-top: 0; margin-bottom: 0; position: relative; overflow: visible;">
+    <a href={withBase('/')} data-astro-reload aria-label="Apex Capital Group home" id="sidebar-logo-box" class="sidebar-logo-expanded site-logo-box flex items-center justify-center flex-shrink-0" style="width: 200px; height: 91px; margin-top: 0; margin-bottom: 0; position: relative; overflow: visible;">
       <div id="sidebar-logo-gif" data-base={base} data-gif-count={gifCount} style="position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease; background-size: 107% auto; background-position: top left; overflow: hidden;"></div>
       <span id="logo-glitch-wrap" style="position: relative; z-index: 1; display: inline-block; line-height: 1;">
         <span style="font-family: var(--font-logo); font-weight: bold; font-size: 2.5rem; letter-spacing: 3px; text-transform: uppercase; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">{siteData.logoText}</span>
       </span>
     </a>
     <!-- Collapsed logo — no inline display; global CSS handles show/hide via .sidebar-collapsed -->
-    <a href={withBase('/')} data-astro-reload aria-label="Apex Capital Group home" id="sidebar-logo-box-collapsed" class="sidebar-logo-collapsed site-logo-box flex items-center justify-center flex-shrink-0" style="width: 44px; height: 44px; border-width: 1px; position: relative; overflow: visible;">
+    <a href={withBase('/')} data-astro-reload aria-label="Apex Capital Group home" id="sidebar-logo-box-collapsed" class="sidebar-logo-collapsed site-logo-box flex items-center justify-center flex-shrink-0" style="width: 60px; height: 60px; border-width: 1px; position: relative; overflow: visible;">
       <span id="logo-glitch-wrap-collapsed" style="position: relative; z-index: 1; display: inline-block; line-height: 1;">
         <span class="font-display font-light text-white text-xl uppercase" style="text-shadow: 0 1px 3px rgba(0,0,0,0.6);">{siteData.logoShort}</span>
       </span>

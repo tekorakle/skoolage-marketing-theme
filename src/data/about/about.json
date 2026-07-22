@@ -1,86 +1,105 @@
 {
-  "pageTitle": "About Apex Capital Group",
-  "pageDescription": "Apex Capital Group is a private holding company that acquires, operates, and strategically exits businesses across multiple sectors. We deploy capital with discipline and manage operations with intention.",
+  "pageTitle": "About Skoolage",
+  "pageDescription": "Skoolage is a lifelong learning institution for the AI era — personalized AI tutoring, AI.M certification, and continuous membership for every profession, industry, and stage of life.",
 
   "contactBar": {
     "items": [
-      { "label": "IR Email",    "value": "ir@apexcap.example",   "href": "mailto:ir@apexcap.example" },
-      { "label": "Phone",       "value": "(000) 000-0000",         "href": "tel:+10000000000" },
-      { "label": "Location",    "value": "New York, New York",     "href": null }
+      { "label": "Admissions Email", "value": "admissions@skoolage.com", "href": "mailto:admissions@skoolage.com" },
+      { "label": "Phone",            "value": "+234 803 931 4584",              "href": "tel:+2348039314584" },
+      { "label": "Location",         "value": "Nsukka, Nigeria",          "href": null }
     ]
   },
 
   "paragraphs": [
-    "Apex Capital Group was formed to do one thing well: identify businesses with strong fundamentals and underutilized potential, acquire them, and make them perform. We are not a turnaround shop. We are not a strip-and-flip operation. We are operators who happen to own companies.",
-    "Our portfolio spans manufacturing, services, technology, media, and real estate. What these companies have in common is not their sector — it is the situation we found them in: ready for the next chapter, waiting for the right partner to write it.",
-    "We take board seats, we hire and replace leadership when necessary, we optimize costs without destroying culture, and we plan for exits from the day we close. This is not complicated. It is simply disciplined capital allocation paired with operational seriousness. Most people find that combination more rare than it should be."
+    "Skoolage exists because the world changed faster than education did. For generations, a degree could carry someone through an entire career, because knowledge changed slowly and professional expectations stayed relatively fixed. Artificial intelligence has ended that assumption. New capabilities emerge every month, workflows shift beneath people already deep into their careers, and the gap between what was studied and what modern work now requires keeps widening. Skoolage was built to close that gap — not with another course library, but with an institution designed to keep teaching for as long as the world keeps changing.",
+    "We are not a chatbot wrapped in a subscription. We are not a marketplace of disconnected tutorials. Skoolage combines a personalized AI Tutor, structured Learning Paths built around real professions, and AI.M — our signature credential recognizing demonstrated, practical capability rather than course completion. A doctor, a teacher, a farmer, a founder, and a civil servant all begin in the same place — curiosity about how AI applies to the work they already do — and each receives a learning journey shaped around their profession, not a generic curriculum everyone is pushed through.",
+    "Graduation at Skoolage is not the end of the relationship. It is the beginning of lifelong membership. As artificial intelligence continues to evolve, so does the curriculum, the AI Tutor, and every learner's path forward. We believe AI literacy is becoming as fundamental as reading, writing, and computer literacy once became — and that no profession, industry, or background should be left out of that transition."
   ],
 
-  "pillarsHeading": "What Apex Capital Does",
+  "pillarsHeading": "What Skoolage Does",
   "pillars": [
-    {
-      "title": "Acquisition & Intake",
-      "desc": "Sourcing, diligence, deal structuring, and portfolio integration across sectors and transaction sizes.",
-      "icon": "building-office"
-    },
-    {
-      "title": "Operational Efficiency",
-      "desc": "Post-close operational assessment, cost structure optimization, and KPI-driven performance management.",
-      "icon": "chart-bar-square"
-    },
-    {
-      "title": "Portfolio Disposition",
-      "desc": "Exit strategy development, M&A advisory, buyer identification, and transaction management.",
-      "icon": "arrow-trending-up"
-    },
-    {
-      "title": "Leadership Transition",
-      "desc": "Executive assessment, onboarding, board governance, and stakeholder communication management.",
-      "icon": "user-plus"
-    }
-  ],
-
-  "stats": [
-    { "value": "20+", "label": "Years Experience" },
-    { "value": "12+", "label": "Portfolio Companies" },
-    { "value": "5",   "label": "Active Sectors" },
-    { "value": "LLC", "label": "Apex Capital Group, LLC" }
+    { "title": "AI Foundations", "desc": "Personalized onboarding with your AI Tutor — literacy, responsible use, prompting fundamentals, and a roadmap built around your profession from day one.", "icon": "building-office" },
+    { "title": "Practice & Application", "desc": "Profession-specific Learning Paths that turn understanding into real, applied capability through guided exercises and real-world projects.", "icon": "chart-bar-square" },
+    { "title": "AI.M Certification", "desc": "Recognition for demonstrated capability, not attendance — evaluated through realistic professional scenarios and responsible AI judgment.", "icon": "arrow-trending-up" },
+    { "title": "Enterprise Learning", "desc": "Workforce AI literacy programs that build AI-ready teams across every department, from frontline staff to executive leadership.", "icon": "user-plus" }
   ],
 
   "clientTypes": {
-    "eyebrow": "Who We Work With",
-    "heading": "Built for businesses at an inflection point.",
-    "body": "Our portfolio companies come to us through various paths — founder succession, corporate divestitures, distressed situations, and competitive acquisitions. What they share is a need for the right owner at the right time.",
+    "eyebrow": "Who We Serve",
+    "heading": "Built for anyone ready to keep learning.",
+    "body": "Skoolage learners arrive from every background, income level, and stage of life — students preparing for the future, professionals adapting mid-career, entrepreneurs building something new, and organizations transforming entire workforces. What they share is a belief that AI mastery is now a foundational capability, not a specialist skill reserved for engineers.",
     "items": [
-      { "label": "Family-Owned Businesses" },
-      { "label": "Corporate Divestitures" },
-      { "label": "Management Buyouts" },
-      { "label": "Distressed & Turnaround" },
-      { "label": "Founder Succession" },
-      { "label": "Secondary Buyouts" }
+      { "label": "Students & Early-Career Professionals" },
+      { "label": "Working Professionals & Career Changers" },
+      { "label": "Entrepreneurs & Business Owners" },
+      { "label": "Educators & Academic Institutions" },
+      { "label": "Enterprise & Government Teams" },
+      { "label": "Tradespeople & Independent Creators" }
     ]
   },
 
   "capabilitiesShowcase": {
-    "eyebrow": "Full Capabilities",
-    "heading": "What We Do.",
-    "subheading": "A cross-section of the disciplines we apply across every company in our portfolio. Click any card to read more."
+    "eyebrow": "Full Curriculum",
+    "heading": "What You'll Learn.",
+    "subheading": "A cross-section of the capability areas taught across every Skoolage Learning Path. Click any card to read more."
   },
 
-  "techStackHeading": "Sectors we know well",
+  "techStackHeading": "Learning Paths by profession — every industry AI is changing",
   "techStackGroups": [
-    { "cat": "Manufacturing",   "items": ["Industrial Supply", "Food Processing", "Contract Manufacturing", "Light Assembly", "Co-Manufacturing", "Specialty Chemicals", "Metal Fabrication", "Plastics & Composites"] },
-    { "cat": "Services",        "items": ["Healthcare Staffing", "IT Services", "Field Services", "Business Process Outsourcing", "Environmental Services", "Facilities Management", "Professional Services"] },
-    { "cat": "Technology",      "items": ["SaaS", "Managed Services", "Enterprise Software", "IoT & Connected Devices", "Data & Analytics", "Digital Transformation", "Platform Businesses"] },
-    { "cat": "Distribution",    "items": ["Industrial Distribution", "Food & Beverage", "Last-Mile Logistics", "Third-Party Logistics", "Cold Chain", "E-commerce Fulfillment"] },
-    { "cat": "Real Estate",     "items": ["Light Industrial", "Flex Commercial", "Net Lease", "Sale-Leaseback", "Owner-User", "Development Land"] },
-    { "cat": "Media",           "items": ["Regional Publishing", "Digital Media", "Events & Conferences", "Trade Publications", "Newsletters", "Broadcast"] }
+    {
+      "cat": "Business & Entrepreneurship",
+      "items": ["Business Planning", "Strategy & Decision-Making", "Marketing", "Sales", "Operations", "Customer Support", "Growth & Scaling", "Startups & Founders", "Small Business Ownership", "Product Management"]
+    },
+    {
+      "cat": "Accounting & Finance",
+      "items": ["Financial Analysis", "Reporting", "Forecasting", "Compliance", "Auditing", "Tax Preparation", "Bookkeeping", "Investment Research", "Corporate Finance", "Risk Management"]
+    },
+    {
+      "cat": "Healthcare & Medicine",
+      "items": ["Clinical Research", "Medical Writing", "Patient Communication", "Nursing", "Administrative Workflows", "Medical Documentation", "Evidence Synthesis", "Clinical Decision Support", "Telehealth", "Healthcare Administration"]
+    },
+    {
+      "cat": "Education & Teaching",
+      "items": ["Lesson Planning", "Curriculum Development", "Assessment Design", "Student Feedback", "Classroom Productivity", "Personalized Instruction", "Higher Education", "Tutoring", "School Administration", "Special Education Support"]
+    },
+    {
+      "cat": "Law & Legal Services",
+      "items": ["Legal Research", "Document Review", "Case Preparation", "Contract Analysis", "Professional Writing", "Knowledge Management", "Regulatory Compliance", "Paralegal Support", "Client Communication", "Responsible AI in Law"]
+    },
+    {
+      "cat": "Engineering & Technology",
+      "items": ["Technical Documentation", "Design Support", "Project Planning", "Software Development", "Knowledge Retrieval", "Workflow Automation", "Systems Architecture", "DevOps & Infrastructure", "Quality Assurance", "Technical Problem-Solving"]
+    },
+    {
+      "cat": "Agriculture & Farming",
+      "items": ["Farm Planning", "Crop Management", "Livestock Management", "Market Intelligence", "Weather Interpretation", "Farm Business Operations", "Record Keeping", "Supply Chain Support", "Agritech Adoption", "Sustainable Practices"]
+    },
+    {
+      "cat": "Public Service & Government",
+      "items": ["Policy Analysis", "Citizen Communication", "Public Sector Research", "Documentation & Records", "Operational Efficiency", "Knowledge Management", "Municipal Administration", "Public Health Programs", "Ethical & Responsible AI", "Digital Transformation"]
+    },
+    {
+      "cat": "Creative Industries & Design",
+      "items": ["Writing", "Graphic Design", "Video Production", "Music & Audio", "Content Strategy", "Brand Development", "Photography", "UX / UI Design", "Creative Direction", "Illustration"]
+    },
+    {
+      "cat": "Research & Academia",
+      "items": ["Academic Research", "Literature Reviews", "Evidence Synthesis", "Citation Management", "Academic Writing Support", "Deep Research Methods", "Responsible Publication", "Data Collection", "Peer Review", "Grant Writing"]
+    },
+    {
+      "cat": "Trades & Skilled Labor",
+      "items": ["Construction", "Electrical Work", "Plumbing", "HVAC", "Automotive Repair", "Manufacturing", "Logistics & Field Services", "Equipment Maintenance", "Facilities Management", "Apprenticeship Training"]
+    },
+    {
+      "cat": "Sales, Marketing & Customer Experience",
+      "items": ["Customer Insights", "Campaign Optimization", "Lead Generation", "Sales Strategy", "Market Analysis", "Customer Retention", "CRM Workflows", "Brand Messaging", "Community Management", "Customer Support Operations"]
+    }
   ],
 
   "cta": {
-    "heading": "Ready to discuss your company or investment thesis?",
-    "body": "We review all serious inquiries and respond to those that fit our mandate. If it fits, we move quickly.",
-    "label": "Contact Investor Relations →",
+    "heading": "Ready to begin your AI.M journey?",
+    "body": "Whatever your profession, industry, or stage of life — there is a Learning Path built for the work you already do. Talk to admissions and we'll help you find the right starting point, for yourself or your whole organization.",
+    "label": "Talk to Admissions →",
     "href": "/contact"
   }
 }

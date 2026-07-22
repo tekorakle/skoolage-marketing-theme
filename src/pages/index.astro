@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import siteData from "@/data/global/site.json";
 import Hero from "@/components/Hero.astro";
+import Pricing from "@/components/Pricing.astro";
 import MarketChart from "@/components/MarketChart.astro";
 import FeaturedSlider from "@/components/FeaturedSlider.astro";
 import Portal from "@/components/Portal.astro";
@@ -17,12 +18,13 @@ import Footer from "@/components/Footer.astro";
   description={siteData.description}
 >
   <Hero />
-  <MarketChart />
+  <!-- <MarketChart /> --> 
   <FeaturedSlider />
   <Portal />
   <Services />
   <TransactionDesk />
   <Projects featuredOnly />
+ <!--<Pricing /> -->
   <QuickHelpForm />
   <Footer />
 </Layout>
