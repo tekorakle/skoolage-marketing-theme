@@ -6,6 +6,7 @@
     "description": "Teach by asking guiding questions instead of handing over answers. Built for homework help, concept doubts, and any moment where the goal is understanding — not just the result.",
     "tags": ["Academics", "Universal", "Guided Learning"],
     "icon": "chat-bubble-left-right",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/socratic-tutor",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/head-question-outline.svg"
@@ -17,6 +18,7 @@
     "description": "Turn notes, a chapter, or a topic into spaced-repetition flashcards — Q/A and cloze deletions — ready to study or import into Anki. Built for memorization, review, and drilling facts.",
     "tags": ["Academics", "Universal", "Spaced Repetition"],
     "icon": "queue-list",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/flashcard-deck",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cards-outline.svg"
@@ -28,6 +30,7 @@
     "description": "Structured, rubric-based feedback on a piece of writing without rewriting it for the student. Built for essays, paragraphs, personal statements, and reports that need critique or grading.",
     "tags": ["For Educators", "Languages & Literature", "K12", "University"],
     "icon": "document-chart-bar",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/essay-feedback",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/text-box-check-outline.svg"
@@ -39,6 +42,7 @@
     "description": "Build a practice exam or quiz from a topic, syllabus, or set of notes — mixed item types, a difficulty spread, and a full answer key with explanations.",
     "tags": ["Academics", "Universal", "Assessment"],
     "icon": "clipboard-document-check",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/exam-blueprint",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-text-outline.svg"
@@ -50,6 +54,7 @@
     "description": "Explain a hard concept clearly with progressive depth, a concrete analogy, and a check for understanding. Built for the moment an idea needs to click.",
     "tags": ["Academics", "Universal", "Explainers"],
     "icon": "light-bulb",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/concept-explainer",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/lightbulb-on-outline.svg"
@@ -61,6 +66,7 @@
     "description": "Help a learner build a realistic study habit through tiny plans, friction checks, and short reflection loops. Built for consistency, procrastination help, and weekly study planning.",
     "tags": ["Companions", "Universal", "Habits"],
     "icon": "calendar-days",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/study-habit-coach",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/calendar-check-outline.svg"
@@ -72,6 +78,7 @@
     "description": "Help learners handle exam anxiety with grounding, triage, and a short action plan. Built for panic, blanking out, avoidance, and fear of failure before or during test prep.",
     "tags": ["Companions", "Universal", "Wellbeing"],
     "icon": "hand-raised",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/exam-anxiety-reset",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/meditation.svg"
@@ -83,6 +90,7 @@
     "description": "Coach learners through friendship or peer conflict by rehearsing respectful conversations, boundaries, and perspective-taking. Built for disagreements, apologies, and group tension.",
     "tags": ["Companions", "Universal", "Social Skills"],
     "icon": "users",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/friendship-conflict-roleplay",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-group-outline.svg"
@@ -94,6 +102,7 @@
     "description": "Teach beginner Python through tiny runnable challenges, hints, and debugging questions. Built for learning the basics, understanding an error, or building a first small program.",
     "tags": ["Skills & Interests", "Universal", "Coding"],
     "icon": "code-bracket",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/python-playground-coach",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/language-python.svg"
@@ -105,6 +114,7 @@
     "description": "Create focused guitar practice sessions for chords, rhythm, transitions, scales, and songs. Built for a practice plan, fixing a tricky passage, or feedback on efficient improvement.",
     "tags": ["Skills & Interests", "Universal", "Music"],
     "icon": "sparkles",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/guitar-practice-coach",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/guitar-acoustic.svg"
@@ -116,6 +126,7 @@
     "description": "Coach a learner through planning, rehearsing, and improving a speech or presentation. Built for structure, delivery, timing, slides, nerves, and Q&A practice.",
     "tags": ["Skills & Interests", "Universal", "Communication"],
     "icon": "megaphone",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/public-speaking-rehearsal",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/microphone-outline.svg"
@@ -127,6 +138,7 @@
     "description": "Help teachers design a lesson with objectives, activities, checks for understanding, differentiation, and materials. Built for turning a topic, standard, or resource into a teachable plan.",
     "tags": ["For Educators", "Universal", "Lesson Design"],
     "icon": "presentation-chart-bar",
+    "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "https://eduhub.deeptutor.info/skills/lesson-plan-studio",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/human-male-board.svg"
