@@ -6,7 +6,7 @@ import { augmentProjectsWithImages, type ProjectEntry } from '../lib/fetchGitHub
 import { withBase } from '../lib/assetPath';
 import { icons } from '../lib/icons';
 
-const projectsData = await augmentProjectsWithImages(projectsRaw as ProjectEntry[]);
+const projectsData = await augmentProjectsWithImages(projectsRaw as ProjectEntry[], 'projects');
 const featuredProjects = projectsData.filter((p: any) => p.featuredImage && typeof p.featuredImage === 'string' && p.featuredImage.trim() !== '');
 ---
 

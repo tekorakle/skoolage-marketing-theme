@@ -11,7 +11,7 @@ interface Props {
 }
 const { featuredOnly = false } = Astro.props;
 
-const allProjectsData = await augmentProjectsWithImages(aiDataRaw as ProjectEntry[]);
+const allProjectsData = await augmentProjectsWithImages(aiDataRaw as ProjectEntry[], 'ai-mastery');
 const projectsData = featuredOnly
   ? allProjectsData.filter(p => p.featuredImage)
   : allProjectsData;
@@ -50,7 +50,7 @@ const projectsForScript = projectsData.map((p) => ({
 
     {featuredOnly && (
       <div class="flex mb-8">
-        <a href={withBase('/projects')} class="portfolio-link inline-flex items-center gap-2 text-xs font-mono">
+        <a href={withBase('/ai-mastery')} class="portfolio-link inline-flex items-center gap-2 text-xs font-mono">
           View full portfolio →
         </a>
       </div>

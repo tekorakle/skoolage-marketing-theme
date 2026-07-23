@@ -11,7 +11,7 @@ interface Props {
 }
 const { featuredOnly = false } = Astro.props;
 
-const allProjectsData = await augmentProjectsWithImages(projectsRaw as ProjectEntry[]);
+const allProjectsData = await augmentProjectsWithImages(projectsRaw as ProjectEntry[], 'projects');
 const projectsData = featuredOnly
   ? allProjectsData.filter(p => p.featuredImage)
   : allProjectsData;
