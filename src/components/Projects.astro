@@ -152,7 +152,7 @@ const projectsForScript = projectsData.map((p) => ({
 
 <Modal id="project-modal">
   <a id="project-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-cta">
-    <span id="project-modal-link-text" class="font-display uppercase tracking-[2px] font-semibold">View Project</span>
+    <span id="project-modal-link-text" class="font-display uppercase tracking-[2px] font-semibold">View Skill</span>
     <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" set:html={icons['external-link']} />
   </a>
   <p id="project-modal-no-link" class="modal-no-link hidden font-mono">Private / No public link available.</p>
@@ -276,7 +276,7 @@ const projectsForScript = projectsData.map((p) => ({
         if (p.link.includes('github.com'))  modalLinkTx.textContent = 'View on GitHub';
         else if (p.link.includes('gitlab')) modalLinkTx.textContent = 'View on GitLab';
         else if (p.link.includes('blog'))   modalLinkTx.textContent = 'Read the Post';
-        else                                modalLinkTx.textContent = 'View Project';
+        else                                modalLinkTx.textContent = 'View Skill';
         modalLink.classList.remove('hidden');
         modalNoLink.classList.add('hidden');
       } else {

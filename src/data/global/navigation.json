@@ -15,7 +15,7 @@
       ]
     },
     { "label": "AI Skills", "href": "/projects", "iconKey": "monitor" },
-    { "label": "AI Mastery", "href": "/ai-mastery", "iconKey": "monitor" },
+    { "label": "Curriculum", "href": "/ai-mastery", "iconKey": "monitor" },
     {
       "label": "Resources",
       "href": "/blog",
