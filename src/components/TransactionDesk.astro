@@ -34,7 +34,7 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--color-primary);"></span>
             <span class="relative inline-flex rounded-full h-2 w-2" style="background: var(--color-primary);"></span>
           </span>
-          <span class="text-[10px] font-mono font-bold uppercase tracking-[3px] text-site-muted">Apex</span>
+          <span class="text-[10px] font-mono font-bold uppercase tracking-[3px] text-site-muted">Skoolage</span>
         </div>
 
         <p class="font-display font-bold text-2xl lg:text-3xl text-site-text leading-snug">
@@ -117,7 +117,7 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
                   <svg aria-hidden="true" width="15" height="15" fill="currentColor" viewBox="0 0 24 24" set:html={icons['ellipsis-v']} />
                 </button>
                 <div class="c-settings-drop" id="chatSettDrop">
-                  <a href={personalData.apex_url} target="_blank" rel="noopener noreferrer">Visit Apex</a>
+                  <a href={personalData.apex_url} target="_blank" rel="noopener noreferrer">Visit Skoolage</a>
                   <a href={`mailto:${personalData.apex_email}`}>Email Support</a>
                   <a href={withBase('/privacy')}>Privacy Policy</a>
                 </div>
@@ -624,7 +624,7 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
             addIn("Have a question? Message us right here \u2193", timeNow());
             inp.disabled     = false;
             sendBtn.disabled = false;
-            inp.placeholder  = 'Message Apex...';
+            inp.placeholder  = 'Message Skoolage...';
           /* NO --  inp.focus(); -- dont steal focus from the user unless landing page*/
           }
         }, item.at);
@@ -695,7 +695,7 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: web3formsKey,
-            subject:    'Apex Chat Inquiry',
+            subject:    'Skoolage Chat Inquiry',
             from_name:  storedName,
             email:      email,
             message:    storedMsg,
@@ -705,10 +705,10 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
           return res.json();
         }).then(function (data) {
           if (!data.success) {
-            console.error('[Apex] Web3Forms error:', data.message);
+            console.error('[Skoolage] Web3Forms error:', data.message);
           }
         }).catch(function (err) {
-          console.error('[Apex] Submit failed:', err);
+          console.error('[Skoolage] Submit failed:', err);
         });
 
         setTimeout(function () {
@@ -716,7 +716,7 @@ const chatScript = deskData.chatScripts[Math.floor(Math.random() * deskData.chat
           setTimeout(function () {
             addIn("We'll follow up at " + email + " within 2 hours. 🟢", timeNow());
             if (statusEl) {
-              statusEl.textContent = '\u2713 Message sent to Apex';
+              statusEl.textContent = '\u2713 Message sent to Skoolage';
               statusEl.classList.add('sent');
             }
           }, 1600);

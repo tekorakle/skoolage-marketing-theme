@@ -218,7 +218,7 @@ Uncomment `push: branches: [main]` in `.github/workflows/deploy.yml`. Every futu
 **Settings → Pages → Custom domain** — enter your domain. At your DNS provider:
 
 ```
-# Apex domain — all four A records
+# Skoolage domain — all four A records
 A    @    185.199.108.153
 A    @    185.199.109.153
 A    @    185.199.110.153
