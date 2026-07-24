@@ -1,459 +1,619 @@
 [
   {
     "title": "Business Planning",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Using AI to stress-test business models, map market opportunity, and build plans investors and lenders actually take seriously.",
-    "tags": ["Business Model", "Market Sizing", "Planning"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Business Model",
+      "Market Sizing",
+      "Planning"
+    ],
+    "icon": "chart-bar-square",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-timeline-variant.svg"
   },
   {
     "title": "Strategy & Decision-Making",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Applying AI to weigh trade-offs, run scenario analysis, and support high-stakes decisions without letting a model make the call for you.",
-    "tags": ["Strategy", "Scenario Planning", "Judgment"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Strategy",
+      "Scenario Planning",
+      "Judgment"
+    ],
+    "icon": "presentation-chart-line",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chess-knight.svg"
   },
   {
     "title": "Marketing",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
-    "description": "Building campaigns, messaging, and content strategy faster with AI — while keeping brand voice and customer insight firmly in human hands.",
-    "tags": ["Campaigns", "Messaging", "Content Strategy"],
-    "icon": "rocket-launch",
+    "description": "Building campaigns, messaging, and content strategy faster with AI \u2014 while keeping brand voice and customer insight firmly in human hands.",
+    "tags": [
+      "Campaigns",
+      "Messaging",
+      "Content Strategy"
+    ],
+    "icon": "presentation-chart-bar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn-outline.svg"
   },
   {
     "title": "Sales",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Using AI for prospect research, personalized outreach, and deal-stage analysis that shortens the path from lead to close.",
-    "tags": ["Prospecting", "Outreach", "Pipeline"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Prospecting",
+      "Outreach",
+      "Pipeline"
+    ],
+    "icon": "circle-stack",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/handshake-outline.svg"
   },
   {
     "title": "Operations",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Streamlining day-to-day operations with AI-assisted process mapping, vendor analysis, and workflow documentation.",
-    "tags": ["Process Design", "Efficiency", "Documentation"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Process Design",
+      "Efficiency",
+      "Documentation"
+    ],
+    "icon": "table-cells",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cogs.svg"
   },
   {
     "title": "Customer Support",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
-    "description": "Handling higher support volume with AI-assisted responses, ticket triage, and knowledge-base drafting — without losing the human touch.",
-    "tags": ["Support Ops", "Ticket Triage", "Knowledge Base"],
-    "icon": "rocket-launch",
+    "description": "Handling higher support volume with AI-assisted responses, ticket triage, and knowledge-base drafting \u2014 without losing the human touch.",
+    "tags": [
+      "Support Ops",
+      "Ticket Triage",
+      "Knowledge Base"
+    ],
+    "icon": "funnel",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/headset.svg"
   },
   {
     "title": "Growth & Scaling",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Using AI to identify growth levers, model scaling scenarios, and prioritize what to build next as a business expands.",
-    "tags": ["Growth Levers", "Scaling", "Prioritization"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Growth Levers",
+      "Scaling",
+      "Prioritization"
+    ],
+    "icon": "server-stack",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-line-variant.svg"
   },
   {
     "title": "Startups & Founders",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "A founder-focused path for using AI across fundraising decks, early product decisions, and the dozens of hats a startup demands.",
-    "tags": ["Fundraising", "Product Decisions", "Early Stage"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Fundraising",
+      "Product Decisions",
+      "Early Stage"
+    ],
+    "icon": "cloud",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/rocket-launch-outline.svg"
   },
   {
     "title": "Small Business Ownership",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
-    "description": "Practical AI skills for owner-operators — scheduling, bookkeeping support, marketing, and customer communication, all in one place.",
-    "tags": ["Owner-Operator", "Daily Operations", "Practical AI"],
-    "icon": "rocket-launch",
+    "description": "Practical AI skills for owner-operators \u2014 scheduling, bookkeeping support, marketing, and customer communication, all in one place.",
+    "tags": [
+      "Owner-Operator",
+      "Daily Operations",
+      "Practical AI"
+    ],
+    "icon": "cpu-chip",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/store.svg"
   },
   {
     "title": "Product Management",
-    "company": "Business & Entrepreneurship · AI.M Pathway",
+    "company": "Business & Entrepreneurship \u00b7 AI.M Pathway",
     "category": "business",
     "description": "Using AI to synthesize user feedback, draft specs, and prioritize roadmaps with clearer signal and less manual busywork.",
-    "tags": ["Roadmapping", "User Feedback", "Specs"],
-    "icon": "rocket-launch",
+    "tags": [
+      "Roadmapping",
+      "User Feedback",
+      "Specs"
+    ],
+    "icon": "wifi",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-list-outline.svg"
   },
-
   {
     "title": "Financial Analysis",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
-    "description": "Using AI to model scenarios, analyze statements, and surface the numbers that matter — with verification built into every step.",
-    "tags": ["Modeling", "Statement Analysis", "Verification"],
-    "icon": "currency-dollar",
+    "description": "Using AI to model scenarios, analyze statements, and surface the numbers that matter \u2014 with verification built into every step.",
+    "tags": [
+      "Modeling",
+      "Statement Analysis",
+      "Verification"
+    ],
+    "icon": "command-line",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-bell-curve.svg"
   },
   {
     "title": "Reporting",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Automating routine financial reports while learning to catch the errors AI-generated summaries can quietly introduce.",
-    "tags": ["Automation", "Reporting", "Accuracy"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Automation",
+      "Reporting",
+      "Accuracy"
+    ],
+    "icon": "globe-alt",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-chart-outline.svg"
   },
   {
     "title": "Forecasting",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Building AI-assisted forecasts that account for uncertainty honestly, rather than presenting false precision.",
-    "tags": ["Forecasting", "Uncertainty", "Planning"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Forecasting",
+      "Uncertainty",
+      "Planning"
+    ],
+    "icon": "signal",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-timeline.svg"
   },
   {
     "title": "Compliance",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Using AI to track regulatory changes and flag compliance risk, while keeping final sign-off firmly with qualified professionals.",
-    "tags": ["Regulation", "Risk Flagging", "Oversight"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Regulation",
+      "Risk Flagging",
+      "Oversight"
+    ],
+    "icon": "code-bracket",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/shield-check-outline.svg"
   },
   {
     "title": "Auditing",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Applying AI to sample testing, anomaly detection, and documentation review, with judgment and skepticism still driving conclusions.",
-    "tags": ["Anomaly Detection", "Sampling", "Documentation"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Anomaly Detection",
+      "Sampling",
+      "Documentation"
+    ],
+    "icon": "code-bracket-square",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/magnify-scan.svg"
   },
   {
     "title": "Tax Preparation",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Using AI to organize documentation and draft filings faster, while learning exactly where professional review remains non-negotiable.",
-    "tags": ["Filing Prep", "Documentation", "Accuracy"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Filing Prep",
+      "Documentation",
+      "Accuracy"
+    ],
+    "icon": "shield-check",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-document-edit-outline.svg"
   },
   {
     "title": "Bookkeeping",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Streamlining reconciliation, categorization, and recordkeeping with AI, freeing time for the advisory work clients actually value.",
-    "tags": ["Reconciliation", "Categorization", "Recordkeeping"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Reconciliation",
+      "Categorization",
+      "Recordkeeping"
+    ],
+    "icon": "lock-closed",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/book-open-variant.svg"
   },
   {
     "title": "Investment Research",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Using AI to synthesize market research and company filings quickly, while learning to verify sources before acting on any conclusion.",
-    "tags": ["Market Research", "Due Diligence", "Synthesis"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Market Research",
+      "Due Diligence",
+      "Synthesis"
+    ],
+    "icon": "lock-open",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-areaspline.svg"
   },
   {
     "title": "Corporate Finance",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Applying AI to capital structure analysis, valuation modeling, and board-level financial narrative development.",
-    "tags": ["Valuation", "Capital Structure", "Board Reporting"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Valuation",
+      "Capital Structure",
+      "Board Reporting"
+    ],
+    "icon": "eye",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank-outline.svg"
   },
   {
     "title": "Risk Management",
-    "company": "Accounting & Finance · AI.M Pathway",
+    "company": "Accounting & Finance \u00b7 AI.M Pathway",
     "category": "finance",
     "description": "Using AI to model risk exposure and stress-test assumptions, with human judgment governing every threshold and decision.",
-    "tags": ["Risk Modeling", "Stress Testing", "Governance"],
-    "icon": "currency-dollar",
+    "tags": [
+      "Risk Modeling",
+      "Stress Testing",
+      "Governance"
+    ],
+    "icon": "eye-slash",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cash-multiple.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/shield-alert-outline.svg"
   },
-
   {
     "title": "Clinical Research",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Using AI to synthesize clinical literature and accelerate evidence review, while maintaining rigorous verification standards.",
-    "tags": ["Literature Review", "Evidence Synthesis", "Verification"],
-    "icon": "shield-check",
+    "tags": [
+      "Literature Review",
+      "Evidence Synthesis",
+      "Verification"
+    ],
+    "icon": "finger-print",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/flask-outline.svg"
   },
   {
     "title": "Medical Writing",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
-    "description": "Drafting clinical documentation, patient education materials, and research summaries faster — with clinical accuracy always verified.",
-    "tags": ["Documentation", "Patient Materials", "Accuracy"],
-    "icon": "shield-check",
+    "description": "Drafting clinical documentation, patient education materials, and research summaries faster \u2014 with clinical accuracy always verified.",
+    "tags": [
+      "Documentation",
+      "Patient Materials",
+      "Accuracy"
+    ],
+    "icon": "users",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-document-edit.svg"
   },
   {
     "title": "Patient Communication",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Using AI to draft clear, compassionate patient communication while preserving the clinical judgment only a provider can offer.",
-    "tags": ["Patient Care", "Clear Communication", "Empathy"],
-    "icon": "shield-check",
+    "tags": [
+      "Patient Care",
+      "Clear Communication",
+      "Empathy"
+    ],
+    "icon": "user-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-heart-outline.svg"
   },
   {
     "title": "Nursing",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
-    "description": "Practical AI skills for nursing staff — documentation support, shift handoff notes, and care-plan drafting that saves time at the bedside.",
-    "tags": ["Documentation", "Care Plans", "Shift Handoff"],
-    "icon": "shield-check",
+    "description": "Practical AI skills for nursing staff \u2014 documentation support, shift handoff notes, and care-plan drafting that saves time at the bedside.",
+    "tags": [
+      "Documentation",
+      "Care Plans",
+      "Shift Handoff"
+    ],
+    "icon": "user-plus",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/heart-pulse.svg"
   },
   {
     "title": "Administrative Workflows",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Reducing administrative burden in healthcare settings with AI-assisted scheduling, intake, and records management.",
-    "tags": ["Scheduling", "Intake", "Records Management"],
-    "icon": "shield-check",
+    "tags": [
+      "Scheduling",
+      "Intake",
+      "Records Management"
+    ],
+    "icon": "hand-raised",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-pulse.svg"
   },
   {
     "title": "Medical Documentation",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Using AI to accelerate chart notes and discharge summaries while keeping documentation accurate, complete, and compliant.",
-    "tags": ["Chart Notes", "Discharge Summaries", "Compliance"],
-    "icon": "shield-check",
+    "tags": [
+      "Chart Notes",
+      "Discharge Summaries",
+      "Compliance"
+    ],
+    "icon": "chat-bubble",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-document-multiple-outline.svg"
   },
   {
     "title": "Evidence Synthesis",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Combining findings across studies and sources with AI assistance, while applying the critical scrutiny clinical evidence demands.",
-    "tags": ["Synthesis", "Critical Review", "Clinical Evidence"],
-    "icon": "shield-check",
+    "tags": [
+      "Synthesis",
+      "Critical Review",
+      "Clinical Evidence"
+    ],
+    "icon": "chat-bubble-left-right",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/microscope.svg"
   },
   {
     "title": "Clinical Decision Support",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
-    "description": "Understanding how AI can inform — never replace — clinical decision-making, with human oversight as a non-negotiable standard.",
-    "tags": ["Decision Support", "Human Oversight", "Responsible AI"],
-    "icon": "shield-check",
+    "description": "Understanding how AI can inform \u2014 never replace \u2014 clinical decision-making, with human oversight as a non-negotiable standard.",
+    "tags": [
+      "Decision Support",
+      "Human Oversight",
+      "Responsible AI"
+    ],
+    "icon": "megaphone",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/stethoscope.svg"
   },
   {
     "title": "Telehealth",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Applying AI to remote patient triage, visit preparation, and follow-up communication in virtual care settings.",
-    "tags": ["Remote Care", "Triage", "Follow-Up"],
-    "icon": "shield-check",
+    "tags": [
+      "Remote Care",
+      "Triage",
+      "Follow-Up"
+    ],
+    "icon": "light-bulb",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/video-account.svg"
   },
   {
     "title": "Healthcare Administration",
-    "company": "Healthcare & Medicine · AI.M Pathway",
+    "company": "Healthcare & Medicine \u00b7 AI.M Pathway",
     "category": "healthcare",
     "description": "Using AI for staffing analysis, resource planning, and operational reporting across clinics, practices, and hospital systems.",
-    "tags": ["Staffing", "Resource Planning", "Operations"],
-    "icon": "shield-check",
+    "tags": [
+      "Staffing",
+      "Resource Planning",
+      "Operations"
+    ],
+    "icon": "rocket-launch",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-box.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hospital-marker.svg"
   },
-
   {
     "title": "Lesson Planning",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Building better lessons faster with AI-assisted planning, while keeping pedagogy and classroom judgment firmly with the teacher.",
-    "tags": ["Lesson Design", "Pedagogy", "Time Savings"],
-    "icon": "academic-cap",
+    "tags": [
+      "Lesson Design",
+      "Pedagogy",
+      "Time Savings"
+    ],
+    "icon": "sparkles",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/notebook-edit-outline.svg"
   },
   {
     "title": "Curriculum Development",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Using AI to draft, sequence, and iterate curriculum units, freeing time for the instructional design work that matters most.",
-    "tags": ["Curriculum Design", "Sequencing", "Iteration"],
+    "tags": [
+      "Curriculum Design",
+      "Sequencing",
+      "Iteration"
+    ],
     "icon": "academic-cap",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/book-open-page-variant.svg"
   },
   {
     "title": "Assessment Design",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Designing assessments that actually measure understanding, with AI assisting on question variety, rigor, and rubric clarity.",
-    "tags": ["Assessment", "Rubrics", "Rigor"],
-    "icon": "academic-cap",
+    "tags": [
+      "Assessment",
+      "Rubrics",
+      "Rigor"
+    ],
+    "icon": "puzzle-piece",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-text-outline.svg"
   },
   {
     "title": "Student Feedback",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Using AI to draft thoughtful, individualized feedback at scale, while keeping the teacher's voice and relationship central.",
-    "tags": ["Feedback", "Personalization", "Scale"],
-    "icon": "academic-cap",
+    "tags": [
+      "Feedback",
+      "Personalization",
+      "Scale"
+    ],
+    "icon": "trophy",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/comment-text-outline.svg"
   },
   {
     "title": "Classroom Productivity",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Practical AI workflows for grading support, communication drafting, and administrative tasks that eat into teaching time.",
-    "tags": ["Grading Support", "Communication", "Time Savings"],
-    "icon": "academic-cap",
+    "tags": [
+      "Grading Support",
+      "Communication",
+      "Time Savings"
+    ],
+    "icon": "map",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/timer-sand.svg"
   },
   {
     "title": "Personalized Instruction",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Using AI to adapt instruction to individual student needs and pace, at a scale no single teacher could manage alone.",
-    "tags": ["Differentiation", "Adaptive Learning", "Student Pace"],
-    "icon": "academic-cap",
+    "tags": [
+      "Differentiation",
+      "Adaptive Learning",
+      "Student Pace"
+    ],
+    "icon": "arrow-path",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-star-outline.svg"
   },
   {
     "title": "Higher Education",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "AI applications for lecture preparation, research support, and academic advising within college and university settings.",
-    "tags": ["Lecture Prep", "Advising", "Academic Support"],
-    "icon": "academic-cap",
+    "tags": [
+      "Lecture Prep",
+      "Advising",
+      "Academic Support"
+    ],
+    "icon": "wrench-screwdriver",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school-outline.svg"
   },
   {
     "title": "Tutoring",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Using AI to prepare tailored practice material and explanations for one-on-one or small-group tutoring sessions.",
-    "tags": ["1:1 Support", "Practice Material", "Explanation"],
-    "icon": "academic-cap",
+    "tags": [
+      "1:1 Support",
+      "Practice Material",
+      "Explanation"
+    ],
+    "icon": "cog-6-tooth",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/human-male-board.svg"
   },
   {
     "title": "School Administration",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Applying AI to scheduling, parent communication, and reporting workflows across school and district administration.",
-    "tags": ["Scheduling", "Parent Communication", "Reporting"],
-    "icon": "academic-cap",
+    "tags": [
+      "Scheduling",
+      "Parent Communication",
+      "Reporting"
+    ],
+    "icon": "clipboard-document-check",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/office-building-outline.svg"
   },
   {
     "title": "Special Education Support",
-    "company": "Education & Teaching · AI.M Pathway",
+    "company": "Education & Teaching \u00b7 AI.M Pathway",
     "category": "education",
     "description": "Using AI to support individualized education plans and accommodation drafting, with educator expertise guiding every decision.",
-    "tags": ["IEPs", "Accommodations", "Individualized Support"],
-    "icon": "academic-cap",
+    "tags": [
+      "IEPs",
+      "Accommodations",
+      "Individualized Support"
+    ],
+    "icon": "queue-list",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/school.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hand-heart-outline.svg"
   },
-
   {
     "title": "Legal Research",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Accelerating case law and statute research with AI, while learning the verification discipline legal work demands.",
-    "tags": ["Case Law", "Statutes", "Verification"],
-    "icon": "scale",
+    "tags": [
+      "Case Law",
+      "Statutes",
+      "Verification"
+    ],
+    "icon": "squares-2x2",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
@@ -461,223 +621,301 @@
   },
   {
     "title": "Document Review",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Using AI to speed up document review and issue-spotting, with attorney judgment governing every material conclusion.",
-    "tags": ["Document Review", "Issue Spotting", "Efficiency"],
-    "icon": "scale",
+    "tags": [
+      "Document Review",
+      "Issue Spotting",
+      "Efficiency"
+    ],
+    "icon": "adjustments-horizontal",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-search-outline.svg"
   },
   {
     "title": "Case Preparation",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Using AI to organize case materials, draft timelines, and prepare briefs faster ahead of hearings and trial.",
-    "tags": ["Case Files", "Timelines", "Briefs"],
-    "icon": "scale",
+    "tags": [
+      "Case Files",
+      "Timelines",
+      "Briefs"
+    ],
+    "icon": "clock",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/briefcase-search.svg"
   },
   {
     "title": "Contract Analysis",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Applying AI to flag contract risk, inconsistent clauses, and negotiation points, with legal review as the final word.",
-    "tags": ["Contract Review", "Risk Flagging", "Negotiation"],
-    "icon": "scale",
+    "tags": [
+      "Contract Review",
+      "Risk Flagging",
+      "Negotiation"
+    ],
+    "icon": "calendar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/text-box-check-outline.svg"
   },
   {
     "title": "Professional Writing",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Drafting memos, correspondence, and filings with AI assistance while preserving precise legal language and tone.",
-    "tags": ["Legal Writing", "Memos", "Precision"],
-    "icon": "scale",
+    "tags": [
+      "Legal Writing",
+      "Memos",
+      "Precision"
+    ],
+    "icon": "calendar-days",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/pencil-box-outline.svg"
   },
   {
     "title": "Knowledge Management",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Using AI to organize firm precedent, past filings, and institutional knowledge into something actually searchable.",
-    "tags": ["Precedent", "Institutional Knowledge", "Search"],
-    "icon": "scale",
+    "tags": [
+      "Precedent",
+      "Institutional Knowledge",
+      "Search"
+    ],
+    "icon": "flag",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/archive-outline.svg"
   },
   {
     "title": "Regulatory Compliance",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Tracking regulatory change and compliance obligations with AI support, while legal counsel retains final interpretive authority.",
-    "tags": ["Regulatory Tracking", "Obligations", "Interpretation"],
-    "icon": "scale",
+    "tags": [
+      "Regulatory Tracking",
+      "Obligations",
+      "Interpretation"
+    ],
+    "icon": "hourglass",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/scale-balance.svg"
   },
   {
     "title": "Paralegal Support",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
-    "description": "Practical AI workflows for paralegals — filing organization, correspondence drafting, and research assistance day to day.",
-    "tags": ["Filing", "Correspondence", "Research Support"],
-    "icon": "scale",
+    "description": "Practical AI workflows for paralegals \u2014 filing organization, correspondence drafting, and research assistance day to day.",
+    "tags": [
+      "Filing",
+      "Correspondence",
+      "Research Support"
+    ],
+    "icon": "currency-dollar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/folder-account-outline.svg"
   },
   {
     "title": "Client Communication",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
     "description": "Using AI to draft clear, accessible client updates that translate legal complexity without losing precision.",
-    "tags": ["Client Updates", "Clarity", "Accessibility"],
-    "icon": "scale",
+    "tags": [
+      "Client Updates",
+      "Clarity",
+      "Accessibility"
+    ],
+    "icon": "banknotes",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/message-account.svg"
   },
   {
     "title": "Responsible AI in Law",
-    "company": "Law & Legal Services · AI.M Pathway",
+    "company": "Law & Legal Services \u00b7 AI.M Pathway",
     "category": "law",
-    "description": "Understanding the ethical and professional obligations around AI use in legal practice — confidentiality, accuracy, and disclosure.",
-    "tags": ["Ethics", "Confidentiality", "Professional Duty"],
-    "icon": "scale",
+    "description": "Understanding the ethical and professional obligations around AI use in legal practice \u2014 confidentiality, accuracy, and disclosure.",
+    "tags": [
+      "Ethics",
+      "Confidentiality",
+      "Professional Duty"
+    ],
+    "icon": "arrow-trending-up",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/shield-account-outline.svg"
   },
-
   {
     "title": "Technical Documentation",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Using AI to draft and maintain technical docs, API references, and internal wikis that actually stay current.",
-    "tags": ["Documentation", "API Reference", "Maintenance"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Documentation",
+      "API Reference",
+      "Maintenance"
+    ],
+    "icon": "arrow-trending-down",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-code-outline.svg"
   },
   {
     "title": "Design Support",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Applying AI to explore design alternatives and technical trade-offs faster during early-stage engineering work.",
-    "tags": ["Design Exploration", "Trade-Offs", "Prototyping"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Design Exploration",
+      "Trade-Offs",
+      "Prototyping"
+    ],
+    "icon": "scale",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/pencil-ruler.svg"
   },
   {
     "title": "Project Planning",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Using AI to build sprint plans, estimate scope, and surface project risk earlier than traditional planning methods.",
-    "tags": ["Sprint Planning", "Estimation", "Risk"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Sprint Planning",
+      "Estimation",
+      "Risk"
+    ],
+    "icon": "building-office",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-gantt.svg"
   },
   {
     "title": "Software Development",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
-    "description": "Using AI as a coding collaborator — code generation, review, and debugging — while keeping architectural decisions human-led.",
-    "tags": ["Code Generation", "Code Review", "Debugging"],
-    "icon": "cpu-chip",
+    "description": "Using AI as a coding collaborator \u2014 code generation, review, and debugging \u2014 while keeping architectural decisions human-led.",
+    "tags": [
+      "Code Generation",
+      "Code Review",
+      "Debugging"
+    ],
+    "icon": "bell",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/code-braces.svg"
   },
   {
     "title": "Knowledge Retrieval",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Building AI-assisted search across internal codebases, tickets, and documentation so answers surface in seconds, not hours.",
-    "tags": ["Internal Search", "Codebase", "Retrieval"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Internal Search",
+      "Codebase",
+      "Retrieval"
+    ],
+    "icon": "check-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/database-search.svg"
   },
   {
     "title": "Workflow Automation",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
-    "description": "Designing AI-assisted automation for repetitive engineering tasks — testing, deployment checks, and routine maintenance.",
-    "tags": ["Automation", "Testing", "Maintenance"],
-    "icon": "cpu-chip",
+    "description": "Designing AI-assisted automation for repetitive engineering tasks \u2014 testing, deployment checks, and routine maintenance.",
+    "tags": [
+      "Automation",
+      "Testing",
+      "Maintenance"
+    ],
+    "icon": "exclamation-triangle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/auto-fix.svg"
   },
   {
     "title": "Systems Architecture",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Using AI to evaluate architectural trade-offs and document system design decisions with clearer, faster reasoning.",
-    "tags": ["Architecture", "System Design", "Trade-Off Analysis"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Architecture",
+      "System Design",
+      "Trade-Off Analysis"
+    ],
+    "icon": "exclamation-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/sitemap-outline.svg"
   },
   {
     "title": "DevOps & Infrastructure",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Applying AI to infrastructure-as-code review, incident analysis, and deployment pipeline optimization.",
-    "tags": ["Infrastructure", "Incident Analysis", "Pipelines"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Infrastructure",
+      "Incident Analysis",
+      "Pipelines"
+    ],
+    "icon": "information-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/server-network-outline.svg"
   },
   {
     "title": "Quality Assurance",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
     "description": "Using AI to generate test cases, identify edge cases, and speed up regression testing without losing coverage discipline.",
-    "tags": ["Test Cases", "Edge Cases", "Regression Testing"],
-    "icon": "cpu-chip",
+    "tags": [
+      "Test Cases",
+      "Edge Cases",
+      "Regression Testing"
+    ],
+    "icon": "document-text",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/checkbox-marked-circle-outline.svg"
   },
   {
     "title": "Technical Problem-Solving",
-    "company": "Engineering & Technology · AI.M Pathway",
+    "company": "Engineering & Technology \u00b7 AI.M Pathway",
     "category": "engineering",
-    "description": "Building the habit of using AI as a reasoning partner for hard technical problems — without losing your own debugging instincts.",
-    "tags": ["Problem-Solving", "Debugging", "Reasoning"],
-    "icon": "cpu-chip",
+    "description": "Building the habit of using AI as a reasoning partner for hard technical problems \u2014 without losing your own debugging instincts.",
+    "tags": [
+      "Problem-Solving",
+      "Debugging",
+      "Reasoning"
+    ],
+    "icon": "document-chart-bar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cog.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/puzzle-outline.svg"
   },
-
   {
     "title": "Farm Planning",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI to plan planting cycles, resource allocation, and seasonal strategy based on historical and forecasted data.",
-    "tags": ["Planting Cycles", "Resource Planning", "Seasonal Strategy"],
-    "icon": "globe-alt",
+    "tags": [
+      "Planting Cycles",
+      "Resource Planning",
+      "Seasonal Strategy"
+    ],
+    "icon": "book-open",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
@@ -685,335 +923,452 @@
   },
   {
     "title": "Crop Management",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Applying AI to monitor crop health signals, identify issues early, and plan interventions with greater precision.",
-    "tags": ["Crop Health", "Early Detection", "Precision Farming"],
-    "icon": "globe-alt",
+    "tags": [
+      "Crop Health",
+      "Early Detection",
+      "Precision Farming"
+    ],
+    "icon": "newspaper",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/sprout-outline.svg"
   },
   {
     "title": "Livestock Management",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI to track herd health trends, feeding schedules, and productivity records across livestock operations.",
-    "tags": ["Herd Health", "Feeding Schedules", "Productivity"],
-    "icon": "globe-alt",
+    "tags": [
+      "Herd Health",
+      "Feeding Schedules",
+      "Productivity"
+    ],
+    "icon": "tag",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cow.svg"
   },
   {
     "title": "Market Intelligence",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI to track commodity prices and demand trends, helping farm operators time sales and plan production.",
-    "tags": ["Commodity Prices", "Demand Trends", "Sales Timing"],
-    "icon": "globe-alt",
+    "tags": [
+      "Commodity Prices",
+      "Demand Trends",
+      "Sales Timing"
+    ],
+    "icon": "link",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-line.svg"
   },
   {
     "title": "Weather Interpretation",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Applying AI to interpret complex weather data and translate it into practical, day-to-day farming decisions.",
-    "tags": ["Weather Data", "Forecast Interpretation", "Field Decisions"],
-    "icon": "globe-alt",
+    "tags": [
+      "Weather Data",
+      "Forecast Interpretation",
+      "Field Decisions"
+    ],
+    "icon": "magnifying-glass",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/weather-partly-cloudy.svg"
   },
   {
     "title": "Farm Business Operations",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI for budgeting, equipment scheduling, and labor planning across the business side of running a farm.",
-    "tags": ["Budgeting", "Equipment Scheduling", "Labor Planning"],
-    "icon": "globe-alt",
+    "tags": [
+      "Budgeting",
+      "Equipment Scheduling",
+      "Labor Planning"
+    ],
+    "icon": "bars-3",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/barn.svg"
   },
   {
     "title": "Record Keeping",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Organizing yield, input, and compliance records with AI assistance, reducing paperwork burden during the busiest seasons.",
-    "tags": ["Yield Records", "Compliance", "Documentation"],
-    "icon": "globe-alt",
+    "tags": [
+      "Yield Records",
+      "Compliance",
+      "Documentation"
+    ],
+    "icon": "arrow-right-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-check-outline.svg"
   },
   {
     "title": "Supply Chain Support",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI to track logistics, input availability, and distribution timing across the agricultural supply chain.",
-    "tags": ["Logistics", "Distribution", "Input Tracking"],
-    "icon": "globe-alt",
+    "tags": [
+      "Logistics",
+      "Distribution",
+      "Input Tracking"
+    ],
+    "icon": "chevron-double-right",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/truck-delivery-outline.svg"
   },
   {
     "title": "Agritech Adoption",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Building the practical confidence to evaluate and adopt new agricultural technology, AI-powered tools included.",
-    "tags": ["Technology Adoption", "Evaluation", "Modernization"],
-    "icon": "globe-alt",
+    "tags": [
+      "Technology Adoption",
+      "Evaluation",
+      "Modernization"
+    ],
+    "icon": "map-pin",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/leaf.svg"
   },
   {
     "title": "Sustainable Practices",
-    "company": "Agriculture & Farming · AI.M Pathway",
+    "company": "Agriculture & Farming \u00b7 AI.M Pathway",
     "category": "agriculture",
     "description": "Using AI to analyze resource use and identify more sustainable practices without sacrificing yield or profitability.",
-    "tags": ["Sustainability", "Resource Use", "Yield Balance"],
-    "icon": "globe-alt",
+    "tags": [
+      "Sustainability",
+      "Resource Use",
+      "Yield Balance"
+    ],
+    "icon": "cursor-arrow-rays",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/tractor-variant.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/recycle-variant.svg"
   },
-
   {
     "title": "Policy Analysis",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Using AI to synthesize policy research and model potential impacts, while keeping public accountability at the center.",
-    "tags": ["Policy Research", "Impact Modeling", "Accountability"],
-    "icon": "flag",
+    "tags": [
+      "Policy Research",
+      "Impact Modeling",
+      "Accountability"
+    ],
+    "icon": "briefcase",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/gavel-outline.svg"
   },
   {
     "title": "Citizen Communication",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Drafting clear, accessible public communication with AI assistance, without losing the accuracy public trust requires.",
-    "tags": ["Public Communication", "Clarity", "Trust"],
-    "icon": "flag",
+    "tags": [
+      "Public Communication",
+      "Clarity",
+      "Trust"
+    ],
+    "icon": "star-filled",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-voice.svg"
   },
   {
     "title": "Public Sector Research",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Using AI to accelerate research for public initiatives while maintaining rigorous sourcing and verification standards.",
-    "tags": ["Research", "Sourcing", "Verification"],
-    "icon": "flag",
+    "tags": [
+      "Research",
+      "Sourcing",
+      "Verification"
+    ],
+    "icon": "wordpress-dots",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-document-multiple.svg"
   },
   {
     "title": "Documentation & Records",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Applying AI to organize and maintain public records and administrative documentation more efficiently.",
-    "tags": ["Records Management", "Administration", "Efficiency"],
-    "icon": "flag",
+    "tags": [
+      "Records Management",
+      "Administration",
+      "Efficiency"
+    ],
+    "icon": "server-rack",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
   },
   {
     "title": "Operational Efficiency",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Using AI to identify process bottlenecks and streamline service delivery across public sector operations.",
-    "tags": ["Process Improvement", "Service Delivery", "Bottleneck Analysis"],
-    "icon": "flag",
+    "tags": [
+      "Process Improvement",
+      "Service Delivery",
+      "Bottleneck Analysis"
+    ],
+    "icon": "network-grid",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/city-variant-outline.svg"
   },
   {
     "title": "Knowledge Management",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Building AI-assisted systems that make institutional knowledge searchable and accessible across departments.",
-    "tags": ["Institutional Knowledge", "Search", "Departments"],
-    "icon": "flag",
+    "tags": [
+      "Institutional Knowledge",
+      "Search",
+      "Departments"
+    ],
+    "icon": "lightbulb-alt",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/text-box-multiple-outline.svg"
   },
   {
     "title": "Municipal Administration",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
-    "description": "Practical AI skills for local government — permitting workflows, resident communication, and budget documentation.",
-    "tags": ["Permitting", "Resident Services", "Budgeting"],
-    "icon": "flag",
+    "description": "Practical AI skills for local government \u2014 permitting workflows, resident communication, and budget documentation.",
+    "tags": [
+      "Permitting",
+      "Resident Services",
+      "Budgeting"
+    ],
+    "icon": "chart-bar-square",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/folder-search-outline.svg"
   },
   {
     "title": "Public Health Programs",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Using AI to analyze public health data and communicate program outcomes clearly to communities and stakeholders.",
-    "tags": ["Public Health", "Data Analysis", "Community Outcomes"],
-    "icon": "flag",
+    "tags": [
+      "Public Health",
+      "Data Analysis",
+      "Community Outcomes"
+    ],
+    "icon": "presentation-chart-line",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/office-building-marker-outline.svg"
   },
   {
     "title": "Ethical & Responsible AI",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
-    "description": "Understanding the ethical obligations of AI use in government — transparency, fairness, and public accountability.",
-    "tags": ["Ethics", "Transparency", "Public Accountability"],
-    "icon": "flag",
+    "description": "Understanding the ethical obligations of AI use in government \u2014 transparency, fairness, and public accountability.",
+    "tags": [
+      "Ethics",
+      "Transparency",
+      "Public Accountability"
+    ],
+    "icon": "presentation-chart-bar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-box-outline.svg"
   },
   {
     "title": "Digital Transformation",
-    "company": "Public Service & Government · AI.M Pathway",
+    "company": "Public Service & Government \u00b7 AI.M Pathway",
     "category": "publicservice",
     "description": "Helping public institutions modernize service delivery through responsible, well-governed AI adoption.",
-    "tags": ["Modernization", "Service Delivery", "Governance"],
-    "icon": "flag",
+    "tags": [
+      "Modernization",
+      "Service Delivery",
+      "Governance"
+    ],
+    "icon": "circle-stack",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bank.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/laptop-account.svg"
   },
-
   {
     "title": "Writing",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
-    "description": "Using AI as a drafting and editing partner across fiction, copywriting, and long-form content — while protecting your voice.",
-    "tags": ["Drafting", "Editing", "Voice"],
-    "icon": "sparkles",
+    "description": "Using AI as a drafting and editing partner across fiction, copywriting, and long-form content \u2014 while protecting your voice.",
+    "tags": [
+      "Drafting",
+      "Editing",
+      "Voice"
+    ],
+    "icon": "table-cells",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/brush-variant.svg"
   },
   {
     "title": "Graphic Design",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Applying AI to speed up ideation and first drafts in graphic design, while keeping creative direction firmly human-led.",
-    "tags": ["Ideation", "Visual Design", "Iteration"],
-    "icon": "sparkles",
+    "tags": [
+      "Ideation",
+      "Visual Design",
+      "Iteration"
+    ],
+    "icon": "funnel",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette-swatch-outline.svg"
   },
   {
     "title": "Video Production",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Using AI to accelerate scripting, editing workflows, and post-production tasks in video content creation.",
-    "tags": ["Scripting", "Editing", "Post-Production"],
-    "icon": "sparkles",
+    "tags": [
+      "Scripting",
+      "Editing",
+      "Post-Production"
+    ],
+    "icon": "server-stack",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/movie-open-outline.svg"
   },
   {
     "title": "Music & Audio",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Exploring AI-assisted composition, sound design, and audio production tools as a collaborator, not a replacement.",
-    "tags": ["Composition", "Sound Design", "Production"],
-    "icon": "sparkles",
+    "tags": [
+      "Composition",
+      "Sound Design",
+      "Production"
+    ],
+    "icon": "cloud",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/music-note-outline.svg"
   },
   {
     "title": "Content Strategy",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Using AI to plan content calendars, audience research, and messaging frameworks that scale creative output responsibly.",
-    "tags": ["Content Planning", "Audience Research", "Messaging"],
-    "icon": "sparkles",
+    "tags": [
+      "Content Planning",
+      "Audience Research",
+      "Messaging"
+    ],
+    "icon": "cpu-chip",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/calendar-multiple.svg"
   },
   {
     "title": "Brand Development",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Applying AI to brand research, messaging exploration, and identity development in early creative stages.",
-    "tags": ["Brand Research", "Identity", "Messaging"],
-    "icon": "sparkles",
+    "tags": [
+      "Brand Research",
+      "Identity",
+      "Messaging"
+    ],
+    "icon": "wifi",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/domain.svg"
   },
   {
     "title": "Photography",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Using AI for post-processing efficiency, shot planning, and portfolio organization in professional photography work.",
-    "tags": ["Post-Processing", "Shot Planning", "Portfolio"],
-    "icon": "sparkles",
+    "tags": [
+      "Post-Processing",
+      "Shot Planning",
+      "Portfolio"
+    ],
+    "icon": "command-line",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/image-multiple-outline.svg"
   },
   {
     "title": "UX / UI Design",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Using AI to accelerate wireframing, user research synthesis, and design iteration in digital product work.",
-    "tags": ["Wireframing", "User Research", "Iteration"],
-    "icon": "sparkles",
+    "tags": [
+      "Wireframing",
+      "User Research",
+      "Iteration"
+    ],
+    "icon": "globe-alt",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/monitor-dashboard.svg"
   },
   {
     "title": "Creative Direction",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Using AI to rapidly explore creative concepts and mood directions before committing production resources.",
-    "tags": ["Concept Exploration", "Mood Boards", "Direction"],
-    "icon": "sparkles",
+    "tags": [
+      "Concept Exploration",
+      "Mood Boards",
+      "Direction"
+    ],
+    "icon": "signal",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/pencil-outline.svg"
   },
   {
     "title": "Illustration",
-    "company": "Creative Industries & Design · AI.M Pathway",
+    "company": "Creative Industries & Design \u00b7 AI.M Pathway",
     "category": "creative",
     "description": "Exploring AI as a sketching and reference tool for illustrators, while preserving distinct artistic style and ownership.",
-    "tags": ["Sketching", "Reference", "Artistic Style"],
-    "icon": "sparkles",
+    "tags": [
+      "Sketching",
+      "Reference",
+      "Artistic Style"
+    ],
+    "icon": "code-bracket",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/palette.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/brush-outline.svg"
   },
-
   {
     "title": "Academic Research",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to accelerate literature discovery and idea exploration, with rigorous academic verification at every stage.",
-    "tags": ["Literature Discovery", "Exploration", "Verification"],
-    "icon": "light-bulb",
+    "tags": [
+      "Literature Discovery",
+      "Exploration",
+      "Verification"
+    ],
+    "icon": "code-bracket-square",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
@@ -1021,111 +1376,150 @@
   },
   {
     "title": "Literature Reviews",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Applying AI to synthesize large bodies of published work into structured, well-sourced literature reviews.",
-    "tags": ["Synthesis", "Sourcing", "Structure"],
-    "icon": "light-bulb",
+    "tags": [
+      "Synthesis",
+      "Sourcing",
+      "Structure"
+    ],
+    "icon": "shield-check",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/book-search-outline.svg"
   },
   {
     "title": "Evidence Synthesis",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Combining findings across multiple studies with AI assistance while applying rigorous methodological scrutiny.",
-    "tags": ["Synthesis", "Methodology", "Rigor"],
-    "icon": "light-bulb",
+    "tags": [
+      "Synthesis",
+      "Methodology",
+      "Rigor"
+    ],
+    "icon": "lock-closed",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/format-list-numbered.svg"
   },
   {
     "title": "Citation Management",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to organize references, verify citation accuracy, and manage bibliography formatting across large projects.",
-    "tags": ["References", "Bibliography", "Accuracy"],
-    "icon": "light-bulb",
+    "tags": [
+      "References",
+      "Bibliography",
+      "Accuracy"
+    ],
+    "icon": "lock-open",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-certificate-outline.svg"
   },
   {
     "title": "Academic Writing Support",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to strengthen structure and clarity in academic writing, while preserving original scholarly voice and argument.",
-    "tags": ["Structure", "Clarity", "Scholarly Voice"],
-    "icon": "light-bulb",
+    "tags": [
+      "Structure",
+      "Clarity",
+      "Scholarly Voice"
+    ],
+    "icon": "eye",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/magnify.svg"
   },
   {
     "title": "Deep Research Methods",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
-    "description": "Building a disciplined approach to AI-assisted deep research — exploring, comparing, and organizing findings over time.",
-    "tags": ["Deep Research", "Comparison", "Organization"],
-    "icon": "light-bulb",
+    "description": "Building a disciplined approach to AI-assisted deep research \u2014 exploring, comparing, and organizing findings over time.",
+    "tags": [
+      "Deep Research",
+      "Comparison",
+      "Organization"
+    ],
+    "icon": "eye-slash",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/book-search.svg"
   },
   {
     "title": "Responsible Publication",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Understanding the ethical standards around AI-assisted research and how to disclose its use in academic publication.",
-    "tags": ["Ethics", "Disclosure", "Publication Standards"],
-    "icon": "light-bulb",
+    "tags": [
+      "Ethics",
+      "Disclosure",
+      "Publication Standards"
+    ],
+    "icon": "finger-print",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-scatter-plot.svg"
   },
   {
     "title": "Data Collection",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to organize and preprocess research data, while maintaining rigorous data integrity standards throughout.",
-    "tags": ["Data Organization", "Preprocessing", "Integrity"],
-    "icon": "light-bulb",
+    "tags": [
+      "Data Organization",
+      "Preprocessing",
+      "Integrity"
+    ],
+    "icon": "users",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/format-quote-close.svg"
   },
   {
     "title": "Peer Review",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to organize review notes and cross-check claims, while human expertise remains central to peer evaluation.",
-    "tags": ["Review Notes", "Cross-Checking", "Evaluation"],
-    "icon": "light-bulb",
+    "tags": [
+      "Review Notes",
+      "Cross-Checking",
+      "Evaluation"
+    ],
+    "icon": "user-circle",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-search-outline.svg"
   },
   {
     "title": "Grant Writing",
-    "company": "Research & Academia · AI.M Pathway",
+    "company": "Research & Academia \u00b7 AI.M Pathway",
     "category": "research",
     "description": "Using AI to draft stronger grant proposals faster, while ensuring every claim is grounded and verifiable.",
-    "tags": ["Proposal Writing", "Funding", "Verification"],
-    "icon": "light-bulb",
+    "tags": [
+      "Proposal Writing",
+      "Funding",
+      "Verification"
+    ],
+    "icon": "user-plus",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/telescope.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/file-certificate.svg"
   },
-
   {
     "title": "Construction",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI for project estimation, materials planning, and scheduling across residential and commercial construction.",
-    "tags": ["Estimation", "Materials Planning", "Scheduling"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Estimation",
+      "Materials Planning",
+      "Scheduling"
+    ],
+    "icon": "hand-raised",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
@@ -1133,213 +1527,288 @@
   },
   {
     "title": "Electrical Work",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Applying AI to code lookup, troubleshooting reference, and job documentation for electrical professionals.",
-    "tags": ["Code Lookup", "Troubleshooting", "Documentation"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Code Lookup",
+      "Troubleshooting",
+      "Documentation"
+    ],
+    "icon": "chat-bubble",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/toolbox-outline.svg"
   },
   {
     "title": "Plumbing",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI for job estimation, parts research, and customer communication in residential and commercial plumbing.",
-    "tags": ["Estimation", "Parts Research", "Customer Communication"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Estimation",
+      "Parts Research",
+      "Customer Communication"
+    ],
+    "icon": "chat-bubble-left-right",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/pipe-wrench.svg"
   },
   {
     "title": "HVAC",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI to support diagnostics, maintenance scheduling, and customer quotes across HVAC service work.",
-    "tags": ["Diagnostics", "Maintenance Scheduling", "Quotes"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Diagnostics",
+      "Maintenance Scheduling",
+      "Quotes"
+    ],
+    "icon": "megaphone",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/air-conditioner.svg"
   },
   {
     "title": "Automotive Repair",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Applying AI to diagnostic reference, repair documentation, and parts sourcing for automotive technicians.",
-    "tags": ["Diagnostics", "Repair Documentation", "Parts Sourcing"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Diagnostics",
+      "Repair Documentation",
+      "Parts Sourcing"
+    ],
+    "icon": "light-bulb",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/car-wrench.svg"
   },
   {
     "title": "Manufacturing",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI for production scheduling, quality tracking, and process documentation on the manufacturing floor.",
-    "tags": ["Production Scheduling", "Quality Tracking", "Process Docs"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Production Scheduling",
+      "Quality Tracking",
+      "Process Docs"
+    ],
+    "icon": "rocket-launch",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/factory.svg"
   },
   {
     "title": "Logistics & Field Services",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI to optimize routing, scheduling, and dispatch communication across field service and logistics teams.",
-    "tags": ["Routing", "Dispatch", "Scheduling"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Routing",
+      "Dispatch",
+      "Scheduling"
+    ],
+    "icon": "sparkles",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/truck-fast-outline.svg"
   },
   {
     "title": "Equipment Maintenance",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Applying AI to predictive maintenance scheduling and equipment history tracking to reduce unplanned downtime.",
-    "tags": ["Predictive Maintenance", "Equipment History", "Downtime Reduction"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Predictive Maintenance",
+      "Equipment History",
+      "Downtime Reduction"
+    ],
+    "icon": "academic-cap",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/wrench-clock.svg"
   },
   {
     "title": "Facilities Management",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI to manage maintenance requests, vendor coordination, and facility documentation more efficiently.",
-    "tags": ["Maintenance Requests", "Vendor Coordination", "Documentation"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Maintenance Requests",
+      "Vendor Coordination",
+      "Documentation"
+    ],
+    "icon": "puzzle-piece",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/office-building-cog-outline.svg"
   },
   {
     "title": "Apprenticeship Training",
-    "company": "Trades & Skilled Labor · AI.M Pathway",
+    "company": "Trades & Skilled Labor \u00b7 AI.M Pathway",
     "category": "trades",
     "description": "Using AI to support hands-on trade training with reference material, practice scenarios, and progress tracking.",
-    "tags": ["Trade Training", "Reference Material", "Progress Tracking"],
-    "icon": "wrench-screwdriver",
+    "tags": [
+      "Trade Training",
+      "Reference Material",
+      "Progress Tracking"
+    ],
+    "icon": "trophy",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer-wrench.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/hammer.svg"
   },
-
   {
     "title": "Customer Insights",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to synthesize customer feedback and behavior data into insights teams can actually act on.",
-    "tags": ["Feedback Analysis", "Behavior Data", "Insights"],
-    "icon": "megaphone",
+    "tags": [
+      "Feedback Analysis",
+      "Behavior Data",
+      "Insights"
+    ],
+    "icon": "map",
     "featuredImage": "/images/projects/default-bg.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/chart-donut.svg"
   },
   {
     "title": "Campaign Optimization",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Applying AI to test messaging variants, analyze performance, and refine campaigns faster with real data.",
-    "tags": ["A/B Testing", "Performance Analysis", "Messaging"],
-    "icon": "megaphone",
+    "tags": [
+      "A/B Testing",
+      "Performance Analysis",
+      "Messaging"
+    ],
+    "icon": "arrow-path",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn-variant-outline.svg"
   },
   {
     "title": "Lead Generation",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to research prospects, qualify leads, and personalize outreach at a scale manual research can't match.",
-    "tags": ["Prospect Research", "Lead Qualification", "Personalization"],
-    "icon": "megaphone",
+    "tags": [
+      "Prospect Research",
+      "Lead Qualification",
+      "Personalization"
+    ],
+    "icon": "wrench-screwdriver",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-multiple-check-outline.svg"
   },
   {
     "title": "Sales Strategy",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to analyze pipeline data and refine sales strategy, while relationship-building stays firmly human.",
-    "tags": ["Pipeline Analysis", "Strategy", "Relationship Selling"],
-    "icon": "megaphone",
+    "tags": [
+      "Pipeline Analysis",
+      "Strategy",
+      "Relationship Selling"
+    ],
+    "icon": "cog-6-tooth",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-heart.svg"
   },
   {
     "title": "Market Analysis",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to track competitive positioning and market trends, translating raw data into strategic recommendations.",
-    "tags": ["Competitive Analysis", "Market Trends", "Strategic Recommendations"],
-    "icon": "megaphone",
+    "tags": [
+      "Competitive Analysis",
+      "Market Trends",
+      "Strategic Recommendations"
+    ],
+    "icon": "clipboard-document-check",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/forum-outline.svg"
   },
   {
     "title": "Customer Retention",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Applying AI to identify churn risk early and design retention outreach that feels personal, not automated.",
-    "tags": ["Churn Prediction", "Retention Outreach", "Personalization"],
-    "icon": "megaphone",
+    "tags": [
+      "Churn Prediction",
+      "Retention Outreach",
+      "Personalization"
+    ],
+    "icon": "queue-list",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/message-bulleted.svg"
   },
   {
     "title": "CRM Workflows",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
-    "description": "Using AI to keep CRM data clean, summarized, and actionable — without adding more manual data entry.",
-    "tags": ["CRM Hygiene", "Summarization", "Data Quality"],
-    "icon": "megaphone",
+    "description": "Using AI to keep CRM data clean, summarized, and actionable \u2014 without adding more manual data entry.",
+    "tags": [
+      "CRM Hygiene",
+      "Summarization",
+      "Data Quality"
+    ],
+    "icon": "squares-2x2",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-star.svg"
   },
   {
     "title": "Brand Messaging",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to test and refine brand messaging across channels while protecting a consistent, authentic voice.",
-    "tags": ["Messaging", "Brand Voice", "Consistency"],
-    "icon": "megaphone",
+    "tags": [
+      "Messaging",
+      "Brand Voice",
+      "Consistency"
+    ],
+    "icon": "adjustments-horizontal",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/message-text-outline.svg"
   },
   {
     "title": "Community Management",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to monitor community sentiment and draft responses, while genuine engagement stays human-led.",
-    "tags": ["Sentiment Monitoring", "Engagement", "Response Drafting"],
-    "icon": "megaphone",
+    "tags": [
+      "Sentiment Monitoring",
+      "Engagement",
+      "Response Drafting"
+    ],
+    "icon": "clock",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/face-agent.svg"
   },
   {
     "title": "Customer Support Operations",
-    "company": "Sales, Marketing & Customer Experience · AI.M Pathway",
+    "company": "Sales, Marketing & Customer Experience \u00b7 AI.M Pathway",
     "category": "salesmarketing",
     "description": "Using AI to triage tickets, draft responses, and identify recurring issues across customer support operations.",
-    "tags": ["Ticket Triage", "Response Drafting", "Issue Trends"],
-    "icon": "megaphone",
+    "tags": [
+      "Ticket Triage",
+      "Response Drafting",
+      "Issue Trends"
+    ],
+    "icon": "calendar",
     "backgroundImage": "/images/projects/default-bg.jpg",
     "link": "#",
-    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/bullhorn.svg"
+    "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/headset-dock.svg"
   }
 ]
