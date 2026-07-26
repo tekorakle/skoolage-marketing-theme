@@ -9,58 +9,63 @@ interface SocialConfig {
 }
 
 const SOCIAL_CONFIG: Record<string, SocialConfig> = {
-  github: { label: 'GitHub', urlTemplate: 'https://github.com/{v}', icon: 'simple-icons:github' },
+  github: { label: 'GitHub', urlTemplate: 'https://github.com/{v}', icon: 'github' },
   linkedin: {
     label: 'LinkedIn',
     urlTemplate: 'https://linkedin.com/in/{v}',
-    icon: 'simple-icons:linkedin',
+    icon: 'linkedin',
   },
-  gitlab: { label: 'GitLab', urlTemplate: 'https://gitlab.com/{v}', icon: 'simple-icons:gitlab' },
-  twitter: { label: 'X (Twitter)', urlTemplate: 'https://x.com/{v}', icon: 'simple-icons:x' },
+  gitlab: { label: 'GitLab', urlTemplate: 'https://gitlab.com/{v}', icon: 'gitlab' },
+  twitter: { label: 'X (Twitter)', urlTemplate: 'https://x.com/{v}', icon: 'twitter' },
   instagram: {
     label: 'Instagram',
     urlTemplate: 'https://instagram.com/{v}',
-    icon: 'simple-icons:instagram',
+    icon: 'instagram',
   },
   youtube: {
     label: 'YouTube',
     urlTemplate: 'https://youtube.com/@{v}',
-    icon: 'simple-icons:youtube',
+    icon: 'youtube',
   },
-  twitch: { label: 'Twitch', urlTemplate: 'https://twitch.tv/{v}', icon: 'simple-icons:twitch' },
-  telegram: { label: 'Telegram', urlTemplate: 'https://t.me/{v}', icon: 'simple-icons:telegram' },
-  signal: { label: 'Signal', urlTemplate: 'https://signal.me/#p/{v}', icon: 'simple-icons:signal' },
-  blog: { label: 'Blog', urlTemplate: '{v}', icon: 'simple-icons:rss' },
-  reddit: { label: 'Reddit', urlTemplate: 'https://reddit.com/u/{v}', icon: 'simple-icons:reddit' },
+  tiktok: {
+    label: 'TikTok',
+    urlTemplate: 'https://tiktok.com/@{v}',
+    icon: 'tiktok',
+  },
+  twitch: { label: 'Twitch', urlTemplate: 'https://twitch.tv/{v}', icon: 'twitch' },
+  telegram: { label: 'Telegram', urlTemplate: 'https://t.me/{v}', icon: 'telegram' },
+  signal: { label: 'Signal', urlTemplate: 'https://signal.me/#p/{v}', icon: 'signal' },
+  blog: { label: 'Blog', urlTemplate: '{v}', icon: 'rss' },
+  reddit: { label: 'Reddit', urlTemplate: 'https://reddit.com/u/{v}', icon: 'reddit' },
   hackernews: {
     label: 'Hacker News',
     urlTemplate: 'https://news.ycombinator.com/user?id={v}',
-    icon: 'simple-icons:ycombinator',
+    icon: 'ycombinator',
   },
   lobsters: {
     label: 'Lobsters',
     urlTemplate: 'https://lobste.rs/u/{v}',
-    icon: 'simple-icons:lobsters',
+    icon: 'lobsters',
   },
   discogs: {
     label: 'Discogs',
     urlTemplate: 'https://www.discogs.com/user/{v}',
-    icon: 'simple-icons:discogs',
+    icon: 'discogs',
   },
   codepen: {
     label: 'CodePen',
     urlTemplate: 'https://codepen.io/{v}',
-    icon: 'simple-icons:codepen',
+    icon: 'codepen',
   },
   jsfiddle: {
     label: 'JSFiddle',
     urlTemplate: 'https://jsfiddle.net/{v}',
-    icon: 'simple-icons:jsfiddle',
+    icon: 'jsfiddle',
   },
   facebook: {
     label: 'Facebook',
     urlTemplate: 'https://facebook.com/{v}',
-    icon: 'simple-icons:facebook',
+    icon: 'facebook',
   },
 };
 
@@ -71,6 +76,7 @@ const DISPLAY_ORDER = [
   'twitter',
   'instagram',
   'youtube',
+  'tiktok',
   'twitch',
   'telegram',
   'signal',

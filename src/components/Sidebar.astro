@@ -4,6 +4,7 @@ import personalData from '@/data/global/personal.json';
 import navigationData from '@/data/global/navigation.json';
 import { withBase } from '@/lib/assetPath';
 import { navIcons, icons } from '@/lib/icons';
+import { getSocialLinks } from '@/lib/socialLinks';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const retroTvGlob = import.meta.glob('/public/images/retro-tv/*.gif', { eager: false });
 const gifCount = Object.keys(retroTvGlob).length;
@@ -18,9 +19,7 @@ function isActive(href: string) {
   return rawPath.startsWith(href);
 }
 
-const socialLinks = personalData.linkedin
-  ? [{ label: "LinkedIn", href: `https://linkedin.com/company/${personalData.linkedin}`, iconKey: 'linkedin' }]
-  : [];
+const renderedSocialLinks = getSocialLinks(personalData);
 
 const otherSites = navigationData.otherSites ?? [];
 ---
@@ -33,7 +32,7 @@ const otherSites = navigationData.otherSites ?? [];
   aria-expanded="false"
   aria-controls="sidebar"
 >
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={icons['bars-3']} />
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
 </button>
 
 <!-- Sidebar -->
@@ -44,7 +43,7 @@ const otherSites = navigationData.otherSites ?? [];
 >
   <!-- Welcome bar -->
   <div id="sidebar-welcome" class="bg-navy-800 border-b border-black px-4 py-3 text-center">
-    <p class="text-[11px] font-display font-semibold tracking-[3px] uppercase" style="color: var(--color-primary);">
+    <p class="text-[11px] font-display font-semibold tracking-[3px] uppercase">
       {navigationData.welcomeText}
     </p>
   </div>
@@ -164,19 +163,19 @@ const otherSites = navigationData.otherSites ?? [];
         <span class="text-xs font-mono sidebar-label">{siteData.email}</span>
       </a>
 
-      {socialLinks.length > 0 && (
+      {renderedSocialLinks.length > 0 && (
         <>
           <div class="site-band mt-4 mb-3"></div>
           <p class="px-3 pb-2 text-[9px] font-display font-semibold uppercase tracking-[3px] text-site-muted sidebar-label">{navigationData.sidebarSocialLabel}</p>
-          {socialLinks.map(link => (
+          {renderedSocialLinks.map(link => (
             <a
-              href={link.href}
+              href={link.url}
               target="_blank"
               rel="noopener noreferrer"
               title={link.label}
               class="flex items-center gap-3 px-3 py-2 text-site-muted hover:text-white hover:bg-site-surface transition-all duration-150"
             >
-              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={icons[link.iconKey]} />
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={icons[link.key]} />
               <span class="text-xs font-mono sidebar-label">{link.label}</span>
             </a>
           ))}
