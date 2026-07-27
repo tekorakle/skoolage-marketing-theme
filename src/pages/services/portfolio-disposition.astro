@@ -34,72 +34,66 @@ const service = servicesData.find((s) => s.slug === "portfolio-disposition")!;
         </p>
       </div>
 
-      <!-- Exit value trend visual -->
-      <div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
-        <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
-          <div class="flex items-center gap-1.5">
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
-          </div>
-          <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
-            Deal Pipeline — Exit Tracking
-          </div>
-          <div class="flex items-center gap-2 font-mono text-xs" style="color: var(--color-primary);">
-            <span class="h-1.5 w-1.5 rounded-full animate-pulse" style="background: var(--color-primary);"></span>
-            ACTIVE
-          </div>
-        </div>
+      <!-- AI.M progress visual -->
+<div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
+  <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
+    <div class="flex items-center gap-1.5">
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
+    </div>
+    <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
+      AI.M · Capability Record
+    </div>
+    <div class="flex items-center gap-2 font-mono text-xs" style="color: var(--color-primary);">
+      <span class="h-1.5 w-1.5 rounded-full animate-pulse" style="background: var(--color-primary);"></span>
+      ACTIVE
+    </div>
+  </div>
 
-        <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
-          <svg viewBox="0 0 580 148" width="100%" style="max-width: 640px; height: 148px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- Grid -->
-            <line x1="52" y1="8" x2="52" y2="108" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
-            <line x1="52" y1="108" x2="528" y2="108" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
-            <line x1="52" y1="70" x2="528" y2="70" stroke="rgba(80,100,140,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="52" y1="36" x2="528" y2="36" stroke="rgba(80,100,140,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
+  <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
+    <svg viewBox="0 0 580 148" width="100%" style="max-width: 640px; height: 148px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="52" y1="8" x2="52" y2="108" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
+      <line x1="52" y1="108" x2="528" y2="108" stroke="rgba(80,100,140,0.25)" stroke-width="1"/>
+      <line x1="52" y1="70" x2="528" y2="70" stroke="rgba(80,100,140,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="52" y1="36" x2="528" y2="36" stroke="rgba(80,100,140,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
 
-            <!-- Area under curve -->
-            <polygon points="52,92 148,80 264,64 376,42 500,20 528,14 528,108 52,108" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.05;0.05;0" keyTimes="0;0.46;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </polygon>
+      <polygon points="52,92 148,80 264,64 376,42 500,20 528,14 528,108 52,108" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.05;0.05;0" keyTimes="0;0.46;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </polygon>
 
-            <!-- Trend line draws left to right -->
-            <polyline points="52,92 148,80 264,64 376,42 500,20 528,14" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="560" style="stroke: var(--color-primary); opacity: 0.8;">
-              <animate attributeName="stroke-dashoffset" values="560;0;0;560" keyTimes="0;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </polyline>
+      <polyline points="52,92 148,80 264,64 376,42 500,20 528,14" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="560" style="stroke: var(--color-primary); opacity: 0.8;">
+        <animate attributeName="stroke-dashoffset" values="560;0;0;560" keyTimes="0;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </polyline>
 
-            <!-- Data point dots appear as line passes -->
-            <circle cx="52" cy="92" r="4.5" style="fill: var(--color-primary);" opacity="0.55"/>
-            <circle cx="148" cy="80" r="4.5" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.13;0.15;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="264" cy="64" r="4.5" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.29;0.31;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="376" cy="42" r="4.5" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.39;0.41;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="500" cy="20" r="4.5" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.47;0.49;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="528" cy="14" r="5.5" style="fill: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.9;0.9;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
-            </circle>
+      <circle cx="52" cy="92" r="4.5" style="fill: var(--color-primary);" opacity="0.55"/>
+      <circle cx="148" cy="80" r="4.5" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.13;0.15;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="264" cy="64" r="4.5" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.29;0.31;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="376" cy="42" r="4.5" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.39;0.41;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="500" cy="20" r="4.5" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.55;0.55;0" keyTimes="0;0.47;0.49;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="528" cy="14" r="5.5" style="fill: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.9;0.9;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
 
-            <!-- Axis labels -->
-            <text x="52" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">HOLD Y1</text>
-            <text x="148" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">Y2</text>
-            <text x="264" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">Y3</text>
-            <text x="376" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">Y4</text>
-            <text x="500" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">Y5</text>
-            <text x="528" y="124" text-anchor="middle" font-family="monospace" font-size="8.5" style="fill: var(--color-primary);" opacity="0">EXIT<animate attributeName="opacity" values="0;0;0.9;0.9;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/></text>
+      <text x="52" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">LEARN</text>
+      <text x="148" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">PRACTICE</text>
+      <text x="264" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">APPLY</text>
+      <text x="376" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">ASSESS</text>
+      <text x="500" y="124" text-anchor="middle" fill="rgba(120,140,170,0.6)" font-family="monospace" font-size="8.5">DEMONSTRATE</text>
+      <text x="528" y="124" text-anchor="middle" font-family="monospace" font-size="8.5" style="fill: var(--color-primary);" opacity="0">AI.M<animate attributeName="opacity" values="0;0;0.9;0.9;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/></text>
 
-            <!-- IRR label at exit -->
-            <text x="524" y="11" text-anchor="end" font-family="monospace" font-size="9" style="fill: var(--color-primary);" opacity="0">↑ IRR<animate attributeName="opacity" values="0;0;0.8;0.8;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/></text>
-          </svg>
-        </div>
-      </div>
+      <text x="524" y="11" text-anchor="end" font-family="monospace" font-size="9" style="fill: var(--color-primary);" opacity="0">↑ EARNED<animate attributeName="opacity" values="0;0;0.8;0.8;0" keyTimes="0;0.49;0.5;0.87;1" dur="6.5s" repeatCount="indefinite"/></text>
+    </svg>
+  </div>
+</div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         {service.capabilities.map((cap) => (

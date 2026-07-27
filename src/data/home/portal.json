@@ -11,16 +11,16 @@
   "quickStats": {
     "label": "Institution Overview",
     "items": [
-      { "key": "Learning Paths", "valueKey": "yearsExperience", "suffix": "" },
-      { "key": "Membership", "value": "Active" },
-      { "key": "Professions Served", "value": "12+" }
+      { "key": "Learning Paths", "value": "12+" },
+      { "key": "Membership", "value": "Lifelong" },
+      { "key": "Professions & Specializations", "value": "120+" }
     ]
   },
   "infoLabels": {
     "role": "Institution Type",
     "location": "Headquarters",
     "experience": "Founded",
-    "experienceSuffix": " years building AI-era education",
+    "experienceSuffix": "",
     "education": "Institutional Model",
     "blog": "Resource Library",
     "contact": "Admissions"

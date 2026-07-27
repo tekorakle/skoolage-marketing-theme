@@ -34,81 +34,102 @@ const service = servicesData.find((s) => s.slug === "leadership-transition")!;
         </p>
       </div>
 
-      <!-- Org structure visual -->
-      <div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
-        <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
-          <div class="flex items-center gap-1.5">
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
-            <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
-          </div>
-          <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
-            Engagement Timeline
-          </div>
-          <div class="flex items-center gap-2 font-mono text-xs text-amber-400">
-            <span class="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-            ACTIVE
-          </div>
-        </div>
+      <!-- Enterprise rollout visual -->
+<div class="mb-12 rounded-2xl border border-site-border bg-navy-800/80 overflow-hidden">
+  <div class="flex items-center justify-between px-4 py-3 bg-navy-950/60 border-b border-site-border">
+    <div class="flex items-center gap-1.5">
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">─</span>
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">□</span>
+      <span class="inline-flex items-center justify-center w-4 h-3 text-[9px] leading-none text-site-muted/50 border border-site-muted/20 rounded-[2px] font-mono select-none">×</span>
+    </div>
+    <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-site-muted hidden sm:block">
+      Workforce AI.M Rollout
+    </div>
+    <div class="flex items-center gap-2 font-mono text-xs text-amber-400">
+      <span class="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+      ACTIVE
+    </div>
+  </div>
 
-        <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
-          <svg viewBox="0 0 580 168" width="100%" style="max-width: 640px; height: 168px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <div class="px-8 py-10 flex items-center justify-center bg-navy-950/30">
+    <svg viewBox="0 0 580 190" width="100%" style="max-width: 640px; height: 190px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 
-            <!-- Board / Skoolage node (visible from start) -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <rect x="230" y="8" width="120" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
-              <text x="290" y="28" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">BOARD / APEX</text>
-            </g>
+      <!-- Leadership sponsorship node -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="220" y="8" width="140" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+        <text x="290" y="28" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">EXECUTIVE SPONSORSHIP</text>
+      </g>
 
-            <!-- Connector: Board → CEO -->
-            <line x1="290" y1="40" x2="290" y2="62" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
-              <animate attributeName="opacity" values="0;0;0.45;0.45;0;0" keyTimes="0;0.10;0.13;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-            </line>
+      <line x1="290" y1="40" x2="290" y2="62" stroke-width="1" style="stroke: var(--color-primary);" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.45;0.45;0;0" keyTimes="0;0.10;0.13;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+      </line>
 
-            <!-- CEO node -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.15;0.19;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <rect x="230" y="62" width="120" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
-              <text x="290" y="82" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">CEO / GM</text>
-            </g>
+      <!-- Workforce AI assessment node -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.15;0.19;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="220" y="62" width="140" height="32" rx="4" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+        <text x="290" y="82" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="9">WORKFORCE AI ASSESSMENT</text>
+      </g>
 
-            <!-- Branch connectors -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;0;0.4;0.4;0;0" keyTimes="0;0.22;0.26;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <line x1="290" y1="94" x2="290" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <line x1="96" y1="106" x2="484" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <line x1="96" y1="106" x2="96" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <line x1="290" y1="106" x2="290" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <line x1="484" y1="106" x2="484" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
-            </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.4;0.4;0;0" keyTimes="0;0.22;0.26;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <line x1="290" y1="94" x2="290" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="72" y1="106" x2="508" y2="106" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="72" y1="106" x2="72" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="180" y1="106" x2="180" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="290" y1="106" x2="290" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="400" y1="106" x2="400" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="508" y1="106" x2="508" y2="118" stroke-width="1" style="stroke: var(--color-primary);"/>
+      </g>
 
-            <!-- Operations node -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.30;0.34;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <rect x="38" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <text x="96" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">OPERATIONS</text>
-            </g>
+      <!-- Department-specific Learning Paths -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.28;0.32;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="24" y="118" width="96" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <text x="72" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8">SALES</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.32;0.36;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="132" y="118" width="96" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <text x="180" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8">MARKETING</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.36;0.40;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="242" y="118" width="96" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <text x="290" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8">FINANCE</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.40;0.44;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="352" y="118" width="96" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <text x="400" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8">HR</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.44;0.48;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="460" y="118" width="96" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <text x="508" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8">ENGINEERING</text>
+      </g>
 
-            <!-- Finance node -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.35;0.39;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <rect x="232" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <text x="290" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">FINANCE</text>
-            </g>
+      <!-- Convergence to enterprise certification -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;0.5;0.5;0;0" keyTimes="0;0.5;0.54;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <line x1="72" y1="146" x2="72" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="180" y1="146" x2="180" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="290" y1="146" x2="290" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="400" y1="146" x2="400" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="508" y1="146" x2="508" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="72" y1="158" x2="508" y2="158" stroke-width="1" style="stroke: var(--color-primary);"/>
+        <line x1="290" y1="158" x2="290" y2="166" stroke-width="1" style="stroke: var(--color-primary);"/>
+      </g>
 
-            <!-- Commercial node -->
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;0;0.85;0.85;0;0" keyTimes="0;0.40;0.44;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
-              <rect x="426" y="118" width="116" height="28" rx="3" fill="rgba(4,10,24,0.96)" stroke-width="1" style="stroke: var(--color-primary);"/>
-              <text x="484" y="136" text-anchor="middle" fill="rgba(170,190,215,0.85)" font-family="monospace" font-size="8.5">COMMERCIAL</text>
-            </g>
-
-            <!-- Status label -->
-            <text x="290" y="162" text-anchor="middle" fill="rgba(100,120,150,0.4)" font-family="monospace" font-size="8" letter-spacing="0.5">STRUCTURE CONFIRMED · DAY 30</text>
-          </svg>
-        </div>
-      </div>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.58;0.62;0.80;0.93;1" dur="7s" repeatCount="indefinite"/>
+        <rect x="210" y="166" width="160" height="20" rx="10" fill="rgba(4,10,24,0.96)" stroke-width="1.5" style="stroke: var(--color-primary);"/>
+        <text x="290" y="180" text-anchor="middle" fill="rgba(200,215,235,0.9)" font-family="monospace" font-size="8" letter-spacing="0.5">AI.M ENTERPRISE CERTIFIED</text>
+      </g>
+    </svg>
+  </div>
+</div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
         {service.capabilities.map((item) => (
