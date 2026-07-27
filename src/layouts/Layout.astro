@@ -5,6 +5,7 @@ import { Font } from "astro:assets";
 import "@/styles/global.css";
 import siteData from "@/data/global/site.json";
 import { withBase } from "@/lib/assetPath";
+import WhatsAppBubble from "@/components/WhatsAppBubble.astro";
 
 interface Props {
   title: string;
@@ -502,5 +503,6 @@ function safeJsonLd(obj: Record<string, unknown>): string {
         if (themeBtn) themeBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
       });
     </script>
+    <WhatsAppBubble />
   </body>
 </html>
