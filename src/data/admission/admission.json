@@ -1,0 +1,24 @@
+{
+  "pageTitle": "Enroll",
+  "pageDescription": "Contact Skoolage admissions regarding individual membership, AI.M certification, or enterprise learning programs.",
+  "heading": "Skoolage Admission",
+  "subHeading": "Every learner begins with an application. This helps us understand your background, career goals, learning preferences, and AI experience so we can personalize your learning journey from day one.",
+  "contactMethods": [
+    { "iconKey": "phone", "label": "Admissions Line", "note": "Mon–Fri, 8am–6pm" },
+    { "iconKey": "envelope", "label": "Admissions Email", "note": "Response within one business day" }
+  ],
+  "form": {
+    "heading": "Send a Message",
+    "fields": {
+      "name": { "label": "Name", "placeholder": "Your name or organization" },
+      "email": { "label": "Email", "placeholder": "you@example.com" },
+      "message": { "label": "Message", "placeholder": "Tell us what you're hoping to learn — individual, team, or full enterprise program." }
+    },
+    "submitLabel": "Send Message",
+    "sendingLabel": "Sending…",
+    "confirmationText": "You will receive an email confirmation of receipt.",
+    "successMessage": "Message received. Our admissions team will be in touch shortly.",
+    "errorFallback": "Something went wrong. Please try again.",
+    "networkError": "Network error. Check your connection and try again."
+  }
+}

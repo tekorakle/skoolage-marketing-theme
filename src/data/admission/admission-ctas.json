@@ -1,0 +1,8 @@
+[
+  { "emoji": "🎓", "title": "Individual Membership", "description": "Ready to begin? Tell us about your goals and we'll recommend the right Learning Path and membership level." },
+  { "emoji": "🏢", "title": "Enterprise Learning", "description": "Building an AI-ready workforce? Submit your details for a preliminary workforce assessment from our enterprise team." },
+  { "emoji": "📜", "title": "AI.M Certification", "description": "Questions about earning AI.M or verifying a credential? Reach out and we'll route you to the right team." },
+  { "emoji": "🤝", "title": "Partnership Inquiry", "description": "Educational institutions, professional associations, and technology partners are welcome to reach out directly." },
+  { "emoji": "⚖️", "title": "Legal or Compliance", "description": "Regulatory, privacy, and legal correspondence should be directed here and will be routed to counsel." },
+  { "emoji": "📬", "title": "General Inquiry", "description": "For anything not covered above, use this form and include enough context for the right team to respond." }
+]

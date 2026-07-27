@@ -4,7 +4,7 @@
   "subHeading": "The School for the AI Era. Learning That Never Stops.",
   "blurb": "Skoolage is the lifelong learning institution built to help professionals master artificial intelligence through structured learning, personal AI tutoring, practical projects, and globally recognized certifications. Whether you are a student preparing for your career, a professional growing your skills, an entrepreneur building your business, or an organization preparing your workforce — Skoolage helps you become ready for the AI era.",
   "ctas": [
-    { "label": "Start Your AI Journey", "href": "https://tally.so/r/q476pO", "style": "primary" },
-    { "label": "Admissions Apply", "href": "https://tally.so/r/q476pO", "style": "secondary" }
+    { "label": "Start Your AI Journey", "href": "/admission", "style": "primary" },
+    { "label": "Admissions Apply", "href": "/admission", "style": "secondary" }
   ]
 }

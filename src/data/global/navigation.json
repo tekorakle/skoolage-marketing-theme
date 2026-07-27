@@ -1,6 +1,6 @@
 {
   "welcomeText": "The School for the AI Era",
-  "ctaText": "Contact Admissions",
+  "ctaText": "Contact Us",
   "navItems": [
     { "label": "Home", "href": "/", "iconKey": "home" },
     {
@@ -27,7 +27,7 @@
       ]
     },
     { "label": "About", "href": "/about", "iconKey": "user" },
-    { "label": "Apply", "href": "https://tally.so/r/q476pO", "iconKey": "mail" }
+    { "label": "Admission", "href": "/admission", "iconKey": "mail" }
   ],
   "footerTagline": "Skoolage helps professionals, entrepreneurs, and organizations master artificial intelligence through a personal AI Tutor, practical Learning Paths, and AI.M certification — built for a world where learning never ends.",
   "footerLinks": {
@@ -51,7 +51,7 @@
   "sidebarSocialLabel": "Social",
   "sidebarOtherSitesLabel": "Other Sites",
   "otherSites": [
-    { "label": "Learner Workspace", "href": "https://tally.so/r/q476pO", "iconKey": "user-outline" },
-    { "label": "Admissions", "href": "https://tally.so/r/q476pO", "iconKey": "home-outline" }
+    { "label": "Learner Workspace", "href": "/admission", "iconKey": "user-outline" },
+    { "label": "Admissions", "href": "/admission", "iconKey": "home-outline" }
   ]
 }

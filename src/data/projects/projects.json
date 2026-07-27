@@ -8,7 +8,7 @@
     "icon": "chat-bubble-left-right",
     "featuredImage": "/images/projects/socratic-tutor-ai.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/head-question-outline.svg"
   },
   {
@@ -20,7 +20,7 @@
     "icon": "queue-list",
     "featuredImage": "/images/projects/flashcard-deck.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/cards-outline.svg"
   },
   {
@@ -32,7 +32,7 @@
     "icon": "document-chart-bar",
     "featuredImage": "/images/projects/essay-feedback.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/text-box-check-outline.svg"
   },
   {
@@ -44,7 +44,7 @@
     "icon": "clipboard-document-check",
     "featuredImage": "/images/projects/exam-blueprint.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/clipboard-text-outline.svg"
   },
   {
@@ -56,7 +56,7 @@
     "icon": "light-bulb",
     "featuredImage": "/images/projects/concept-explainer.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/lightbulb-on-outline.svg"
   },
   {
@@ -68,7 +68,7 @@
     "icon": "calendar-days",
     "featuredImage": "/images/projects/study-habit-coach.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/calendar-check-outline.svg"
   },
   {
@@ -80,7 +80,7 @@
     "icon": "hand-raised",
     "featuredImage": "/images/projects/exam-anxiety-reset.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/meditation.svg"
   },
   {
@@ -92,7 +92,7 @@
     "icon": "users",
     "featuredImage": "/images/projects/friendship-conflict-roleplay.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/account-group-outline.svg"
   },
   {
@@ -104,7 +104,7 @@
     "icon": "code-bracket",
     "featuredImage": "/images/projects/python-playground-coach.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/language-python.svg"
   },
   {
@@ -116,7 +116,7 @@
     "icon": "sparkles",
     "featuredImage": "/images/projects/guitar-practice-coach.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/guitar-acoustic.svg"
   },
   {
@@ -128,7 +128,7 @@
     "icon": "megaphone",
     "featuredImage": "/images/projects/public-speaking-rehearsal.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/microphone-outline.svg"
   },
   {
@@ -140,7 +140,7 @@
     "icon": "presentation-chart-bar",
     "featuredImage": "/images/projects/lesson-plan-studio.jpg",
     "backgroundImage": "/images/projects/default-bg.jpg",
-    "link": "https://tally.so/r/q476pO",
+    "link": "/admission",
     "colorIcon": "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/human-male-board.svg"
   }
 ]

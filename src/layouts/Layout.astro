@@ -28,7 +28,7 @@ const fullTitle = title === siteData.name ? title : `${title} | ${siteData.name}
 
 const siteOrigin = Astro.site?.origin ?? siteData.url;
 const resolvedOgImage = ogImage ?? `${siteOrigin}/images/favicons/android-chrome-512x512.png`;
-const ogImageAlt = `${siteData.name} — Private Holding Company`;
+const ogImageAlt = `${siteData.name} — AI-Powered Lifelong Learning Institution.`;
 
 const defaultSchema = {
   "@context": "https://schema.org",
@@ -46,11 +46,11 @@ const defaultSchema = {
         "@type": "PostalAddress",
         addressLocality: siteData.addressLocality,
         addressRegion: siteData.addressRegion,
-        addressCountry: "US",
+        addressCountry: "NG",
       },
       areaServed: {
         "@type": "State",
-        name: "Colorado",
+        name: "Enugu",
       },
       founder: { "@id": `${siteData.url}/#founder` },
       sameAs: siteData.sameAs,
@@ -87,7 +87,6 @@ function safeJsonLd(obj: Record<string, unknown>): string {
 <!--!
 
   This is the Skoolage company site.
-  We are a real and real serious financial firm. :-D
 
 -->
 <html lang="en" class="scroll-smooth">

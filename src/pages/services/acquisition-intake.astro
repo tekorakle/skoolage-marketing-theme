@@ -106,7 +106,7 @@ const service = servicesData.find((s) => s.slug === "acquisition-intake")!;
       <div class={`p-8 rounded-2xl border ${service.theme.borderAccent} bg-site-surface/40 text-center`}>
         <h2 class="font-display font-bold text-2xl text-white mb-3">{service.cta.heading}</h2>
         <p class="text-site-muted mb-6">{service.cta.body}</p>
-        <a href={withBase('/contact')} class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:scale-105">
+        <a href={withBase('/admission')} class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cta-gradient text-white font-semibold shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:scale-105">
           {service.cta.label}
         </a>
       </div>
